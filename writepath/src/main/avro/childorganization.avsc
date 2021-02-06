@@ -1,0 +1,390 @@
+{
+  "type" : "record",
+  "name" : "ChildOrganization",
+  "namespace" : "com.graphqlkafkaproducer.writepath.models2",
+  "fields" : [ {
+    "name" : "basicDataCompleteCode",
+    "type" : [ "null", "string" ]
+  }, {
+    "name" : "basingPartyRoleInRelationshipSpecificationSpecificationKey",
+    "type" : [ "null", "string" ]
+  }, {
+    "name" : "creationDateTime",
+    "type" : [ "null", "string" ]
+  }, {
+    "name" : "description",
+    "type" : [ "null", "string" ]
+  }, {
+    "name" : "id",
+    "type" : [ "null", "string" ]
+  }, {
+    "name" : "informationModelObjectKind",
+    "type" : [ "null", "string" ]
+  }, {
+    "name" : "namePartyNameKey",
+    "type" : [ "null", "string" ]
+  }, {
+    "name" : "party",
+    "type" : [ "null", {
+      "type" : "record",
+      "name" : "Party",
+      "fields" : [ {
+        "name" : "basicDataCompleteCode",
+        "type" : [ "null", "string" ]
+      }, {
+        "name" : "childOrganization",
+        "type" : [ "null", {
+          "type" : "array",
+          "items" : "ChildOrganization"
+        } ],
+        "default": null
+      }, {
+        "name" : "creationDateTime",
+        "type" : [ "null", "string" ]
+      }, {
+        "name" : "id",
+        "type" : [ "null", "string" ]
+      }, {
+        "name" : "informationModelObjectKind",
+        "type" : [ "null", "string" ]
+      }, {
+        "name" : "partyKey",
+        "type" : [ "null", "string" ]
+      }, {
+        "name" : "partyKind",
+        "type" : [ "null", "string" ]
+      }, {
+        "name" : "partyName",
+        "type" : [ "null", {
+          "type" : "array",
+          "items" : {
+            "type" : "record",
+            "name" : "PartyName",
+            "fields" : [ {
+              "name" : "basicDataCompleteCode",
+              "type" : [ "null", "string" ]
+            }, {
+              "name" : "childOrganization",
+              "type" : [ "null", {
+                "type" : "array",
+                "items" : "ChildOrganization"
+              } ],
+              "default": null
+            }, {
+              "name" : "companyId",
+              "type" : [ "null", "string" ]
+            }, {
+              "name" : "creationDateTime",
+              "type" : [ "null", "string" ]
+            }, {
+              "name" : "defaultIndicator",
+              "type" : [ "null", "boolean" ]
+            }, {
+              "name" : "description",
+              "type" : [ "null", "string" ]
+            }, {
+              "name" : "effectivePeriodEnd",
+              "type" : [ "null", "string" ]
+            }, {
+              "name" : "effectivePeriodStart",
+              "type" : [ "null", "string" ]
+            }, {
+              "name" : "fullName",
+              "type" : [ "null", "string" ]
+            }, {
+              "name" : "givenName",
+              "type" : [ "null", "string" ]
+            }, {
+              "name" : "id",
+              "type" : [ "null", "string" ]
+            }, {
+              "name" : "informationModelObjectKind",
+              "type" : [ "null", "string" ]
+            }, {
+              "name" : "middleName",
+              "type" : [ "null", "string" ]
+            }, {
+              "name" : "organizationUnitId",
+              "type" : [ "null", "string" ]
+            }, {
+              "name" : "ownerPartyKey",
+              "type" : [ "null", "string" ]
+            }, {
+              "name" : "party",
+              "type" : [ "null", "Party" ],
+              "default": null
+            }, {
+              "name" : "partyId",
+              "type" : [ "null", "string" ],
+              "default": null
+            }, {
+              "name" : "partyNameKey",
+              "type" : [ "null", "string" ]
+            }, {
+              "name" : "partyNameKind",
+              "type" : [ "null", "string" ]
+            }, {
+              "name" : "person",
+              "type" : [ "null", {
+                "type" : "record",
+                "name" : "Person",
+                "fields" : [ {
+                  "name" : "birthDateTime",
+                  "type" : [ "null", "string" ]
+                }, {
+                  "name" : "bloodTypeCode",
+                  "type" : [ "null", "string" ]
+                }, {
+                  "name" : "deathIndicator",
+                  "type" : [ "null", "boolean" ]
+                }, {
+                  "name" : "ethnicityCode",
+                  "type" : [ "null", "string" ]
+                }, {
+                  "name" : "genderCode",
+                  "type" : [ "null", "string" ]
+                }, {
+                  "name" : "id",
+                  "type" : [ "null", "string" ]
+                }, {
+                  "name" : "maritalStatusCode",
+                  "type" : [ "null", "string" ]
+                }, {
+                  "name" : "missingDateTime",
+                  "type" : [ "null", "string" ]
+                }, {
+                  "name" : "missingIndicator",
+                  "type" : [ "null", "boolean" ]
+                }, {
+                  "name" : "party",
+                  "type" : [ "null", "Party" ],
+                  "default": null
+                }, {
+                  "name" : "partyId",
+                  "type" : [ "null", "string" ],
+                  "default": null
+                }, {
+                  "name" : "partyKey",
+                  "type" : [ "null", "string" ]
+                }, {
+                  "name" : "partyName",
+                  "type" : [ "null", {
+                    "type" : "array",
+                    "items" : "PartyName"
+                  } ],
+                  "default": null
+                }, {
+                  "name" : "primaryLanguageLanguageKey",
+                  "type" : [ "null", "string" ]
+                }, {
+                  "name" : "txGlobalGenderCode",
+                  "type" : [ "null", "string" ]
+                }, {
+                  "name" : "txMetaAccessFilter",
+                  "type" : [ "null", {
+                    "type" : "int",
+                    "java-class" : "java.lang.Integer"
+                  } ]
+                }, {
+                  "name" : "txMetaChange",
+                  "type" : [ "null", "string" ]
+                }, {
+                  "name" : "txMetaCorrection",
+                  "type" : [ "null", "string" ]
+                }, {
+                  "name" : "txMetaLoadTime",
+                  "type" : [ "null", "string" ]
+                }, {
+                  "name" : "txMetaSource",
+                  "type" : [ "null", "string" ]
+                }, {
+                  "name" : "txMetaSourceKey",
+                  "type" : [ "null", "string" ]
+                }, {
+                  "name" : "txMetaStartEventTime",
+                  "type" : [ "null", "string" ]
+                }, {
+                  "name" : "txPrimaryKey",
+                  "type" : [ "null", "string" ]
+                } ]
+              } ],
+              "default": null
+            }, {
+              "name" : "personId",
+              "type" : [ "null", "string" ],
+              "default": null
+            }, {
+              "name" : "prefixTitleCode",
+              "type" : [ "null", "string" ]
+            }, {
+              "name" : "suffix",
+              "type" : [ "null", "string" ]
+            }, {
+              "name" : "surname",
+              "type" : [ "null", "string" ]
+            }, {
+              "name" : "txGlobalTypeName",
+              "type" : [ "null", "string" ]
+            }, {
+              "name" : "txMetaAccessFilter",
+              "type" : [ "null", {
+                "type" : "int",
+                "java-class" : "java.lang.Integer"
+              } ]
+            }, {
+              "name" : "txMetaChange",
+              "type" : [ "null", "string" ]
+            }, {
+              "name" : "txMetaCorrection",
+              "type" : [ "null", "string" ]
+            }, {
+              "name" : "txMetaLoadTime",
+              "type" : [ "null", "string" ]
+            }, {
+              "name" : "txMetaSource",
+              "type" : [ "null", "string" ]
+            }, {
+              "name" : "txMetaSourceKey",
+              "type" : [ "null", "string" ]
+            }, {
+              "name" : "txMetaStartEventTime",
+              "type" : [ "null", "string" ]
+            }, {
+              "name" : "txPrimaryKey",
+              "type" : [ "null", "string" ]
+            }, {
+              "name" : "txTypeCode",
+              "type" : [ "null", "string" ]
+            }, {
+              "name" : "typeName",
+              "type" : [ "null", "string" ]
+            }, {
+              "name" : "usageCode",
+              "type" : [ "null", "string" ]
+            }, {
+              "name" : "utilizedLanguageLanguageKey",
+              "type" : [ "null", "string" ]
+            } ]
+          }
+        } ],
+        "default": null
+      }, {
+        "name" : "person",
+        "type" : [ "null", {
+          "type" : "array",
+          "items" : "Person"
+        } ],
+        "default": null
+      }, {
+        "name" : "txGlobalTypeName",
+        "type" : [ "null", "string" ]
+      }, {
+        "name" : "txMetaAccessFilter",
+        "type" : [ "null", {
+          "type" : "int",
+          "java-class" : "java.lang.Integer"
+        } ]
+      }, {
+        "name" : "txMetaChange",
+        "type" : [ "null", "string" ]
+      }, {
+        "name" : "txMetaCorrection",
+        "type" : [ "null", "string" ]
+      }, {
+        "name" : "txMetaLoadTime",
+        "type" : [ "null", "string" ]
+      }, {
+        "name" : "txMetaSource",
+        "type" : [ "null", "string" ]
+      }, {
+        "name" : "txMetaSourceKey",
+        "type" : [ "null", "string" ]
+      }, {
+        "name" : "txMetaStartEventTime",
+        "type" : [ "null", "string" ]
+      }, {
+        "name" : "txPrimaryKey",
+        "type" : [ "null", "string" ]
+      }, {
+        "name" : "txTypeCode",
+        "type" : [ "null", "string" ]
+      }, {
+        "name" : "typeName",
+        "type" : [ "null", "string" ]
+      } ]
+    } ],
+    "default": null
+  }, {
+    "name" : "partyId",
+    "type" : [ "null", "string" ],
+    "default": null
+  }, {
+    "name" : "partyName",
+    "type" : [ "null", "PartyName" ],
+    "default": null
+  }, {
+    "name" : "partyNameId",
+    "type" : [ "null", "string" ],
+    "default": null
+  }, {
+    "name" : "partyRoleInRelationshipKind",
+    "type" : [ "null", "string" ]
+  }, {
+    "name" : "partyRoleKind",
+    "type" : [ "null", "string" ]
+  }, {
+    "name" : "playerRoleRoleKey",
+    "type" : [ "null", "string" ]
+  }, {
+    "name" : "playingPartyPartyKey",
+    "type" : [ "null", "string" ]
+  }, {
+    "name" : "roleKey",
+    "type" : [ "null", "string" ]
+  }, {
+    "name" : "roleKind",
+    "type" : [ "null", "string" ]
+  }, {
+    "name" : "rolePlayerPeriodEnd",
+    "type" : [ "null", "string" ]
+  }, {
+    "name" : "rolePlayerPeriodStart",
+    "type" : [ "null", "string" ]
+  }, {
+    "name" : "txGlobalTypeName",
+    "type" : [ "null", "string" ]
+  }, {
+    "name" : "txMetaAccessFilter",
+    "type" : [ "null", {
+      "type" : "int",
+      "java-class" : "java.lang.Integer"
+    } ]
+  }, {
+    "name" : "txMetaChange",
+    "type" : [ "null", "string" ]
+  }, {
+    "name" : "txMetaCorrection",
+    "type" : [ "null", "string" ]
+  }, {
+    "name" : "txMetaLoadTime",
+    "type" : [ "null", "string" ]
+  }, {
+    "name" : "txMetaSource",
+    "type" : [ "null", "string" ]
+  }, {
+    "name" : "txMetaSourceKey",
+    "type" : [ "null", "string" ]
+  }, {
+    "name" : "txMetaStartEventTime",
+    "type" : [ "null", "string" ]
+  }, {
+    "name" : "txPrimaryKey",
+    "type" : [ "null", "string" ]
+  }, {
+    "name" : "txTypeCode",
+    "type" : [ "null", "string" ]
+  }, {
+    "name" : "typeName",
+    "type" : [ "null", "string" ]
+  } ]
+}

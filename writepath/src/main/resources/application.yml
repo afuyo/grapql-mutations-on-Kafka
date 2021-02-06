@@ -1,0 +1,40 @@
+spring:
+  application:
+    name: graphql-java-tools-app
+  kafka:
+    properties:
+      schema.registry.url: http://localhost:8081
+
+    consumer:
+      bootstrap-servers: localhost:9092
+      group-id: group_id
+      auto-offset-reset: earliest
+      key-deserializer: org.apache.kafka.common.serialization.StringDeserializer
+      value-deserializer: io.confluent.kafka.serializers.KafkaAvroDeserializer
+      properties:
+        specific.avro.reader: true
+    producer:
+      bootstrap-servers: localhost:9092
+      key-serializer: org.apache.kafka.common.serialization.StringSerializer
+      value-serializer: io.confluent.kafka.serializers.KafkaAvroSerializer
+
+server:
+  port: 9001
+graphql:
+  servlet:
+    exception-handlers-enabled: true
+    subscriptions:
+      websocket:
+        path: /subscriptions
+graphiql:
+  headers:
+    Authorization: "Bearer 05bd9a5f3fe0408f89520946b0fe1b06"
+
+logging:
+  level:
+    com:
+      oembedler:
+        moon:
+          graphql:
+            boot:
+              error: debug

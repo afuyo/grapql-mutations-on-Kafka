@@ -1,0 +1,36 @@
+package com.graphqlkafkaproducer.writepath.mappings;
+
+import com.graphqlkafkaproducer.writepath.models2.Types.PartyCreateInput;
+import com.graphqlkafkaproducer.writepath.models2.Types2.HashMapWrapper;
+import org.mapstruct.Mapper;
+import org.mapstruct.Mapping;
+import org.mapstruct.Mappings;
+import org.mapstruct.factory.Mappers;
+@Mapper(uses= UtilPartyCreateInput.class)
+public interface MapperPartyCreateInputUtil {
+
+MapperPartyCreateInputUtil MAPPER = Mappers.getMapper(MapperPartyCreateInputUtil.class);
+@Mappings( {
+@Mapping(source = "meta", target = "id", qualifiedBy = UtilPartyCreateInput.Id.class ),
+@Mapping(source = "meta", target = "basicDataCompleteCode", qualifiedBy = UtilPartyCreateInput.BasicDataCompleteCode.class ),
+@Mapping(source = "meta", target = "creationDateTime", qualifiedBy = UtilPartyCreateInput.CreationDateTime.class ),
+@Mapping(source = "meta", target = "informationModelObjectKind", qualifiedBy = UtilPartyCreateInput.InformationModelObjectKind.class ),
+@Mapping(source = "meta", target = "partyKey", qualifiedBy = UtilPartyCreateInput.PartyKey.class ),
+@Mapping(source = "meta", target = "partyKind", qualifiedBy = UtilPartyCreateInput.PartyKind.class ),
+@Mapping(source = "meta", target = "typeName", qualifiedBy = UtilPartyCreateInput.TypeName.class ),
+@Mapping(source = "meta", target = "txGlobalTypeName", qualifiedBy = UtilPartyCreateInput.TxGlobalTypeName.class ),
+@Mapping(source = "meta", target = "txTypeCode", qualifiedBy = UtilPartyCreateInput.TxTypeCode.class ),
+@Mapping(source = "meta", target = "txPrimaryKey", qualifiedBy = UtilPartyCreateInput.TxPrimaryKey.class ),
+@Mapping(source = "meta", target = "txMetaSourceKey", qualifiedBy = UtilPartyCreateInput.TxMetaSourceKey.class ),
+@Mapping(source = "meta", target = "txMetaStartEventTime", qualifiedBy = UtilPartyCreateInput.TxMetaStartEventTime.class ),
+@Mapping(source = "meta", target = "txMetaLoadTime", qualifiedBy = UtilPartyCreateInput.TxMetaLoadTime.class ),
+@Mapping(source = "meta", target = "txMetaSource", qualifiedBy = UtilPartyCreateInput.TxMetaSource.class ),
+@Mapping(source = "meta", target = "txMetaCorrection", qualifiedBy = UtilPartyCreateInput.TxMetaCorrection.class ),
+@Mapping(source = "meta", target = "txMetaChange", qualifiedBy = UtilPartyCreateInput.TxMetaChange.class ),
+@Mapping(source = "meta", target = "txMetaAccessFilter", qualifiedBy = UtilPartyCreateInput.TxMetaAccessFilter.class ),
+@Mapping(target=" person" , ignore= true ),
+@Mapping(target=" partyName" , ignore= true ),
+@Mapping(target=" childOrganization" , ignore= true ),
+})
+PartyCreateInput toTarget(HashMapWrapper source);
+}

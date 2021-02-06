@@ -1,0 +1,2398 @@
+scalar DateTime
+
+type BatchPayload {
+  count: Int!
+}
+
+enum CoverageDistinctFieldEnum {
+  id
+  agreementBaseKey
+  agreementBaseKind
+  agreementComponentKind
+  benefitKind
+  coverageKind
+  creationDateTime
+  effectivePeriodStart
+  effectivePeriodEnd
+  identifier
+  informationModelObjectKind
+  name
+  typeName
+  version
+  txGlobalTypeName
+  txTypeCode
+  txPrimaryKey
+  txMetaSourceKey
+  txMetaStartEventTime
+  txMetaLoadTime
+  txMetaSource
+  txMetaCorrection
+  txMetaChange
+  txMetaAccessFilter
+  InsuranceAgreement_IncludedAgreementComponentId
+  InsuredObjectId
+  InsuranceAgreement_ReferencingAgreementBaseId
+  insuranceAgreementId
+}
+
+enum InsuranceAgreementDistinctFieldEnum {
+  id
+  agreementBaseKey
+  agreementBaseKind
+  agreementKind
+  creationDateTime
+  description
+  effectivePeriodStart
+  effectivePeriodEnd
+  financialServicesAgreementKind
+  identifier
+  informationModelObjectKind
+  insuranceAgreementKind
+  issueDateTime
+  name
+  originalInceptionDateTime
+  renewalIndicator
+  typeName
+  version
+  txGlobalTypeName
+  txPrimaryKey
+  txMetaSourceKey
+  txMetaStartEventTime
+  txMetaLoadTime
+  txMetaSource
+  txMetaCorrection
+  txMetaChange
+  txMetaAccessFilter
+  InsuranceAgreement_ExcessAgreementId
+  InsuranceAgreement_UnderlyingAgreementId
+  InsuranceAgreement_IncludedAgreementId
+}
+
+enum InsuredObjectDistinctFieldEnum {
+  id
+  basingPhysicalObjectRoleInAgreementSpecificationSpecificat
+  creationDateTime
+  description
+  includingAgreementBaseAgreementBaseKey
+  informationModelObjectKind
+  physicalObjectRoleInAgreementKind
+  physicalObjectRoleKind
+  roleKey
+  roleKind
+  typeName
+  txGlobalTypeName
+  txPrimaryKey
+  txMetaSourceKey
+  txMetaStartEventTime
+  txMetaLoadTime
+  txMetaSource
+  txMetaCorrection
+  txMetaChange
+  txMetaAccessFilter
+  InsuranceAgreementId
+}
+
+enum SortOrder {
+  asc
+  desc
+}
+
+input CoverageWhereInput {
+  AND: [CoverageWhereInput!]
+  OR: [CoverageWhereInput!]
+  NOT: [CoverageWhereInput!]
+  id: StringFilter
+  agreementBaseKey: StringNullableFilter
+  agreementBaseKind: StringNullableFilter
+  agreementComponentKind: StringNullableFilter
+  benefitKind: StringNullableFilter
+  coverageKind: StringNullableFilter
+  creationDateTime: StringNullableFilter
+  effectivePeriodStart: StringNullableFilter
+  effectivePeriodEnd: StringNullableFilter
+  identifier: StringNullableFilter
+  informationModelObjectKind: StringNullableFilter
+  name: StringNullableFilter
+  typeName: StringNullableFilter
+  version: StringNullableFilter
+  txGlobalTypeName: StringNullableFilter
+  txTypeCode: StringNullableFilter
+  txPrimaryKey: StringNullableFilter
+  txMetaSourceKey: StringNullableFilter
+  txMetaStartEventTime: StringNullableFilter
+  txMetaLoadTime: StringNullableFilter
+  txMetaSource: StringNullableFilter
+  txMetaCorrection: StringNullableFilter
+  txMetaChange: StringNullableFilter
+  txMetaAccessFilter: IntNullableFilter
+  InsuranceAgreement_IncludedAgreementComponent: InsuranceAgreementWhereInput
+  InsuranceAgreement_IncludedAgreementComponentId: StringNullableFilter
+  InsuredObject: InsuredObjectWhereInput
+  InsuredObjectId: StringNullableFilter
+  InsuranceAgreement_ReferencingAgreementBase: InsuranceAgreementWhereInput
+  InsuranceAgreement_ReferencingAgreementBaseId: StringNullableFilter
+  InsuranceAgreement: InsuranceAgreementWhereInput
+  insuranceAgreementId: StringNullableFilter
+}
+
+input CoverageOrderByInput {
+  id: SortOrder
+  agreementBaseKey: SortOrder
+  agreementBaseKind: SortOrder
+  agreementComponentKind: SortOrder
+  benefitKind: SortOrder
+  coverageKind: SortOrder
+  creationDateTime: SortOrder
+  effectivePeriodStart: SortOrder
+  effectivePeriodEnd: SortOrder
+  identifier: SortOrder
+  informationModelObjectKind: SortOrder
+  name: SortOrder
+  typeName: SortOrder
+  version: SortOrder
+  txGlobalTypeName: SortOrder
+  txTypeCode: SortOrder
+  txPrimaryKey: SortOrder
+  txMetaSourceKey: SortOrder
+  txMetaStartEventTime: SortOrder
+  txMetaLoadTime: SortOrder
+  txMetaSource: SortOrder
+  txMetaCorrection: SortOrder
+  txMetaChange: SortOrder
+  txMetaAccessFilter: SortOrder
+  InsuranceAgreement_IncludedAgreementComponentId: SortOrder
+  InsuredObjectId: SortOrder
+  InsuranceAgreement_ReferencingAgreementBaseId: SortOrder
+  insuranceAgreementId: SortOrder
+}
+
+input CoverageWhereUniqueInput {
+  id: String
+  txPrimaryKey: String
+}
+
+input InsuranceAgreementWhereInput {
+  AND: [InsuranceAgreementWhereInput!]
+  OR: [InsuranceAgreementWhereInput!]
+  NOT: [InsuranceAgreementWhereInput!]
+  id: StringFilter
+  agreementBaseKey: StringNullableFilter
+  agreementBaseKind: StringNullableFilter
+  agreementKind: StringNullableFilter
+  creationDateTime: StringNullableFilter
+  description: StringNullableFilter
+  effectivePeriodStart: StringNullableFilter
+  effectivePeriodEnd: StringNullableFilter
+  financialServicesAgreementKind: StringNullableFilter
+  identifier: StringNullableFilter
+  informationModelObjectKind: StringNullableFilter
+  insuranceAgreementKind: StringNullableFilter
+  issueDateTime: StringNullableFilter
+  name: StringNullableFilter
+  originalInceptionDateTime: StringNullableFilter
+  renewalIndicator: BoolNullableFilter
+  typeName: StringNullableFilter
+  version: StringNullableFilter
+  txGlobalTypeName: StringNullableFilter
+  txPrimaryKey: StringNullableFilter
+  txMetaSourceKey: StringNullableFilter
+  txMetaStartEventTime: StringNullableFilter
+  txMetaLoadTime: StringNullableFilter
+  txMetaSource: StringNullableFilter
+  txMetaCorrection: StringNullableFilter
+  txMetaChange: StringNullableFilter
+  txMetaAccessFilter: IntNullableFilter
+  Coverage_IncludedAgreementComponent: CoverageListRelationFilter
+  InsuredObject: InsuredObjectListRelationFilter
+  Coverage_ReferencingAgreementBase: CoverageListRelationFilter
+  Coverage_ReferencedAgreementBase: CoverageListRelationFilter
+  InsuranceAgreement_ExcessAgreement: InsuranceAgreementListRelationFilter
+  InsuranceAgreement_ExcessAgreementId: StringNullableFilter
+  InsuranceAgreement_UnderlyingAgreement: InsuranceAgreementListRelationFilter
+  InsuranceAgreement_UnderlyingAgreementId: StringNullableFilter
+  InsuranceAgreement_IncludedAgreement: InsuranceAgreementListRelationFilter
+  InsuranceAgreement_IncludedAgreement_back: InsuranceAgreementWhereInput
+  InsuranceAgreement_IncludedAgreementId: StringNullableFilter
+}
+
+input InsuranceAgreementOrderByInput {
+  id: SortOrder
+  agreementBaseKey: SortOrder
+  agreementBaseKind: SortOrder
+  agreementKind: SortOrder
+  creationDateTime: SortOrder
+  description: SortOrder
+  effectivePeriodStart: SortOrder
+  effectivePeriodEnd: SortOrder
+  financialServicesAgreementKind: SortOrder
+  identifier: SortOrder
+  informationModelObjectKind: SortOrder
+  insuranceAgreementKind: SortOrder
+  issueDateTime: SortOrder
+  name: SortOrder
+  originalInceptionDateTime: SortOrder
+  renewalIndicator: SortOrder
+  typeName: SortOrder
+  version: SortOrder
+  txGlobalTypeName: SortOrder
+  txPrimaryKey: SortOrder
+  txMetaSourceKey: SortOrder
+  txMetaStartEventTime: SortOrder
+  txMetaLoadTime: SortOrder
+  txMetaSource: SortOrder
+  txMetaCorrection: SortOrder
+  txMetaChange: SortOrder
+  txMetaAccessFilter: SortOrder
+  InsuranceAgreement_ExcessAgreementId: SortOrder
+  InsuranceAgreement_UnderlyingAgreementId: SortOrder
+  InsuranceAgreement_IncludedAgreementId: SortOrder
+}
+
+input InsuranceAgreementWhereUniqueInput {
+  id: String
+  txPrimaryKey: String
+}
+
+input InsuredObjectWhereInput {
+  AND: [InsuredObjectWhereInput!]
+  OR: [InsuredObjectWhereInput!]
+  NOT: [InsuredObjectWhereInput!]
+  id: StringFilter
+  basingPhysicalObjectRoleInAgreementSpecificationSpecificat: StringNullableFilter
+  creationDateTime: StringNullableFilter
+  description: StringNullableFilter
+  includingAgreementBaseAgreementBaseKey: StringNullableFilter
+  informationModelObjectKind: StringNullableFilter
+  physicalObjectRoleInAgreementKind: StringNullableFilter
+  physicalObjectRoleKind: StringNullableFilter
+  roleKey: StringNullableFilter
+  roleKind: StringNullableFilter
+  typeName: StringNullableFilter
+  txGlobalTypeName: StringNullableFilter
+  txPrimaryKey: StringNullableFilter
+  txMetaSourceKey: StringNullableFilter
+  txMetaStartEventTime: StringNullableFilter
+  txMetaLoadTime: StringNullableFilter
+  txMetaSource: StringNullableFilter
+  txMetaCorrection: StringNullableFilter
+  txMetaChange: StringNullableFilter
+  txMetaAccessFilter: IntNullableFilter
+  Coverage: CoverageListRelationFilter
+  InsuranceAgreement: InsuranceAgreementWhereInput
+  InsuranceAgreementId: StringNullableFilter
+}
+
+input InsuredObjectOrderByInput {
+  id: SortOrder
+  basingPhysicalObjectRoleInAgreementSpecificationSpecificat: SortOrder
+  creationDateTime: SortOrder
+  description: SortOrder
+  includingAgreementBaseAgreementBaseKey: SortOrder
+  informationModelObjectKind: SortOrder
+  physicalObjectRoleInAgreementKind: SortOrder
+  physicalObjectRoleKind: SortOrder
+  roleKey: SortOrder
+  roleKind: SortOrder
+  typeName: SortOrder
+  txGlobalTypeName: SortOrder
+  txPrimaryKey: SortOrder
+  txMetaSourceKey: SortOrder
+  txMetaStartEventTime: SortOrder
+  txMetaLoadTime: SortOrder
+  txMetaSource: SortOrder
+  txMetaCorrection: SortOrder
+  txMetaChange: SortOrder
+  txMetaAccessFilter: SortOrder
+  InsuranceAgreementId: SortOrder
+}
+
+input InsuredObjectWhereUniqueInput {
+  id: String
+  txPrimaryKey: String
+}
+
+input CoverageCreateInput {
+  id: String
+  agreementBaseKey: String
+  agreementBaseKind: String
+  agreementComponentKind: String
+  benefitKind: String
+  coverageKind: String
+  creationDateTime: String
+  effectivePeriodStart: String
+  effectivePeriodEnd: String
+  identifier: String
+  informationModelObjectKind: String
+  name: String
+  typeName: String
+  version: String
+  txGlobalTypeName: String
+  txTypeCode: String
+  txPrimaryKey: String
+  txMetaSourceKey: String
+  txMetaStartEventTime: String
+  txMetaLoadTime: String
+  txMetaSource: String
+  txMetaCorrection: String
+  txMetaChange: String
+  txMetaAccessFilter: Int
+  InsuranceAgreement_IncludedAgreementComponent: InsuranceAgreementCreateOneWithoutCoverage_IncludedAgreementComponentInput
+  InsuredObject: InsuredObjectCreateOneWithoutCoverageInput
+  InsuranceAgreement_ReferencingAgreementBase: InsuranceAgreementCreateOneWithoutCoverage_ReferencingAgreementBaseInput
+  InsuranceAgreement: InsuranceAgreementCreateOneWithoutCoverage_ReferencedAgreementBaseInput
+}
+
+input CoverageUpdateInput {
+  id: StringFieldUpdateOperationsInput
+  agreementBaseKey: NullableStringFieldUpdateOperationsInput
+  agreementBaseKind: NullableStringFieldUpdateOperationsInput
+  agreementComponentKind: NullableStringFieldUpdateOperationsInput
+  benefitKind: NullableStringFieldUpdateOperationsInput
+  coverageKind: NullableStringFieldUpdateOperationsInput
+  creationDateTime: NullableStringFieldUpdateOperationsInput
+  effectivePeriodStart: NullableStringFieldUpdateOperationsInput
+  effectivePeriodEnd: NullableStringFieldUpdateOperationsInput
+  identifier: NullableStringFieldUpdateOperationsInput
+  informationModelObjectKind: NullableStringFieldUpdateOperationsInput
+  name: NullableStringFieldUpdateOperationsInput
+  typeName: NullableStringFieldUpdateOperationsInput
+  version: NullableStringFieldUpdateOperationsInput
+  txGlobalTypeName: NullableStringFieldUpdateOperationsInput
+  txTypeCode: NullableStringFieldUpdateOperationsInput
+  txPrimaryKey: NullableStringFieldUpdateOperationsInput
+  txMetaSourceKey: NullableStringFieldUpdateOperationsInput
+  txMetaStartEventTime: NullableStringFieldUpdateOperationsInput
+  txMetaLoadTime: NullableStringFieldUpdateOperationsInput
+  txMetaSource: NullableStringFieldUpdateOperationsInput
+  txMetaCorrection: NullableStringFieldUpdateOperationsInput
+  txMetaChange: NullableStringFieldUpdateOperationsInput
+  txMetaAccessFilter: NullableIntFieldUpdateOperationsInput
+  InsuranceAgreement_IncludedAgreementComponent: InsuranceAgreementUpdateOneWithoutCoverage_IncludedAgreementComponentInput
+  InsuredObject: InsuredObjectUpdateOneWithoutCoverageInput
+  InsuranceAgreement_ReferencingAgreementBase: InsuranceAgreementUpdateOneWithoutCoverage_ReferencingAgreementBaseInput
+  InsuranceAgreement: InsuranceAgreementUpdateOneWithoutCoverage_ReferencedAgreementBaseInput
+}
+
+input CoverageUpdateManyMutationInput {
+  id: StringFieldUpdateOperationsInput
+  agreementBaseKey: NullableStringFieldUpdateOperationsInput
+  agreementBaseKind: NullableStringFieldUpdateOperationsInput
+  agreementComponentKind: NullableStringFieldUpdateOperationsInput
+  benefitKind: NullableStringFieldUpdateOperationsInput
+  coverageKind: NullableStringFieldUpdateOperationsInput
+  creationDateTime: NullableStringFieldUpdateOperationsInput
+  effectivePeriodStart: NullableStringFieldUpdateOperationsInput
+  effectivePeriodEnd: NullableStringFieldUpdateOperationsInput
+  identifier: NullableStringFieldUpdateOperationsInput
+  informationModelObjectKind: NullableStringFieldUpdateOperationsInput
+  name: NullableStringFieldUpdateOperationsInput
+  typeName: NullableStringFieldUpdateOperationsInput
+  version: NullableStringFieldUpdateOperationsInput
+  txGlobalTypeName: NullableStringFieldUpdateOperationsInput
+  txTypeCode: NullableStringFieldUpdateOperationsInput
+  txPrimaryKey: NullableStringFieldUpdateOperationsInput
+  txMetaSourceKey: NullableStringFieldUpdateOperationsInput
+  txMetaStartEventTime: NullableStringFieldUpdateOperationsInput
+  txMetaLoadTime: NullableStringFieldUpdateOperationsInput
+  txMetaSource: NullableStringFieldUpdateOperationsInput
+  txMetaCorrection: NullableStringFieldUpdateOperationsInput
+  txMetaChange: NullableStringFieldUpdateOperationsInput
+  txMetaAccessFilter: NullableIntFieldUpdateOperationsInput
+}
+
+input InsuranceAgreementCreateInput {
+  id: String
+  agreementBaseKey: String
+  agreementBaseKind: String
+  agreementKind: String
+  creationDateTime: String
+  description: String
+  effectivePeriodStart: String
+  effectivePeriodEnd: String
+  financialServicesAgreementKind: String
+  identifier: String
+  informationModelObjectKind: String
+  insuranceAgreementKind: String
+  issueDateTime: String
+  name: String
+  originalInceptionDateTime: String
+  renewalIndicator: Boolean
+  typeName: String
+  version: String
+  txGlobalTypeName: String
+  txPrimaryKey: String
+  txMetaSourceKey: String
+  txMetaStartEventTime: String
+  txMetaLoadTime: String
+  txMetaSource: String
+  txMetaCorrection: String
+  txMetaChange: String
+  txMetaAccessFilter: Int
+  InsuranceAgreement_ExcessAgreementId: String
+  InsuranceAgreement_UnderlyingAgreementId: String
+  Coverage_IncludedAgreementComponent: CoverageCreateManyWithoutInsuranceAgreement_IncludedAgreementComponentInput
+  InsuredObject: InsuredObjectCreateManyWithoutInsuranceAgreementInput
+  Coverage_ReferencingAgreementBase: CoverageCreateManyWithoutInsuranceAgreement_ReferencingAgreementBaseInput
+  Coverage_ReferencedAgreementBase: CoverageCreateManyWithoutInsuranceAgreementInput
+  InsuranceAgreement_ExcessAgreement: InsuranceAgreementCreateManyWithoutInsuranceAgreement_UnderlyingAgreementInput
+  InsuranceAgreement_UnderlyingAgreement: InsuranceAgreementCreateManyWithoutInsuranceAgreement_ExcessAgreementInput
+  InsuranceAgreement_IncludedAgreement: InsuranceAgreementCreateManyWithoutInsuranceAgreement_IncludedAgreement_backInput
+  InsuranceAgreement_IncludedAgreement_back: InsuranceAgreementCreateOneWithoutInsuranceAgreement_IncludedAgreementInput
+}
+
+input InsuranceAgreementUpdateInput {
+  id: StringFieldUpdateOperationsInput
+  agreementBaseKey: NullableStringFieldUpdateOperationsInput
+  agreementBaseKind: NullableStringFieldUpdateOperationsInput
+  agreementKind: NullableStringFieldUpdateOperationsInput
+  creationDateTime: NullableStringFieldUpdateOperationsInput
+  description: NullableStringFieldUpdateOperationsInput
+  effectivePeriodStart: NullableStringFieldUpdateOperationsInput
+  effectivePeriodEnd: NullableStringFieldUpdateOperationsInput
+  financialServicesAgreementKind: NullableStringFieldUpdateOperationsInput
+  identifier: NullableStringFieldUpdateOperationsInput
+  informationModelObjectKind: NullableStringFieldUpdateOperationsInput
+  insuranceAgreementKind: NullableStringFieldUpdateOperationsInput
+  issueDateTime: NullableStringFieldUpdateOperationsInput
+  name: NullableStringFieldUpdateOperationsInput
+  originalInceptionDateTime: NullableStringFieldUpdateOperationsInput
+  renewalIndicator: NullableBoolFieldUpdateOperationsInput
+  typeName: NullableStringFieldUpdateOperationsInput
+  version: NullableStringFieldUpdateOperationsInput
+  txGlobalTypeName: NullableStringFieldUpdateOperationsInput
+  txPrimaryKey: NullableStringFieldUpdateOperationsInput
+  txMetaSourceKey: NullableStringFieldUpdateOperationsInput
+  txMetaStartEventTime: NullableStringFieldUpdateOperationsInput
+  txMetaLoadTime: NullableStringFieldUpdateOperationsInput
+  txMetaSource: NullableStringFieldUpdateOperationsInput
+  txMetaCorrection: NullableStringFieldUpdateOperationsInput
+  txMetaChange: NullableStringFieldUpdateOperationsInput
+  txMetaAccessFilter: NullableIntFieldUpdateOperationsInput
+  InsuranceAgreement_ExcessAgreementId: NullableStringFieldUpdateOperationsInput
+  InsuranceAgreement_UnderlyingAgreementId: NullableStringFieldUpdateOperationsInput
+  Coverage_IncludedAgreementComponent: CoverageUpdateManyWithoutInsuranceAgreement_IncludedAgreementComponentInput
+  InsuredObject: InsuredObjectUpdateManyWithoutInsuranceAgreementInput
+  Coverage_ReferencingAgreementBase: CoverageUpdateManyWithoutInsuranceAgreement_ReferencingAgreementBaseInput
+  Coverage_ReferencedAgreementBase: CoverageUpdateManyWithoutInsuranceAgreementInput
+  InsuranceAgreement_ExcessAgreement: InsuranceAgreementUpdateManyWithoutInsuranceAgreement_UnderlyingAgreementInput
+  InsuranceAgreement_UnderlyingAgreement: InsuranceAgreementUpdateManyWithoutInsuranceAgreement_ExcessAgreementInput
+  InsuranceAgreement_IncludedAgreement: InsuranceAgreementUpdateManyWithoutInsuranceAgreement_IncludedAgreement_backInput
+  InsuranceAgreement_IncludedAgreement_back: InsuranceAgreementUpdateOneWithoutInsuranceAgreement_IncludedAgreementInput
+}
+
+input InsuranceAgreementUpdateManyMutationInput {
+  id: StringFieldUpdateOperationsInput
+  agreementBaseKey: NullableStringFieldUpdateOperationsInput
+  agreementBaseKind: NullableStringFieldUpdateOperationsInput
+  agreementKind: NullableStringFieldUpdateOperationsInput
+  creationDateTime: NullableStringFieldUpdateOperationsInput
+  description: NullableStringFieldUpdateOperationsInput
+  effectivePeriodStart: NullableStringFieldUpdateOperationsInput
+  effectivePeriodEnd: NullableStringFieldUpdateOperationsInput
+  financialServicesAgreementKind: NullableStringFieldUpdateOperationsInput
+  identifier: NullableStringFieldUpdateOperationsInput
+  informationModelObjectKind: NullableStringFieldUpdateOperationsInput
+  insuranceAgreementKind: NullableStringFieldUpdateOperationsInput
+  issueDateTime: NullableStringFieldUpdateOperationsInput
+  name: NullableStringFieldUpdateOperationsInput
+  originalInceptionDateTime: NullableStringFieldUpdateOperationsInput
+  renewalIndicator: NullableBoolFieldUpdateOperationsInput
+  typeName: NullableStringFieldUpdateOperationsInput
+  version: NullableStringFieldUpdateOperationsInput
+  txGlobalTypeName: NullableStringFieldUpdateOperationsInput
+  txPrimaryKey: NullableStringFieldUpdateOperationsInput
+  txMetaSourceKey: NullableStringFieldUpdateOperationsInput
+  txMetaStartEventTime: NullableStringFieldUpdateOperationsInput
+  txMetaLoadTime: NullableStringFieldUpdateOperationsInput
+  txMetaSource: NullableStringFieldUpdateOperationsInput
+  txMetaCorrection: NullableStringFieldUpdateOperationsInput
+  txMetaChange: NullableStringFieldUpdateOperationsInput
+  txMetaAccessFilter: NullableIntFieldUpdateOperationsInput
+  InsuranceAgreement_ExcessAgreementId: NullableStringFieldUpdateOperationsInput
+  InsuranceAgreement_UnderlyingAgreementId: NullableStringFieldUpdateOperationsInput
+}
+
+input InsuredObjectCreateInput {
+  id: String
+  basingPhysicalObjectRoleInAgreementSpecificationSpecificat: String
+  creationDateTime: String
+  description: String
+  includingAgreementBaseAgreementBaseKey: String
+  informationModelObjectKind: String
+  physicalObjectRoleInAgreementKind: String
+  physicalObjectRoleKind: String
+  roleKey: String
+  roleKind: String
+  typeName: String
+  txGlobalTypeName: String
+  txPrimaryKey: String
+  txMetaSourceKey: String
+  txMetaStartEventTime: String
+  txMetaLoadTime: String
+  txMetaSource: String
+  txMetaCorrection: String
+  txMetaChange: String
+  txMetaAccessFilter: Int
+  Coverage: CoverageCreateManyWithoutInsuredObjectInput
+  InsuranceAgreement: InsuranceAgreementCreateOneWithoutInsuredObjectInput
+}
+
+input InsuredObjectUpdateInput {
+  id: StringFieldUpdateOperationsInput
+  basingPhysicalObjectRoleInAgreementSpecificationSpecificat: NullableStringFieldUpdateOperationsInput
+  creationDateTime: NullableStringFieldUpdateOperationsInput
+  description: NullableStringFieldUpdateOperationsInput
+  includingAgreementBaseAgreementBaseKey: NullableStringFieldUpdateOperationsInput
+  informationModelObjectKind: NullableStringFieldUpdateOperationsInput
+  physicalObjectRoleInAgreementKind: NullableStringFieldUpdateOperationsInput
+  physicalObjectRoleKind: NullableStringFieldUpdateOperationsInput
+  roleKey: NullableStringFieldUpdateOperationsInput
+  roleKind: NullableStringFieldUpdateOperationsInput
+  typeName: NullableStringFieldUpdateOperationsInput
+  txGlobalTypeName: NullableStringFieldUpdateOperationsInput
+  txPrimaryKey: NullableStringFieldUpdateOperationsInput
+  txMetaSourceKey: NullableStringFieldUpdateOperationsInput
+  txMetaStartEventTime: NullableStringFieldUpdateOperationsInput
+  txMetaLoadTime: NullableStringFieldUpdateOperationsInput
+  txMetaSource: NullableStringFieldUpdateOperationsInput
+  txMetaCorrection: NullableStringFieldUpdateOperationsInput
+  txMetaChange: NullableStringFieldUpdateOperationsInput
+  txMetaAccessFilter: NullableIntFieldUpdateOperationsInput
+  Coverage: CoverageUpdateManyWithoutInsuredObjectInput
+  InsuranceAgreement: InsuranceAgreementUpdateOneWithoutInsuredObjectInput
+}
+
+input InsuredObjectUpdateManyMutationInput {
+  id: StringFieldUpdateOperationsInput
+  basingPhysicalObjectRoleInAgreementSpecificationSpecificat: NullableStringFieldUpdateOperationsInput
+  creationDateTime: NullableStringFieldUpdateOperationsInput
+  description: NullableStringFieldUpdateOperationsInput
+  includingAgreementBaseAgreementBaseKey: NullableStringFieldUpdateOperationsInput
+  informationModelObjectKind: NullableStringFieldUpdateOperationsInput
+  physicalObjectRoleInAgreementKind: NullableStringFieldUpdateOperationsInput
+  physicalObjectRoleKind: NullableStringFieldUpdateOperationsInput
+  roleKey: NullableStringFieldUpdateOperationsInput
+  roleKind: NullableStringFieldUpdateOperationsInput
+  typeName: NullableStringFieldUpdateOperationsInput
+  txGlobalTypeName: NullableStringFieldUpdateOperationsInput
+  txPrimaryKey: NullableStringFieldUpdateOperationsInput
+  txMetaSourceKey: NullableStringFieldUpdateOperationsInput
+  txMetaStartEventTime: NullableStringFieldUpdateOperationsInput
+  txMetaLoadTime: NullableStringFieldUpdateOperationsInput
+  txMetaSource: NullableStringFieldUpdateOperationsInput
+  txMetaCorrection: NullableStringFieldUpdateOperationsInput
+  txMetaChange: NullableStringFieldUpdateOperationsInput
+  txMetaAccessFilter: NullableIntFieldUpdateOperationsInput
+}
+
+input StringFilter {
+  equals: String
+  in: [String!]
+  notIn: [String!]
+  lt: String
+  lte: String
+  gt: String
+  gte: String
+  contains: String
+  startsWith: String
+  endsWith: String
+  not: String
+}
+
+input StringNullableFilter {
+  equals: String
+  in: [String!]
+  notIn: [String!]
+  lt: String
+  lte: String
+  gt: String
+  gte: String
+  contains: String
+  startsWith: String
+  endsWith: String
+  not: String
+}
+
+input IntNullableFilter {
+  equals: Int
+  in: [Int!]
+  notIn: [Int!]
+  lt: Int
+  lte: Int
+  gt: Int
+  gte: Int
+  not: Int
+}
+
+input InsuranceAgreementRelationFilter {
+  is: InsuranceAgreementWhereInput
+  isNot: InsuranceAgreementWhereInput
+}
+
+input InsuredObjectRelationFilter {
+  is: InsuredObjectWhereInput
+  isNot: InsuredObjectWhereInput
+}
+
+input BoolNullableFilter {
+  equals: Boolean
+  not: Boolean
+}
+
+input CoverageListRelationFilter {
+  every: CoverageWhereInput
+  some: CoverageWhereInput
+  none: CoverageWhereInput
+}
+
+input InsuredObjectListRelationFilter {
+  every: InsuredObjectWhereInput
+  some: InsuredObjectWhereInput
+  none: InsuredObjectWhereInput
+}
+
+input InsuranceAgreementListRelationFilter {
+  every: InsuranceAgreementWhereInput
+  some: InsuranceAgreementWhereInput
+  none: InsuranceAgreementWhereInput
+}
+
+input InsuranceAgreementCreateOneWithoutCoverage_IncludedAgreementComponentInput {
+  create: InsuranceAgreementCreateWithoutCoverage_IncludedAgreementComponentInput
+  connect: InsuranceAgreementWhereUniqueInput
+}
+
+input InsuredObjectCreateOneWithoutCoverageInput {
+  create: InsuredObjectCreateWithoutCoverageInput
+  connect: InsuredObjectWhereUniqueInput
+}
+
+input InsuranceAgreementCreateOneWithoutCoverage_ReferencingAgreementBaseInput {
+  create: InsuranceAgreementCreateWithoutCoverage_ReferencingAgreementBaseInput
+  connect: InsuranceAgreementWhereUniqueInput
+}
+
+input InsuranceAgreementCreateOneWithoutCoverage_ReferencedAgreementBaseInput {
+  create: InsuranceAgreementCreateWithoutCoverage_ReferencedAgreementBaseInput
+  connect: InsuranceAgreementWhereUniqueInput
+}
+
+input StringFieldUpdateOperationsInput {
+  set: String
+}
+
+input NullableStringFieldUpdateOperationsInput {
+  set: String
+}
+
+input NullableIntFieldUpdateOperationsInput {
+  set: Int
+}
+
+input InsuranceAgreementUpdateOneWithoutCoverage_IncludedAgreementComponentInput {
+  create: InsuranceAgreementCreateWithoutCoverage_IncludedAgreementComponentInput
+  connect: InsuranceAgreementWhereUniqueInput
+  disconnect: Boolean
+  delete: Boolean
+  update: InsuranceAgreementUpdateWithoutCoverage_IncludedAgreementComponentDataInput
+  upsert: InsuranceAgreementUpsertWithoutCoverage_IncludedAgreementComponentInput
+}
+
+input InsuredObjectUpdateOneWithoutCoverageInput {
+  create: InsuredObjectCreateWithoutCoverageInput
+  connect: InsuredObjectWhereUniqueInput
+  disconnect: Boolean
+  delete: Boolean
+  update: InsuredObjectUpdateWithoutCoverageDataInput
+  upsert: InsuredObjectUpsertWithoutCoverageInput
+}
+
+input InsuranceAgreementUpdateOneWithoutCoverage_ReferencingAgreementBaseInput {
+  create: InsuranceAgreementCreateWithoutCoverage_ReferencingAgreementBaseInput
+  connect: InsuranceAgreementWhereUniqueInput
+  disconnect: Boolean
+  delete: Boolean
+  update: InsuranceAgreementUpdateWithoutCoverage_ReferencingAgreementBaseDataInput
+  upsert: InsuranceAgreementUpsertWithoutCoverage_ReferencingAgreementBaseInput
+}
+
+input InsuranceAgreementUpdateOneWithoutCoverage_ReferencedAgreementBaseInput {
+  create: InsuranceAgreementCreateWithoutCoverage_ReferencedAgreementBaseInput
+  connect: InsuranceAgreementWhereUniqueInput
+  disconnect: Boolean
+  delete: Boolean
+  update: InsuranceAgreementUpdateWithoutCoverage_ReferencedAgreementBaseDataInput
+  upsert: InsuranceAgreementUpsertWithoutCoverage_ReferencedAgreementBaseInput
+}
+
+input CoverageCreateManyWithoutInsuranceAgreement_IncludedAgreementComponentInput {
+  create: [CoverageCreateWithoutInsuranceAgreement_IncludedAgreementComponentInput!]
+  connect: [CoverageWhereUniqueInput!]
+}
+
+input InsuredObjectCreateManyWithoutInsuranceAgreementInput {
+  create: [InsuredObjectCreateWithoutInsuranceAgreementInput!]
+  connect: [InsuredObjectWhereUniqueInput!]
+}
+
+input CoverageCreateManyWithoutInsuranceAgreement_ReferencingAgreementBaseInput {
+  create: [CoverageCreateWithoutInsuranceAgreement_ReferencingAgreementBaseInput!]
+  connect: [CoverageWhereUniqueInput!]
+}
+
+input CoverageCreateManyWithoutInsuranceAgreementInput {
+  create: [CoverageCreateWithoutInsuranceAgreementInput!]
+  connect: [CoverageWhereUniqueInput!]
+}
+
+input InsuranceAgreementCreateManyWithoutInsuranceAgreement_UnderlyingAgreementInput {
+  create: [InsuranceAgreementCreateWithoutInsuranceAgreement_UnderlyingAgreementInput!]
+  connect: [InsuranceAgreementWhereUniqueInput!]
+}
+
+input InsuranceAgreementCreateManyWithoutInsuranceAgreement_ExcessAgreementInput {
+  create: [InsuranceAgreementCreateWithoutInsuranceAgreement_ExcessAgreementInput!]
+  connect: [InsuranceAgreementWhereUniqueInput!]
+}
+
+input InsuranceAgreementCreateManyWithoutInsuranceAgreement_IncludedAgreement_backInput {
+  create: [InsuranceAgreementCreateWithoutInsuranceAgreement_IncludedAgreement_backInput!]
+  connect: [InsuranceAgreementWhereUniqueInput!]
+}
+
+input InsuranceAgreementCreateOneWithoutInsuranceAgreement_IncludedAgreementInput {
+  create: InsuranceAgreementCreateWithoutInsuranceAgreement_IncludedAgreementInput
+  connect: InsuranceAgreementWhereUniqueInput
+}
+
+input NullableBoolFieldUpdateOperationsInput {
+  set: Boolean
+}
+
+input CoverageUpdateManyWithoutInsuranceAgreement_IncludedAgreementComponentInput {
+  create: [CoverageCreateWithoutInsuranceAgreement_IncludedAgreementComponentInput!]
+  connect: [CoverageWhereUniqueInput!]
+  set: [CoverageWhereUniqueInput!]
+  disconnect: [CoverageWhereUniqueInput!]
+  delete: [CoverageWhereUniqueInput!]
+  update: [CoverageUpdateWithWhereUniqueWithoutInsuranceAgreement_IncludedAgreementComponentInput!]
+  updateMany: [CoverageUpdateManyWithWhereNestedInput!]
+  deleteMany: [CoverageScalarWhereInput!]
+  upsert: [CoverageUpsertWithWhereUniqueWithoutInsuranceAgreement_IncludedAgreementComponentInput!]
+}
+
+input InsuredObjectUpdateManyWithoutInsuranceAgreementInput {
+  create: [InsuredObjectCreateWithoutInsuranceAgreementInput!]
+  connect: [InsuredObjectWhereUniqueInput!]
+  set: [InsuredObjectWhereUniqueInput!]
+  disconnect: [InsuredObjectWhereUniqueInput!]
+  delete: [InsuredObjectWhereUniqueInput!]
+  update: [InsuredObjectUpdateWithWhereUniqueWithoutInsuranceAgreementInput!]
+  updateMany: [InsuredObjectUpdateManyWithWhereNestedInput!]
+  deleteMany: [InsuredObjectScalarWhereInput!]
+  upsert: [InsuredObjectUpsertWithWhereUniqueWithoutInsuranceAgreementInput!]
+}
+
+input CoverageUpdateManyWithoutInsuranceAgreement_ReferencingAgreementBaseInput {
+  create: [CoverageCreateWithoutInsuranceAgreement_ReferencingAgreementBaseInput!]
+  connect: [CoverageWhereUniqueInput!]
+  set: [CoverageWhereUniqueInput!]
+  disconnect: [CoverageWhereUniqueInput!]
+  delete: [CoverageWhereUniqueInput!]
+  update: [CoverageUpdateWithWhereUniqueWithoutInsuranceAgreement_ReferencingAgreementBaseInput!]
+  updateMany: [CoverageUpdateManyWithWhereNestedInput!]
+  deleteMany: [CoverageScalarWhereInput!]
+  upsert: [CoverageUpsertWithWhereUniqueWithoutInsuranceAgreement_ReferencingAgreementBaseInput!]
+}
+
+input CoverageUpdateManyWithoutInsuranceAgreementInput {
+  create: [CoverageCreateWithoutInsuranceAgreementInput!]
+  connect: [CoverageWhereUniqueInput!]
+  set: [CoverageWhereUniqueInput!]
+  disconnect: [CoverageWhereUniqueInput!]
+  delete: [CoverageWhereUniqueInput!]
+  update: [CoverageUpdateWithWhereUniqueWithoutInsuranceAgreementInput!]
+  updateMany: [CoverageUpdateManyWithWhereNestedInput!]
+  deleteMany: [CoverageScalarWhereInput!]
+  upsert: [CoverageUpsertWithWhereUniqueWithoutInsuranceAgreementInput!]
+}
+
+input InsuranceAgreementUpdateManyWithoutInsuranceAgreement_UnderlyingAgreementInput {
+  create: [InsuranceAgreementCreateWithoutInsuranceAgreement_UnderlyingAgreementInput!]
+  connect: [InsuranceAgreementWhereUniqueInput!]
+  set: [InsuranceAgreementWhereUniqueInput!]
+  disconnect: [InsuranceAgreementWhereUniqueInput!]
+  delete: [InsuranceAgreementWhereUniqueInput!]
+  update: [InsuranceAgreementUpdateWithWhereUniqueWithoutInsuranceAgreement_UnderlyingAgreementInput!]
+  updateMany: [InsuranceAgreementUpdateManyWithWhereNestedInput!]
+  deleteMany: [InsuranceAgreementScalarWhereInput!]
+  upsert: [InsuranceAgreementUpsertWithWhereUniqueWithoutInsuranceAgreement_UnderlyingAgreementInput!]
+}
+
+input InsuranceAgreementUpdateManyWithoutInsuranceAgreement_ExcessAgreementInput {
+  create: [InsuranceAgreementCreateWithoutInsuranceAgreement_ExcessAgreementInput!]
+  connect: [InsuranceAgreementWhereUniqueInput!]
+  set: [InsuranceAgreementWhereUniqueInput!]
+  disconnect: [InsuranceAgreementWhereUniqueInput!]
+  delete: [InsuranceAgreementWhereUniqueInput!]
+  update: [InsuranceAgreementUpdateWithWhereUniqueWithoutInsuranceAgreement_ExcessAgreementInput!]
+  updateMany: [InsuranceAgreementUpdateManyWithWhereNestedInput!]
+  deleteMany: [InsuranceAgreementScalarWhereInput!]
+  upsert: [InsuranceAgreementUpsertWithWhereUniqueWithoutInsuranceAgreement_ExcessAgreementInput!]
+}
+
+input InsuranceAgreementUpdateManyWithoutInsuranceAgreement_IncludedAgreement_backInput {
+  create: [InsuranceAgreementCreateWithoutInsuranceAgreement_IncludedAgreement_backInput!]
+  connect: [InsuranceAgreementWhereUniqueInput!]
+  set: [InsuranceAgreementWhereUniqueInput!]
+  disconnect: [InsuranceAgreementWhereUniqueInput!]
+  delete: [InsuranceAgreementWhereUniqueInput!]
+  update: [InsuranceAgreementUpdateWithWhereUniqueWithoutInsuranceAgreement_IncludedAgreement_backInput!]
+  updateMany: [InsuranceAgreementUpdateManyWithWhereNestedInput!]
+  deleteMany: [InsuranceAgreementScalarWhereInput!]
+  upsert: [InsuranceAgreementUpsertWithWhereUniqueWithoutInsuranceAgreement_IncludedAgreement_backInput!]
+}
+
+input InsuranceAgreementUpdateOneWithoutInsuranceAgreement_IncludedAgreementInput {
+  create: InsuranceAgreementCreateWithoutInsuranceAgreement_IncludedAgreementInput
+  connect: InsuranceAgreementWhereUniqueInput
+  disconnect: Boolean
+  delete: Boolean
+  update: InsuranceAgreementUpdateWithoutInsuranceAgreement_IncludedAgreementDataInput
+  upsert: InsuranceAgreementUpsertWithoutInsuranceAgreement_IncludedAgreementInput
+}
+
+input CoverageCreateManyWithoutInsuredObjectInput {
+  create: [CoverageCreateWithoutInsuredObjectInput!]
+  connect: [CoverageWhereUniqueInput!]
+}
+
+input InsuranceAgreementCreateOneWithoutInsuredObjectInput {
+  create: InsuranceAgreementCreateWithoutInsuredObjectInput
+  connect: InsuranceAgreementWhereUniqueInput
+}
+
+input CoverageUpdateManyWithoutInsuredObjectInput {
+  create: [CoverageCreateWithoutInsuredObjectInput!]
+  connect: [CoverageWhereUniqueInput!]
+  set: [CoverageWhereUniqueInput!]
+  disconnect: [CoverageWhereUniqueInput!]
+  delete: [CoverageWhereUniqueInput!]
+  update: [CoverageUpdateWithWhereUniqueWithoutInsuredObjectInput!]
+  updateMany: [CoverageUpdateManyWithWhereNestedInput!]
+  deleteMany: [CoverageScalarWhereInput!]
+  upsert: [CoverageUpsertWithWhereUniqueWithoutInsuredObjectInput!]
+}
+
+input InsuranceAgreementUpdateOneWithoutInsuredObjectInput {
+  create: InsuranceAgreementCreateWithoutInsuredObjectInput
+  connect: InsuranceAgreementWhereUniqueInput
+  disconnect: Boolean
+  delete: Boolean
+  update: InsuranceAgreementUpdateWithoutInsuredObjectDataInput
+  upsert: InsuranceAgreementUpsertWithoutInsuredObjectInput
+}
+
+input NestedStringFilter {
+  equals: String
+  in: [String!]
+  notIn: [String!]
+  lt: String
+  lte: String
+  gt: String
+  gte: String
+  contains: String
+  startsWith: String
+  endsWith: String
+  not: NestedStringFilter
+}
+
+input NestedStringNullableFilter {
+  equals: String
+  in: [String!]
+  notIn: [String!]
+  lt: String
+  lte: String
+  gt: String
+  gte: String
+  contains: String
+  startsWith: String
+  endsWith: String
+  not: NestedStringNullableFilter
+}
+
+input NestedIntNullableFilter {
+  equals: Int
+  in: [Int!]
+  notIn: [Int!]
+  lt: Int
+  lte: Int
+  gt: Int
+  gte: Int
+  not: NestedIntNullableFilter
+}
+
+input NestedBoolNullableFilter {
+  equals: Boolean
+  not: NestedBoolNullableFilter
+}
+
+input InsuranceAgreementCreateWithoutCoverage_IncludedAgreementComponentInput {
+  id: String
+  agreementBaseKey: String
+  agreementBaseKind: String
+  agreementKind: String
+  creationDateTime: String
+  description: String
+  effectivePeriodStart: String
+  effectivePeriodEnd: String
+  financialServicesAgreementKind: String
+  identifier: String
+  informationModelObjectKind: String
+  insuranceAgreementKind: String
+  issueDateTime: String
+  name: String
+  originalInceptionDateTime: String
+  renewalIndicator: Boolean
+  typeName: String
+  version: String
+  txGlobalTypeName: String
+  txPrimaryKey: String
+  txMetaSourceKey: String
+  txMetaStartEventTime: String
+  txMetaLoadTime: String
+  txMetaSource: String
+  txMetaCorrection: String
+  txMetaChange: String
+  txMetaAccessFilter: Int
+  InsuranceAgreement_ExcessAgreementId: String
+  InsuranceAgreement_UnderlyingAgreementId: String
+  InsuredObject: InsuredObjectCreateManyWithoutInsuranceAgreementInput
+  Coverage_ReferencingAgreementBase: CoverageCreateManyWithoutInsuranceAgreement_ReferencingAgreementBaseInput
+  Coverage_ReferencedAgreementBase: CoverageCreateManyWithoutInsuranceAgreementInput
+  InsuranceAgreement_ExcessAgreement: InsuranceAgreementCreateManyWithoutInsuranceAgreement_UnderlyingAgreementInput
+  InsuranceAgreement_UnderlyingAgreement: InsuranceAgreementCreateManyWithoutInsuranceAgreement_ExcessAgreementInput
+  InsuranceAgreement_IncludedAgreement: InsuranceAgreementCreateManyWithoutInsuranceAgreement_IncludedAgreement_backInput
+  InsuranceAgreement_IncludedAgreement_back: InsuranceAgreementCreateOneWithoutInsuranceAgreement_IncludedAgreementInput
+}
+
+input InsuredObjectCreateWithoutCoverageInput {
+  id: String
+  basingPhysicalObjectRoleInAgreementSpecificationSpecificat: String
+  creationDateTime: String
+  description: String
+  includingAgreementBaseAgreementBaseKey: String
+  informationModelObjectKind: String
+  physicalObjectRoleInAgreementKind: String
+  physicalObjectRoleKind: String
+  roleKey: String
+  roleKind: String
+  typeName: String
+  txGlobalTypeName: String
+  txPrimaryKey: String
+  txMetaSourceKey: String
+  txMetaStartEventTime: String
+  txMetaLoadTime: String
+  txMetaSource: String
+  txMetaCorrection: String
+  txMetaChange: String
+  txMetaAccessFilter: Int
+  InsuranceAgreement: InsuranceAgreementCreateOneWithoutInsuredObjectInput
+}
+
+input InsuranceAgreementCreateWithoutCoverage_ReferencingAgreementBaseInput {
+  id: String
+  agreementBaseKey: String
+  agreementBaseKind: String
+  agreementKind: String
+  creationDateTime: String
+  description: String
+  effectivePeriodStart: String
+  effectivePeriodEnd: String
+  financialServicesAgreementKind: String
+  identifier: String
+  informationModelObjectKind: String
+  insuranceAgreementKind: String
+  issueDateTime: String
+  name: String
+  originalInceptionDateTime: String
+  renewalIndicator: Boolean
+  typeName: String
+  version: String
+  txGlobalTypeName: String
+  txPrimaryKey: String
+  txMetaSourceKey: String
+  txMetaStartEventTime: String
+  txMetaLoadTime: String
+  txMetaSource: String
+  txMetaCorrection: String
+  txMetaChange: String
+  txMetaAccessFilter: Int
+  InsuranceAgreement_ExcessAgreementId: String
+  InsuranceAgreement_UnderlyingAgreementId: String
+  Coverage_IncludedAgreementComponent: CoverageCreateManyWithoutInsuranceAgreement_IncludedAgreementComponentInput
+  InsuredObject: InsuredObjectCreateManyWithoutInsuranceAgreementInput
+  Coverage_ReferencedAgreementBase: CoverageCreateManyWithoutInsuranceAgreementInput
+  InsuranceAgreement_ExcessAgreement: InsuranceAgreementCreateManyWithoutInsuranceAgreement_UnderlyingAgreementInput
+  InsuranceAgreement_UnderlyingAgreement: InsuranceAgreementCreateManyWithoutInsuranceAgreement_ExcessAgreementInput
+  InsuranceAgreement_IncludedAgreement: InsuranceAgreementCreateManyWithoutInsuranceAgreement_IncludedAgreement_backInput
+  InsuranceAgreement_IncludedAgreement_back: InsuranceAgreementCreateOneWithoutInsuranceAgreement_IncludedAgreementInput
+}
+
+input InsuranceAgreementCreateWithoutCoverage_ReferencedAgreementBaseInput {
+  id: String
+  agreementBaseKey: String
+  agreementBaseKind: String
+  agreementKind: String
+  creationDateTime: String
+  description: String
+  effectivePeriodStart: String
+  effectivePeriodEnd: String
+  financialServicesAgreementKind: String
+  identifier: String
+  informationModelObjectKind: String
+  insuranceAgreementKind: String
+  issueDateTime: String
+  name: String
+  originalInceptionDateTime: String
+  renewalIndicator: Boolean
+  typeName: String
+  version: String
+  txGlobalTypeName: String
+  txPrimaryKey: String
+  txMetaSourceKey: String
+  txMetaStartEventTime: String
+  txMetaLoadTime: String
+  txMetaSource: String
+  txMetaCorrection: String
+  txMetaChange: String
+  txMetaAccessFilter: Int
+  InsuranceAgreement_ExcessAgreementId: String
+  InsuranceAgreement_UnderlyingAgreementId: String
+  Coverage_IncludedAgreementComponent: CoverageCreateManyWithoutInsuranceAgreement_IncludedAgreementComponentInput
+  InsuredObject: InsuredObjectCreateManyWithoutInsuranceAgreementInput
+  Coverage_ReferencingAgreementBase: CoverageCreateManyWithoutInsuranceAgreement_ReferencingAgreementBaseInput
+  InsuranceAgreement_ExcessAgreement: InsuranceAgreementCreateManyWithoutInsuranceAgreement_UnderlyingAgreementInput
+  InsuranceAgreement_UnderlyingAgreement: InsuranceAgreementCreateManyWithoutInsuranceAgreement_ExcessAgreementInput
+  InsuranceAgreement_IncludedAgreement: InsuranceAgreementCreateManyWithoutInsuranceAgreement_IncludedAgreement_backInput
+  InsuranceAgreement_IncludedAgreement_back: InsuranceAgreementCreateOneWithoutInsuranceAgreement_IncludedAgreementInput
+}
+
+input InsuranceAgreementUpdateWithoutCoverage_IncludedAgreementComponentDataInput {
+  id: StringFieldUpdateOperationsInput
+  agreementBaseKey: NullableStringFieldUpdateOperationsInput
+  agreementBaseKind: NullableStringFieldUpdateOperationsInput
+  agreementKind: NullableStringFieldUpdateOperationsInput
+  creationDateTime: NullableStringFieldUpdateOperationsInput
+  description: NullableStringFieldUpdateOperationsInput
+  effectivePeriodStart: NullableStringFieldUpdateOperationsInput
+  effectivePeriodEnd: NullableStringFieldUpdateOperationsInput
+  financialServicesAgreementKind: NullableStringFieldUpdateOperationsInput
+  identifier: NullableStringFieldUpdateOperationsInput
+  informationModelObjectKind: NullableStringFieldUpdateOperationsInput
+  insuranceAgreementKind: NullableStringFieldUpdateOperationsInput
+  issueDateTime: NullableStringFieldUpdateOperationsInput
+  name: NullableStringFieldUpdateOperationsInput
+  originalInceptionDateTime: NullableStringFieldUpdateOperationsInput
+  renewalIndicator: NullableBoolFieldUpdateOperationsInput
+  typeName: NullableStringFieldUpdateOperationsInput
+  version: NullableStringFieldUpdateOperationsInput
+  txGlobalTypeName: NullableStringFieldUpdateOperationsInput
+  txPrimaryKey: NullableStringFieldUpdateOperationsInput
+  txMetaSourceKey: NullableStringFieldUpdateOperationsInput
+  txMetaStartEventTime: NullableStringFieldUpdateOperationsInput
+  txMetaLoadTime: NullableStringFieldUpdateOperationsInput
+  txMetaSource: NullableStringFieldUpdateOperationsInput
+  txMetaCorrection: NullableStringFieldUpdateOperationsInput
+  txMetaChange: NullableStringFieldUpdateOperationsInput
+  txMetaAccessFilter: NullableIntFieldUpdateOperationsInput
+  InsuranceAgreement_ExcessAgreementId: NullableStringFieldUpdateOperationsInput
+  InsuranceAgreement_UnderlyingAgreementId: NullableStringFieldUpdateOperationsInput
+  InsuredObject: InsuredObjectUpdateManyWithoutInsuranceAgreementInput
+  Coverage_ReferencingAgreementBase: CoverageUpdateManyWithoutInsuranceAgreement_ReferencingAgreementBaseInput
+  Coverage_ReferencedAgreementBase: CoverageUpdateManyWithoutInsuranceAgreementInput
+  InsuranceAgreement_ExcessAgreement: InsuranceAgreementUpdateManyWithoutInsuranceAgreement_UnderlyingAgreementInput
+  InsuranceAgreement_UnderlyingAgreement: InsuranceAgreementUpdateManyWithoutInsuranceAgreement_ExcessAgreementInput
+  InsuranceAgreement_IncludedAgreement: InsuranceAgreementUpdateManyWithoutInsuranceAgreement_IncludedAgreement_backInput
+  InsuranceAgreement_IncludedAgreement_back: InsuranceAgreementUpdateOneWithoutInsuranceAgreement_IncludedAgreementInput
+}
+
+input InsuranceAgreementUpsertWithoutCoverage_IncludedAgreementComponentInput {
+  update: InsuranceAgreementUpdateWithoutCoverage_IncludedAgreementComponentDataInput!
+  create: InsuranceAgreementCreateWithoutCoverage_IncludedAgreementComponentInput!
+}
+
+input InsuredObjectUpdateWithoutCoverageDataInput {
+  id: StringFieldUpdateOperationsInput
+  basingPhysicalObjectRoleInAgreementSpecificationSpecificat: NullableStringFieldUpdateOperationsInput
+  creationDateTime: NullableStringFieldUpdateOperationsInput
+  description: NullableStringFieldUpdateOperationsInput
+  includingAgreementBaseAgreementBaseKey: NullableStringFieldUpdateOperationsInput
+  informationModelObjectKind: NullableStringFieldUpdateOperationsInput
+  physicalObjectRoleInAgreementKind: NullableStringFieldUpdateOperationsInput
+  physicalObjectRoleKind: NullableStringFieldUpdateOperationsInput
+  roleKey: NullableStringFieldUpdateOperationsInput
+  roleKind: NullableStringFieldUpdateOperationsInput
+  typeName: NullableStringFieldUpdateOperationsInput
+  txGlobalTypeName: NullableStringFieldUpdateOperationsInput
+  txPrimaryKey: NullableStringFieldUpdateOperationsInput
+  txMetaSourceKey: NullableStringFieldUpdateOperationsInput
+  txMetaStartEventTime: NullableStringFieldUpdateOperationsInput
+  txMetaLoadTime: NullableStringFieldUpdateOperationsInput
+  txMetaSource: NullableStringFieldUpdateOperationsInput
+  txMetaCorrection: NullableStringFieldUpdateOperationsInput
+  txMetaChange: NullableStringFieldUpdateOperationsInput
+  txMetaAccessFilter: NullableIntFieldUpdateOperationsInput
+  InsuranceAgreement: InsuranceAgreementUpdateOneWithoutInsuredObjectInput
+}
+
+input InsuredObjectUpsertWithoutCoverageInput {
+  update: InsuredObjectUpdateWithoutCoverageDataInput!
+  create: InsuredObjectCreateWithoutCoverageInput!
+}
+
+input InsuranceAgreementUpdateWithoutCoverage_ReferencingAgreementBaseDataInput {
+  id: StringFieldUpdateOperationsInput
+  agreementBaseKey: NullableStringFieldUpdateOperationsInput
+  agreementBaseKind: NullableStringFieldUpdateOperationsInput
+  agreementKind: NullableStringFieldUpdateOperationsInput
+  creationDateTime: NullableStringFieldUpdateOperationsInput
+  description: NullableStringFieldUpdateOperationsInput
+  effectivePeriodStart: NullableStringFieldUpdateOperationsInput
+  effectivePeriodEnd: NullableStringFieldUpdateOperationsInput
+  financialServicesAgreementKind: NullableStringFieldUpdateOperationsInput
+  identifier: NullableStringFieldUpdateOperationsInput
+  informationModelObjectKind: NullableStringFieldUpdateOperationsInput
+  insuranceAgreementKind: NullableStringFieldUpdateOperationsInput
+  issueDateTime: NullableStringFieldUpdateOperationsInput
+  name: NullableStringFieldUpdateOperationsInput
+  originalInceptionDateTime: NullableStringFieldUpdateOperationsInput
+  renewalIndicator: NullableBoolFieldUpdateOperationsInput
+  typeName: NullableStringFieldUpdateOperationsInput
+  version: NullableStringFieldUpdateOperationsInput
+  txGlobalTypeName: NullableStringFieldUpdateOperationsInput
+  txPrimaryKey: NullableStringFieldUpdateOperationsInput
+  txMetaSourceKey: NullableStringFieldUpdateOperationsInput
+  txMetaStartEventTime: NullableStringFieldUpdateOperationsInput
+  txMetaLoadTime: NullableStringFieldUpdateOperationsInput
+  txMetaSource: NullableStringFieldUpdateOperationsInput
+  txMetaCorrection: NullableStringFieldUpdateOperationsInput
+  txMetaChange: NullableStringFieldUpdateOperationsInput
+  txMetaAccessFilter: NullableIntFieldUpdateOperationsInput
+  InsuranceAgreement_ExcessAgreementId: NullableStringFieldUpdateOperationsInput
+  InsuranceAgreement_UnderlyingAgreementId: NullableStringFieldUpdateOperationsInput
+  Coverage_IncludedAgreementComponent: CoverageUpdateManyWithoutInsuranceAgreement_IncludedAgreementComponentInput
+  InsuredObject: InsuredObjectUpdateManyWithoutInsuranceAgreementInput
+  Coverage_ReferencedAgreementBase: CoverageUpdateManyWithoutInsuranceAgreementInput
+  InsuranceAgreement_ExcessAgreement: InsuranceAgreementUpdateManyWithoutInsuranceAgreement_UnderlyingAgreementInput
+  InsuranceAgreement_UnderlyingAgreement: InsuranceAgreementUpdateManyWithoutInsuranceAgreement_ExcessAgreementInput
+  InsuranceAgreement_IncludedAgreement: InsuranceAgreementUpdateManyWithoutInsuranceAgreement_IncludedAgreement_backInput
+  InsuranceAgreement_IncludedAgreement_back: InsuranceAgreementUpdateOneWithoutInsuranceAgreement_IncludedAgreementInput
+}
+
+input InsuranceAgreementUpsertWithoutCoverage_ReferencingAgreementBaseInput {
+  update: InsuranceAgreementUpdateWithoutCoverage_ReferencingAgreementBaseDataInput!
+  create: InsuranceAgreementCreateWithoutCoverage_ReferencingAgreementBaseInput!
+}
+
+input InsuranceAgreementUpdateWithoutCoverage_ReferencedAgreementBaseDataInput {
+  id: StringFieldUpdateOperationsInput
+  agreementBaseKey: NullableStringFieldUpdateOperationsInput
+  agreementBaseKind: NullableStringFieldUpdateOperationsInput
+  agreementKind: NullableStringFieldUpdateOperationsInput
+  creationDateTime: NullableStringFieldUpdateOperationsInput
+  description: NullableStringFieldUpdateOperationsInput
+  effectivePeriodStart: NullableStringFieldUpdateOperationsInput
+  effectivePeriodEnd: NullableStringFieldUpdateOperationsInput
+  financialServicesAgreementKind: NullableStringFieldUpdateOperationsInput
+  identifier: NullableStringFieldUpdateOperationsInput
+  informationModelObjectKind: NullableStringFieldUpdateOperationsInput
+  insuranceAgreementKind: NullableStringFieldUpdateOperationsInput
+  issueDateTime: NullableStringFieldUpdateOperationsInput
+  name: NullableStringFieldUpdateOperationsInput
+  originalInceptionDateTime: NullableStringFieldUpdateOperationsInput
+  renewalIndicator: NullableBoolFieldUpdateOperationsInput
+  typeName: NullableStringFieldUpdateOperationsInput
+  version: NullableStringFieldUpdateOperationsInput
+  txGlobalTypeName: NullableStringFieldUpdateOperationsInput
+  txPrimaryKey: NullableStringFieldUpdateOperationsInput
+  txMetaSourceKey: NullableStringFieldUpdateOperationsInput
+  txMetaStartEventTime: NullableStringFieldUpdateOperationsInput
+  txMetaLoadTime: NullableStringFieldUpdateOperationsInput
+  txMetaSource: NullableStringFieldUpdateOperationsInput
+  txMetaCorrection: NullableStringFieldUpdateOperationsInput
+  txMetaChange: NullableStringFieldUpdateOperationsInput
+  txMetaAccessFilter: NullableIntFieldUpdateOperationsInput
+  InsuranceAgreement_ExcessAgreementId: NullableStringFieldUpdateOperationsInput
+  InsuranceAgreement_UnderlyingAgreementId: NullableStringFieldUpdateOperationsInput
+  Coverage_IncludedAgreementComponent: CoverageUpdateManyWithoutInsuranceAgreement_IncludedAgreementComponentInput
+  InsuredObject: InsuredObjectUpdateManyWithoutInsuranceAgreementInput
+  Coverage_ReferencingAgreementBase: CoverageUpdateManyWithoutInsuranceAgreement_ReferencingAgreementBaseInput
+  InsuranceAgreement_ExcessAgreement: InsuranceAgreementUpdateManyWithoutInsuranceAgreement_UnderlyingAgreementInput
+  InsuranceAgreement_UnderlyingAgreement: InsuranceAgreementUpdateManyWithoutInsuranceAgreement_ExcessAgreementInput
+  InsuranceAgreement_IncludedAgreement: InsuranceAgreementUpdateManyWithoutInsuranceAgreement_IncludedAgreement_backInput
+  InsuranceAgreement_IncludedAgreement_back: InsuranceAgreementUpdateOneWithoutInsuranceAgreement_IncludedAgreementInput
+}
+
+input InsuranceAgreementUpsertWithoutCoverage_ReferencedAgreementBaseInput {
+  update: InsuranceAgreementUpdateWithoutCoverage_ReferencedAgreementBaseDataInput!
+  create: InsuranceAgreementCreateWithoutCoverage_ReferencedAgreementBaseInput!
+}
+
+input CoverageCreateWithoutInsuranceAgreement_IncludedAgreementComponentInput {
+  id: String
+  agreementBaseKey: String
+  agreementBaseKind: String
+  agreementComponentKind: String
+  benefitKind: String
+  coverageKind: String
+  creationDateTime: String
+  effectivePeriodStart: String
+  effectivePeriodEnd: String
+  identifier: String
+  informationModelObjectKind: String
+  name: String
+  typeName: String
+  version: String
+  txGlobalTypeName: String
+  txTypeCode: String
+  txPrimaryKey: String
+  txMetaSourceKey: String
+  txMetaStartEventTime: String
+  txMetaLoadTime: String
+  txMetaSource: String
+  txMetaCorrection: String
+  txMetaChange: String
+  txMetaAccessFilter: Int
+  InsuredObject: InsuredObjectCreateOneWithoutCoverageInput
+  InsuranceAgreement_ReferencingAgreementBase: InsuranceAgreementCreateOneWithoutCoverage_ReferencingAgreementBaseInput
+  InsuranceAgreement: InsuranceAgreementCreateOneWithoutCoverage_ReferencedAgreementBaseInput
+}
+
+input InsuredObjectCreateWithoutInsuranceAgreementInput {
+  id: String
+  basingPhysicalObjectRoleInAgreementSpecificationSpecificat: String
+  creationDateTime: String
+  description: String
+  includingAgreementBaseAgreementBaseKey: String
+  informationModelObjectKind: String
+  physicalObjectRoleInAgreementKind: String
+  physicalObjectRoleKind: String
+  roleKey: String
+  roleKind: String
+  typeName: String
+  txGlobalTypeName: String
+  txPrimaryKey: String
+  txMetaSourceKey: String
+  txMetaStartEventTime: String
+  txMetaLoadTime: String
+  txMetaSource: String
+  txMetaCorrection: String
+  txMetaChange: String
+  txMetaAccessFilter: Int
+  Coverage: CoverageCreateManyWithoutInsuredObjectInput
+}
+
+input CoverageCreateWithoutInsuranceAgreement_ReferencingAgreementBaseInput {
+  id: String
+  agreementBaseKey: String
+  agreementBaseKind: String
+  agreementComponentKind: String
+  benefitKind: String
+  coverageKind: String
+  creationDateTime: String
+  effectivePeriodStart: String
+  effectivePeriodEnd: String
+  identifier: String
+  informationModelObjectKind: String
+  name: String
+  typeName: String
+  version: String
+  txGlobalTypeName: String
+  txTypeCode: String
+  txPrimaryKey: String
+  txMetaSourceKey: String
+  txMetaStartEventTime: String
+  txMetaLoadTime: String
+  txMetaSource: String
+  txMetaCorrection: String
+  txMetaChange: String
+  txMetaAccessFilter: Int
+  InsuranceAgreement_IncludedAgreementComponent: InsuranceAgreementCreateOneWithoutCoverage_IncludedAgreementComponentInput
+  InsuredObject: InsuredObjectCreateOneWithoutCoverageInput
+  InsuranceAgreement: InsuranceAgreementCreateOneWithoutCoverage_ReferencedAgreementBaseInput
+}
+
+input CoverageCreateWithoutInsuranceAgreementInput {
+  id: String
+  agreementBaseKey: String
+  agreementBaseKind: String
+  agreementComponentKind: String
+  benefitKind: String
+  coverageKind: String
+  creationDateTime: String
+  effectivePeriodStart: String
+  effectivePeriodEnd: String
+  identifier: String
+  informationModelObjectKind: String
+  name: String
+  typeName: String
+  version: String
+  txGlobalTypeName: String
+  txTypeCode: String
+  txPrimaryKey: String
+  txMetaSourceKey: String
+  txMetaStartEventTime: String
+  txMetaLoadTime: String
+  txMetaSource: String
+  txMetaCorrection: String
+  txMetaChange: String
+  txMetaAccessFilter: Int
+  InsuranceAgreement_IncludedAgreementComponent: InsuranceAgreementCreateOneWithoutCoverage_IncludedAgreementComponentInput
+  InsuredObject: InsuredObjectCreateOneWithoutCoverageInput
+  InsuranceAgreement_ReferencingAgreementBase: InsuranceAgreementCreateOneWithoutCoverage_ReferencingAgreementBaseInput
+}
+
+input InsuranceAgreementCreateWithoutInsuranceAgreement_UnderlyingAgreementInput {
+  id: String
+  agreementBaseKey: String
+  agreementBaseKind: String
+  agreementKind: String
+  creationDateTime: String
+  description: String
+  effectivePeriodStart: String
+  effectivePeriodEnd: String
+  financialServicesAgreementKind: String
+  identifier: String
+  informationModelObjectKind: String
+  insuranceAgreementKind: String
+  issueDateTime: String
+  name: String
+  originalInceptionDateTime: String
+  renewalIndicator: Boolean
+  typeName: String
+  version: String
+  txGlobalTypeName: String
+  txPrimaryKey: String
+  txMetaSourceKey: String
+  txMetaStartEventTime: String
+  txMetaLoadTime: String
+  txMetaSource: String
+  txMetaCorrection: String
+  txMetaChange: String
+  txMetaAccessFilter: Int
+  InsuranceAgreement_ExcessAgreementId: String
+  InsuranceAgreement_UnderlyingAgreementId: String
+  Coverage_IncludedAgreementComponent: CoverageCreateManyWithoutInsuranceAgreement_IncludedAgreementComponentInput
+  InsuredObject: InsuredObjectCreateManyWithoutInsuranceAgreementInput
+  Coverage_ReferencingAgreementBase: CoverageCreateManyWithoutInsuranceAgreement_ReferencingAgreementBaseInput
+  Coverage_ReferencedAgreementBase: CoverageCreateManyWithoutInsuranceAgreementInput
+  InsuranceAgreement_ExcessAgreement: InsuranceAgreementCreateManyWithoutInsuranceAgreement_UnderlyingAgreementInput
+  InsuranceAgreement_IncludedAgreement: InsuranceAgreementCreateManyWithoutInsuranceAgreement_IncludedAgreement_backInput
+  InsuranceAgreement_IncludedAgreement_back: InsuranceAgreementCreateOneWithoutInsuranceAgreement_IncludedAgreementInput
+}
+
+input InsuranceAgreementCreateWithoutInsuranceAgreement_ExcessAgreementInput {
+  id: String
+  agreementBaseKey: String
+  agreementBaseKind: String
+  agreementKind: String
+  creationDateTime: String
+  description: String
+  effectivePeriodStart: String
+  effectivePeriodEnd: String
+  financialServicesAgreementKind: String
+  identifier: String
+  informationModelObjectKind: String
+  insuranceAgreementKind: String
+  issueDateTime: String
+  name: String
+  originalInceptionDateTime: String
+  renewalIndicator: Boolean
+  typeName: String
+  version: String
+  txGlobalTypeName: String
+  txPrimaryKey: String
+  txMetaSourceKey: String
+  txMetaStartEventTime: String
+  txMetaLoadTime: String
+  txMetaSource: String
+  txMetaCorrection: String
+  txMetaChange: String
+  txMetaAccessFilter: Int
+  InsuranceAgreement_ExcessAgreementId: String
+  InsuranceAgreement_UnderlyingAgreementId: String
+  Coverage_IncludedAgreementComponent: CoverageCreateManyWithoutInsuranceAgreement_IncludedAgreementComponentInput
+  InsuredObject: InsuredObjectCreateManyWithoutInsuranceAgreementInput
+  Coverage_ReferencingAgreementBase: CoverageCreateManyWithoutInsuranceAgreement_ReferencingAgreementBaseInput
+  Coverage_ReferencedAgreementBase: CoverageCreateManyWithoutInsuranceAgreementInput
+  InsuranceAgreement_UnderlyingAgreement: InsuranceAgreementCreateManyWithoutInsuranceAgreement_ExcessAgreementInput
+  InsuranceAgreement_IncludedAgreement: InsuranceAgreementCreateManyWithoutInsuranceAgreement_IncludedAgreement_backInput
+  InsuranceAgreement_IncludedAgreement_back: InsuranceAgreementCreateOneWithoutInsuranceAgreement_IncludedAgreementInput
+}
+
+input InsuranceAgreementCreateWithoutInsuranceAgreement_IncludedAgreement_backInput {
+  id: String
+  agreementBaseKey: String
+  agreementBaseKind: String
+  agreementKind: String
+  creationDateTime: String
+  description: String
+  effectivePeriodStart: String
+  effectivePeriodEnd: String
+  financialServicesAgreementKind: String
+  identifier: String
+  informationModelObjectKind: String
+  insuranceAgreementKind: String
+  issueDateTime: String
+  name: String
+  originalInceptionDateTime: String
+  renewalIndicator: Boolean
+  typeName: String
+  version: String
+  txGlobalTypeName: String
+  txPrimaryKey: String
+  txMetaSourceKey: String
+  txMetaStartEventTime: String
+  txMetaLoadTime: String
+  txMetaSource: String
+  txMetaCorrection: String
+  txMetaChange: String
+  txMetaAccessFilter: Int
+  InsuranceAgreement_ExcessAgreementId: String
+  InsuranceAgreement_UnderlyingAgreementId: String
+  Coverage_IncludedAgreementComponent: CoverageCreateManyWithoutInsuranceAgreement_IncludedAgreementComponentInput
+  InsuredObject: InsuredObjectCreateManyWithoutInsuranceAgreementInput
+  Coverage_ReferencingAgreementBase: CoverageCreateManyWithoutInsuranceAgreement_ReferencingAgreementBaseInput
+  Coverage_ReferencedAgreementBase: CoverageCreateManyWithoutInsuranceAgreementInput
+  InsuranceAgreement_ExcessAgreement: InsuranceAgreementCreateManyWithoutInsuranceAgreement_UnderlyingAgreementInput
+  InsuranceAgreement_UnderlyingAgreement: InsuranceAgreementCreateManyWithoutInsuranceAgreement_ExcessAgreementInput
+  InsuranceAgreement_IncludedAgreement: InsuranceAgreementCreateManyWithoutInsuranceAgreement_IncludedAgreement_backInput
+}
+
+input InsuranceAgreementCreateWithoutInsuranceAgreement_IncludedAgreementInput {
+  id: String
+  agreementBaseKey: String
+  agreementBaseKind: String
+  agreementKind: String
+  creationDateTime: String
+  description: String
+  effectivePeriodStart: String
+  effectivePeriodEnd: String
+  financialServicesAgreementKind: String
+  identifier: String
+  informationModelObjectKind: String
+  insuranceAgreementKind: String
+  issueDateTime: String
+  name: String
+  originalInceptionDateTime: String
+  renewalIndicator: Boolean
+  typeName: String
+  version: String
+  txGlobalTypeName: String
+  txPrimaryKey: String
+  txMetaSourceKey: String
+  txMetaStartEventTime: String
+  txMetaLoadTime: String
+  txMetaSource: String
+  txMetaCorrection: String
+  txMetaChange: String
+  txMetaAccessFilter: Int
+  InsuranceAgreement_ExcessAgreementId: String
+  InsuranceAgreement_UnderlyingAgreementId: String
+  Coverage_IncludedAgreementComponent: CoverageCreateManyWithoutInsuranceAgreement_IncludedAgreementComponentInput
+  InsuredObject: InsuredObjectCreateManyWithoutInsuranceAgreementInput
+  Coverage_ReferencingAgreementBase: CoverageCreateManyWithoutInsuranceAgreement_ReferencingAgreementBaseInput
+  Coverage_ReferencedAgreementBase: CoverageCreateManyWithoutInsuranceAgreementInput
+  InsuranceAgreement_ExcessAgreement: InsuranceAgreementCreateManyWithoutInsuranceAgreement_UnderlyingAgreementInput
+  InsuranceAgreement_UnderlyingAgreement: InsuranceAgreementCreateManyWithoutInsuranceAgreement_ExcessAgreementInput
+  InsuranceAgreement_IncludedAgreement_back: InsuranceAgreementCreateOneWithoutInsuranceAgreement_IncludedAgreementInput
+}
+
+input CoverageUpdateWithWhereUniqueWithoutInsuranceAgreement_IncludedAgreementComponentInput {
+  where: CoverageWhereUniqueInput!
+  data: CoverageUpdateWithoutInsuranceAgreement_IncludedAgreementComponentDataInput!
+}
+
+input CoverageUpdateManyWithWhereNestedInput {
+  where: CoverageScalarWhereInput!
+  data: CoverageUpdateManyDataInput!
+}
+
+input CoverageScalarWhereInput {
+  AND: [CoverageScalarWhereInput!]
+  OR: [CoverageScalarWhereInput!]
+  NOT: [CoverageScalarWhereInput!]
+  id: StringFilter
+  agreementBaseKey: StringNullableFilter
+  agreementBaseKind: StringNullableFilter
+  agreementComponentKind: StringNullableFilter
+  benefitKind: StringNullableFilter
+  coverageKind: StringNullableFilter
+  creationDateTime: StringNullableFilter
+  effectivePeriodStart: StringNullableFilter
+  effectivePeriodEnd: StringNullableFilter
+  identifier: StringNullableFilter
+  informationModelObjectKind: StringNullableFilter
+  name: StringNullableFilter
+  typeName: StringNullableFilter
+  version: StringNullableFilter
+  txGlobalTypeName: StringNullableFilter
+  txTypeCode: StringNullableFilter
+  txPrimaryKey: StringNullableFilter
+  txMetaSourceKey: StringNullableFilter
+  txMetaStartEventTime: StringNullableFilter
+  txMetaLoadTime: StringNullableFilter
+  txMetaSource: StringNullableFilter
+  txMetaCorrection: StringNullableFilter
+  txMetaChange: StringNullableFilter
+  txMetaAccessFilter: IntNullableFilter
+  InsuranceAgreement_IncludedAgreementComponentId: StringNullableFilter
+  InsuredObjectId: StringNullableFilter
+  InsuranceAgreement_ReferencingAgreementBaseId: StringNullableFilter
+  insuranceAgreementId: StringNullableFilter
+}
+
+input CoverageUpsertWithWhereUniqueWithoutInsuranceAgreement_IncludedAgreementComponentInput {
+  where: CoverageWhereUniqueInput!
+  update: CoverageUpdateWithoutInsuranceAgreement_IncludedAgreementComponentDataInput!
+  create: CoverageCreateWithoutInsuranceAgreement_IncludedAgreementComponentInput!
+}
+
+input InsuredObjectUpdateWithWhereUniqueWithoutInsuranceAgreementInput {
+  where: InsuredObjectWhereUniqueInput!
+  data: InsuredObjectUpdateWithoutInsuranceAgreementDataInput!
+}
+
+input InsuredObjectUpdateManyWithWhereNestedInput {
+  where: InsuredObjectScalarWhereInput!
+  data: InsuredObjectUpdateManyDataInput!
+}
+
+input InsuredObjectScalarWhereInput {
+  AND: [InsuredObjectScalarWhereInput!]
+  OR: [InsuredObjectScalarWhereInput!]
+  NOT: [InsuredObjectScalarWhereInput!]
+  id: StringFilter
+  basingPhysicalObjectRoleInAgreementSpecificationSpecificat: StringNullableFilter
+  creationDateTime: StringNullableFilter
+  description: StringNullableFilter
+  includingAgreementBaseAgreementBaseKey: StringNullableFilter
+  informationModelObjectKind: StringNullableFilter
+  physicalObjectRoleInAgreementKind: StringNullableFilter
+  physicalObjectRoleKind: StringNullableFilter
+  roleKey: StringNullableFilter
+  roleKind: StringNullableFilter
+  typeName: StringNullableFilter
+  txGlobalTypeName: StringNullableFilter
+  txPrimaryKey: StringNullableFilter
+  txMetaSourceKey: StringNullableFilter
+  txMetaStartEventTime: StringNullableFilter
+  txMetaLoadTime: StringNullableFilter
+  txMetaSource: StringNullableFilter
+  txMetaCorrection: StringNullableFilter
+  txMetaChange: StringNullableFilter
+  txMetaAccessFilter: IntNullableFilter
+  InsuranceAgreementId: StringNullableFilter
+}
+
+input InsuredObjectUpsertWithWhereUniqueWithoutInsuranceAgreementInput {
+  where: InsuredObjectWhereUniqueInput!
+  update: InsuredObjectUpdateWithoutInsuranceAgreementDataInput!
+  create: InsuredObjectCreateWithoutInsuranceAgreementInput!
+}
+
+input CoverageUpdateWithWhereUniqueWithoutInsuranceAgreement_ReferencingAgreementBaseInput {
+  where: CoverageWhereUniqueInput!
+  data: CoverageUpdateWithoutInsuranceAgreement_ReferencingAgreementBaseDataInput!
+}
+
+input CoverageUpsertWithWhereUniqueWithoutInsuranceAgreement_ReferencingAgreementBaseInput {
+  where: CoverageWhereUniqueInput!
+  update: CoverageUpdateWithoutInsuranceAgreement_ReferencingAgreementBaseDataInput!
+  create: CoverageCreateWithoutInsuranceAgreement_ReferencingAgreementBaseInput!
+}
+
+input CoverageUpdateWithWhereUniqueWithoutInsuranceAgreementInput {
+  where: CoverageWhereUniqueInput!
+  data: CoverageUpdateWithoutInsuranceAgreementDataInput!
+}
+
+input CoverageUpsertWithWhereUniqueWithoutInsuranceAgreementInput {
+  where: CoverageWhereUniqueInput!
+  update: CoverageUpdateWithoutInsuranceAgreementDataInput!
+  create: CoverageCreateWithoutInsuranceAgreementInput!
+}
+
+input InsuranceAgreementUpdateWithWhereUniqueWithoutInsuranceAgreement_UnderlyingAgreementInput {
+  where: InsuranceAgreementWhereUniqueInput!
+  data: InsuranceAgreementUpdateWithoutInsuranceAgreement_UnderlyingAgreementDataInput!
+}
+
+input InsuranceAgreementUpdateManyWithWhereNestedInput {
+  where: InsuranceAgreementScalarWhereInput!
+  data: InsuranceAgreementUpdateManyDataInput!
+}
+
+input InsuranceAgreementScalarWhereInput {
+  AND: [InsuranceAgreementScalarWhereInput!]
+  OR: [InsuranceAgreementScalarWhereInput!]
+  NOT: [InsuranceAgreementScalarWhereInput!]
+  id: StringFilter
+  agreementBaseKey: StringNullableFilter
+  agreementBaseKind: StringNullableFilter
+  agreementKind: StringNullableFilter
+  creationDateTime: StringNullableFilter
+  description: StringNullableFilter
+  effectivePeriodStart: StringNullableFilter
+  effectivePeriodEnd: StringNullableFilter
+  financialServicesAgreementKind: StringNullableFilter
+  identifier: StringNullableFilter
+  informationModelObjectKind: StringNullableFilter
+  insuranceAgreementKind: StringNullableFilter
+  issueDateTime: StringNullableFilter
+  name: StringNullableFilter
+  originalInceptionDateTime: StringNullableFilter
+  renewalIndicator: BoolNullableFilter
+  typeName: StringNullableFilter
+  version: StringNullableFilter
+  txGlobalTypeName: StringNullableFilter
+  txPrimaryKey: StringNullableFilter
+  txMetaSourceKey: StringNullableFilter
+  txMetaStartEventTime: StringNullableFilter
+  txMetaLoadTime: StringNullableFilter
+  txMetaSource: StringNullableFilter
+  txMetaCorrection: StringNullableFilter
+  txMetaChange: StringNullableFilter
+  txMetaAccessFilter: IntNullableFilter
+  InsuranceAgreement_ExcessAgreementId: StringNullableFilter
+  InsuranceAgreement_UnderlyingAgreementId: StringNullableFilter
+  InsuranceAgreement_IncludedAgreementId: StringNullableFilter
+}
+
+input InsuranceAgreementUpsertWithWhereUniqueWithoutInsuranceAgreement_UnderlyingAgreementInput {
+  where: InsuranceAgreementWhereUniqueInput!
+  update: InsuranceAgreementUpdateWithoutInsuranceAgreement_UnderlyingAgreementDataInput!
+  create: InsuranceAgreementCreateWithoutInsuranceAgreement_UnderlyingAgreementInput!
+}
+
+input InsuranceAgreementUpdateWithWhereUniqueWithoutInsuranceAgreement_ExcessAgreementInput {
+  where: InsuranceAgreementWhereUniqueInput!
+  data: InsuranceAgreementUpdateWithoutInsuranceAgreement_ExcessAgreementDataInput!
+}
+
+input InsuranceAgreementUpsertWithWhereUniqueWithoutInsuranceAgreement_ExcessAgreementInput {
+  where: InsuranceAgreementWhereUniqueInput!
+  update: InsuranceAgreementUpdateWithoutInsuranceAgreement_ExcessAgreementDataInput!
+  create: InsuranceAgreementCreateWithoutInsuranceAgreement_ExcessAgreementInput!
+}
+
+input InsuranceAgreementUpdateWithWhereUniqueWithoutInsuranceAgreement_IncludedAgreement_backInput {
+  where: InsuranceAgreementWhereUniqueInput!
+  data: InsuranceAgreementUpdateWithoutInsuranceAgreement_IncludedAgreement_backDataInput!
+}
+
+input InsuranceAgreementUpsertWithWhereUniqueWithoutInsuranceAgreement_IncludedAgreement_backInput {
+  where: InsuranceAgreementWhereUniqueInput!
+  update: InsuranceAgreementUpdateWithoutInsuranceAgreement_IncludedAgreement_backDataInput!
+  create: InsuranceAgreementCreateWithoutInsuranceAgreement_IncludedAgreement_backInput!
+}
+
+input InsuranceAgreementUpdateWithoutInsuranceAgreement_IncludedAgreementDataInput {
+  id: StringFieldUpdateOperationsInput
+  agreementBaseKey: NullableStringFieldUpdateOperationsInput
+  agreementBaseKind: NullableStringFieldUpdateOperationsInput
+  agreementKind: NullableStringFieldUpdateOperationsInput
+  creationDateTime: NullableStringFieldUpdateOperationsInput
+  description: NullableStringFieldUpdateOperationsInput
+  effectivePeriodStart: NullableStringFieldUpdateOperationsInput
+  effectivePeriodEnd: NullableStringFieldUpdateOperationsInput
+  financialServicesAgreementKind: NullableStringFieldUpdateOperationsInput
+  identifier: NullableStringFieldUpdateOperationsInput
+  informationModelObjectKind: NullableStringFieldUpdateOperationsInput
+  insuranceAgreementKind: NullableStringFieldUpdateOperationsInput
+  issueDateTime: NullableStringFieldUpdateOperationsInput
+  name: NullableStringFieldUpdateOperationsInput
+  originalInceptionDateTime: NullableStringFieldUpdateOperationsInput
+  renewalIndicator: NullableBoolFieldUpdateOperationsInput
+  typeName: NullableStringFieldUpdateOperationsInput
+  version: NullableStringFieldUpdateOperationsInput
+  txGlobalTypeName: NullableStringFieldUpdateOperationsInput
+  txPrimaryKey: NullableStringFieldUpdateOperationsInput
+  txMetaSourceKey: NullableStringFieldUpdateOperationsInput
+  txMetaStartEventTime: NullableStringFieldUpdateOperationsInput
+  txMetaLoadTime: NullableStringFieldUpdateOperationsInput
+  txMetaSource: NullableStringFieldUpdateOperationsInput
+  txMetaCorrection: NullableStringFieldUpdateOperationsInput
+  txMetaChange: NullableStringFieldUpdateOperationsInput
+  txMetaAccessFilter: NullableIntFieldUpdateOperationsInput
+  InsuranceAgreement_ExcessAgreementId: NullableStringFieldUpdateOperationsInput
+  InsuranceAgreement_UnderlyingAgreementId: NullableStringFieldUpdateOperationsInput
+  Coverage_IncludedAgreementComponent: CoverageUpdateManyWithoutInsuranceAgreement_IncludedAgreementComponentInput
+  InsuredObject: InsuredObjectUpdateManyWithoutInsuranceAgreementInput
+  Coverage_ReferencingAgreementBase: CoverageUpdateManyWithoutInsuranceAgreement_ReferencingAgreementBaseInput
+  Coverage_ReferencedAgreementBase: CoverageUpdateManyWithoutInsuranceAgreementInput
+  InsuranceAgreement_ExcessAgreement: InsuranceAgreementUpdateManyWithoutInsuranceAgreement_UnderlyingAgreementInput
+  InsuranceAgreement_UnderlyingAgreement: InsuranceAgreementUpdateManyWithoutInsuranceAgreement_ExcessAgreementInput
+  InsuranceAgreement_IncludedAgreement_back: InsuranceAgreementUpdateOneWithoutInsuranceAgreement_IncludedAgreementInput
+}
+
+input InsuranceAgreementUpsertWithoutInsuranceAgreement_IncludedAgreementInput {
+  update: InsuranceAgreementUpdateWithoutInsuranceAgreement_IncludedAgreementDataInput!
+  create: InsuranceAgreementCreateWithoutInsuranceAgreement_IncludedAgreementInput!
+}
+
+input CoverageCreateWithoutInsuredObjectInput {
+  id: String
+  agreementBaseKey: String
+  agreementBaseKind: String
+  agreementComponentKind: String
+  benefitKind: String
+  coverageKind: String
+  creationDateTime: String
+  effectivePeriodStart: String
+  effectivePeriodEnd: String
+  identifier: String
+  informationModelObjectKind: String
+  name: String
+  typeName: String
+  version: String
+  txGlobalTypeName: String
+  txTypeCode: String
+  txPrimaryKey: String
+  txMetaSourceKey: String
+  txMetaStartEventTime: String
+  txMetaLoadTime: String
+  txMetaSource: String
+  txMetaCorrection: String
+  txMetaChange: String
+  txMetaAccessFilter: Int
+  InsuranceAgreement_IncludedAgreementComponent: InsuranceAgreementCreateOneWithoutCoverage_IncludedAgreementComponentInput
+  InsuranceAgreement_ReferencingAgreementBase: InsuranceAgreementCreateOneWithoutCoverage_ReferencingAgreementBaseInput
+  InsuranceAgreement: InsuranceAgreementCreateOneWithoutCoverage_ReferencedAgreementBaseInput
+}
+
+input InsuranceAgreementCreateWithoutInsuredObjectInput {
+  id: String
+  agreementBaseKey: String
+  agreementBaseKind: String
+  agreementKind: String
+  creationDateTime: String
+  description: String
+  effectivePeriodStart: String
+  effectivePeriodEnd: String
+  financialServicesAgreementKind: String
+  identifier: String
+  informationModelObjectKind: String
+  insuranceAgreementKind: String
+  issueDateTime: String
+  name: String
+  originalInceptionDateTime: String
+  renewalIndicator: Boolean
+  typeName: String
+  version: String
+  txGlobalTypeName: String
+  txPrimaryKey: String
+  txMetaSourceKey: String
+  txMetaStartEventTime: String
+  txMetaLoadTime: String
+  txMetaSource: String
+  txMetaCorrection: String
+  txMetaChange: String
+  txMetaAccessFilter: Int
+  InsuranceAgreement_ExcessAgreementId: String
+  InsuranceAgreement_UnderlyingAgreementId: String
+  Coverage_IncludedAgreementComponent: CoverageCreateManyWithoutInsuranceAgreement_IncludedAgreementComponentInput
+  Coverage_ReferencingAgreementBase: CoverageCreateManyWithoutInsuranceAgreement_ReferencingAgreementBaseInput
+  Coverage_ReferencedAgreementBase: CoverageCreateManyWithoutInsuranceAgreementInput
+  InsuranceAgreement_ExcessAgreement: InsuranceAgreementCreateManyWithoutInsuranceAgreement_UnderlyingAgreementInput
+  InsuranceAgreement_UnderlyingAgreement: InsuranceAgreementCreateManyWithoutInsuranceAgreement_ExcessAgreementInput
+  InsuranceAgreement_IncludedAgreement: InsuranceAgreementCreateManyWithoutInsuranceAgreement_IncludedAgreement_backInput
+  InsuranceAgreement_IncludedAgreement_back: InsuranceAgreementCreateOneWithoutInsuranceAgreement_IncludedAgreementInput
+}
+
+input CoverageUpdateWithWhereUniqueWithoutInsuredObjectInput {
+  where: CoverageWhereUniqueInput!
+  data: CoverageUpdateWithoutInsuredObjectDataInput!
+}
+
+input CoverageUpsertWithWhereUniqueWithoutInsuredObjectInput {
+  where: CoverageWhereUniqueInput!
+  update: CoverageUpdateWithoutInsuredObjectDataInput!
+  create: CoverageCreateWithoutInsuredObjectInput!
+}
+
+input InsuranceAgreementUpdateWithoutInsuredObjectDataInput {
+  id: StringFieldUpdateOperationsInput
+  agreementBaseKey: NullableStringFieldUpdateOperationsInput
+  agreementBaseKind: NullableStringFieldUpdateOperationsInput
+  agreementKind: NullableStringFieldUpdateOperationsInput
+  creationDateTime: NullableStringFieldUpdateOperationsInput
+  description: NullableStringFieldUpdateOperationsInput
+  effectivePeriodStart: NullableStringFieldUpdateOperationsInput
+  effectivePeriodEnd: NullableStringFieldUpdateOperationsInput
+  financialServicesAgreementKind: NullableStringFieldUpdateOperationsInput
+  identifier: NullableStringFieldUpdateOperationsInput
+  informationModelObjectKind: NullableStringFieldUpdateOperationsInput
+  insuranceAgreementKind: NullableStringFieldUpdateOperationsInput
+  issueDateTime: NullableStringFieldUpdateOperationsInput
+  name: NullableStringFieldUpdateOperationsInput
+  originalInceptionDateTime: NullableStringFieldUpdateOperationsInput
+  renewalIndicator: NullableBoolFieldUpdateOperationsInput
+  typeName: NullableStringFieldUpdateOperationsInput
+  version: NullableStringFieldUpdateOperationsInput
+  txGlobalTypeName: NullableStringFieldUpdateOperationsInput
+  txPrimaryKey: NullableStringFieldUpdateOperationsInput
+  txMetaSourceKey: NullableStringFieldUpdateOperationsInput
+  txMetaStartEventTime: NullableStringFieldUpdateOperationsInput
+  txMetaLoadTime: NullableStringFieldUpdateOperationsInput
+  txMetaSource: NullableStringFieldUpdateOperationsInput
+  txMetaCorrection: NullableStringFieldUpdateOperationsInput
+  txMetaChange: NullableStringFieldUpdateOperationsInput
+  txMetaAccessFilter: NullableIntFieldUpdateOperationsInput
+  InsuranceAgreement_ExcessAgreementId: NullableStringFieldUpdateOperationsInput
+  InsuranceAgreement_UnderlyingAgreementId: NullableStringFieldUpdateOperationsInput
+  Coverage_IncludedAgreementComponent: CoverageUpdateManyWithoutInsuranceAgreement_IncludedAgreementComponentInput
+  Coverage_ReferencingAgreementBase: CoverageUpdateManyWithoutInsuranceAgreement_ReferencingAgreementBaseInput
+  Coverage_ReferencedAgreementBase: CoverageUpdateManyWithoutInsuranceAgreementInput
+  InsuranceAgreement_ExcessAgreement: InsuranceAgreementUpdateManyWithoutInsuranceAgreement_UnderlyingAgreementInput
+  InsuranceAgreement_UnderlyingAgreement: InsuranceAgreementUpdateManyWithoutInsuranceAgreement_ExcessAgreementInput
+  InsuranceAgreement_IncludedAgreement: InsuranceAgreementUpdateManyWithoutInsuranceAgreement_IncludedAgreement_backInput
+  InsuranceAgreement_IncludedAgreement_back: InsuranceAgreementUpdateOneWithoutInsuranceAgreement_IncludedAgreementInput
+}
+
+input InsuranceAgreementUpsertWithoutInsuredObjectInput {
+  update: InsuranceAgreementUpdateWithoutInsuredObjectDataInput!
+  create: InsuranceAgreementCreateWithoutInsuredObjectInput!
+}
+
+input CoverageUpdateWithoutInsuranceAgreement_IncludedAgreementComponentDataInput {
+  id: StringFieldUpdateOperationsInput
+  agreementBaseKey: NullableStringFieldUpdateOperationsInput
+  agreementBaseKind: NullableStringFieldUpdateOperationsInput
+  agreementComponentKind: NullableStringFieldUpdateOperationsInput
+  benefitKind: NullableStringFieldUpdateOperationsInput
+  coverageKind: NullableStringFieldUpdateOperationsInput
+  creationDateTime: NullableStringFieldUpdateOperationsInput
+  effectivePeriodStart: NullableStringFieldUpdateOperationsInput
+  effectivePeriodEnd: NullableStringFieldUpdateOperationsInput
+  identifier: NullableStringFieldUpdateOperationsInput
+  informationModelObjectKind: NullableStringFieldUpdateOperationsInput
+  name: NullableStringFieldUpdateOperationsInput
+  typeName: NullableStringFieldUpdateOperationsInput
+  version: NullableStringFieldUpdateOperationsInput
+  txGlobalTypeName: NullableStringFieldUpdateOperationsInput
+  txTypeCode: NullableStringFieldUpdateOperationsInput
+  txPrimaryKey: NullableStringFieldUpdateOperationsInput
+  txMetaSourceKey: NullableStringFieldUpdateOperationsInput
+  txMetaStartEventTime: NullableStringFieldUpdateOperationsInput
+  txMetaLoadTime: NullableStringFieldUpdateOperationsInput
+  txMetaSource: NullableStringFieldUpdateOperationsInput
+  txMetaCorrection: NullableStringFieldUpdateOperationsInput
+  txMetaChange: NullableStringFieldUpdateOperationsInput
+  txMetaAccessFilter: NullableIntFieldUpdateOperationsInput
+  InsuredObject: InsuredObjectUpdateOneWithoutCoverageInput
+  InsuranceAgreement_ReferencingAgreementBase: InsuranceAgreementUpdateOneWithoutCoverage_ReferencingAgreementBaseInput
+  InsuranceAgreement: InsuranceAgreementUpdateOneWithoutCoverage_ReferencedAgreementBaseInput
+}
+
+input CoverageUpdateManyDataInput {
+  id: StringFieldUpdateOperationsInput
+  agreementBaseKey: NullableStringFieldUpdateOperationsInput
+  agreementBaseKind: NullableStringFieldUpdateOperationsInput
+  agreementComponentKind: NullableStringFieldUpdateOperationsInput
+  benefitKind: NullableStringFieldUpdateOperationsInput
+  coverageKind: NullableStringFieldUpdateOperationsInput
+  creationDateTime: NullableStringFieldUpdateOperationsInput
+  effectivePeriodStart: NullableStringFieldUpdateOperationsInput
+  effectivePeriodEnd: NullableStringFieldUpdateOperationsInput
+  identifier: NullableStringFieldUpdateOperationsInput
+  informationModelObjectKind: NullableStringFieldUpdateOperationsInput
+  name: NullableStringFieldUpdateOperationsInput
+  typeName: NullableStringFieldUpdateOperationsInput
+  version: NullableStringFieldUpdateOperationsInput
+  txGlobalTypeName: NullableStringFieldUpdateOperationsInput
+  txTypeCode: NullableStringFieldUpdateOperationsInput
+  txPrimaryKey: NullableStringFieldUpdateOperationsInput
+  txMetaSourceKey: NullableStringFieldUpdateOperationsInput
+  txMetaStartEventTime: NullableStringFieldUpdateOperationsInput
+  txMetaLoadTime: NullableStringFieldUpdateOperationsInput
+  txMetaSource: NullableStringFieldUpdateOperationsInput
+  txMetaCorrection: NullableStringFieldUpdateOperationsInput
+  txMetaChange: NullableStringFieldUpdateOperationsInput
+  txMetaAccessFilter: NullableIntFieldUpdateOperationsInput
+}
+
+input InsuredObjectUpdateWithoutInsuranceAgreementDataInput {
+  id: StringFieldUpdateOperationsInput
+  basingPhysicalObjectRoleInAgreementSpecificationSpecificat: NullableStringFieldUpdateOperationsInput
+  creationDateTime: NullableStringFieldUpdateOperationsInput
+  description: NullableStringFieldUpdateOperationsInput
+  includingAgreementBaseAgreementBaseKey: NullableStringFieldUpdateOperationsInput
+  informationModelObjectKind: NullableStringFieldUpdateOperationsInput
+  physicalObjectRoleInAgreementKind: NullableStringFieldUpdateOperationsInput
+  physicalObjectRoleKind: NullableStringFieldUpdateOperationsInput
+  roleKey: NullableStringFieldUpdateOperationsInput
+  roleKind: NullableStringFieldUpdateOperationsInput
+  typeName: NullableStringFieldUpdateOperationsInput
+  txGlobalTypeName: NullableStringFieldUpdateOperationsInput
+  txPrimaryKey: NullableStringFieldUpdateOperationsInput
+  txMetaSourceKey: NullableStringFieldUpdateOperationsInput
+  txMetaStartEventTime: NullableStringFieldUpdateOperationsInput
+  txMetaLoadTime: NullableStringFieldUpdateOperationsInput
+  txMetaSource: NullableStringFieldUpdateOperationsInput
+  txMetaCorrection: NullableStringFieldUpdateOperationsInput
+  txMetaChange: NullableStringFieldUpdateOperationsInput
+  txMetaAccessFilter: NullableIntFieldUpdateOperationsInput
+  Coverage: CoverageUpdateManyWithoutInsuredObjectInput
+}
+
+input InsuredObjectUpdateManyDataInput {
+  id: StringFieldUpdateOperationsInput
+  basingPhysicalObjectRoleInAgreementSpecificationSpecificat: NullableStringFieldUpdateOperationsInput
+  creationDateTime: NullableStringFieldUpdateOperationsInput
+  description: NullableStringFieldUpdateOperationsInput
+  includingAgreementBaseAgreementBaseKey: NullableStringFieldUpdateOperationsInput
+  informationModelObjectKind: NullableStringFieldUpdateOperationsInput
+  physicalObjectRoleInAgreementKind: NullableStringFieldUpdateOperationsInput
+  physicalObjectRoleKind: NullableStringFieldUpdateOperationsInput
+  roleKey: NullableStringFieldUpdateOperationsInput
+  roleKind: NullableStringFieldUpdateOperationsInput
+  typeName: NullableStringFieldUpdateOperationsInput
+  txGlobalTypeName: NullableStringFieldUpdateOperationsInput
+  txPrimaryKey: NullableStringFieldUpdateOperationsInput
+  txMetaSourceKey: NullableStringFieldUpdateOperationsInput
+  txMetaStartEventTime: NullableStringFieldUpdateOperationsInput
+  txMetaLoadTime: NullableStringFieldUpdateOperationsInput
+  txMetaSource: NullableStringFieldUpdateOperationsInput
+  txMetaCorrection: NullableStringFieldUpdateOperationsInput
+  txMetaChange: NullableStringFieldUpdateOperationsInput
+  txMetaAccessFilter: NullableIntFieldUpdateOperationsInput
+}
+
+input CoverageUpdateWithoutInsuranceAgreement_ReferencingAgreementBaseDataInput {
+  id: StringFieldUpdateOperationsInput
+  agreementBaseKey: NullableStringFieldUpdateOperationsInput
+  agreementBaseKind: NullableStringFieldUpdateOperationsInput
+  agreementComponentKind: NullableStringFieldUpdateOperationsInput
+  benefitKind: NullableStringFieldUpdateOperationsInput
+  coverageKind: NullableStringFieldUpdateOperationsInput
+  creationDateTime: NullableStringFieldUpdateOperationsInput
+  effectivePeriodStart: NullableStringFieldUpdateOperationsInput
+  effectivePeriodEnd: NullableStringFieldUpdateOperationsInput
+  identifier: NullableStringFieldUpdateOperationsInput
+  informationModelObjectKind: NullableStringFieldUpdateOperationsInput
+  name: NullableStringFieldUpdateOperationsInput
+  typeName: NullableStringFieldUpdateOperationsInput
+  version: NullableStringFieldUpdateOperationsInput
+  txGlobalTypeName: NullableStringFieldUpdateOperationsInput
+  txTypeCode: NullableStringFieldUpdateOperationsInput
+  txPrimaryKey: NullableStringFieldUpdateOperationsInput
+  txMetaSourceKey: NullableStringFieldUpdateOperationsInput
+  txMetaStartEventTime: NullableStringFieldUpdateOperationsInput
+  txMetaLoadTime: NullableStringFieldUpdateOperationsInput
+  txMetaSource: NullableStringFieldUpdateOperationsInput
+  txMetaCorrection: NullableStringFieldUpdateOperationsInput
+  txMetaChange: NullableStringFieldUpdateOperationsInput
+  txMetaAccessFilter: NullableIntFieldUpdateOperationsInput
+  InsuranceAgreement_IncludedAgreementComponent: InsuranceAgreementUpdateOneWithoutCoverage_IncludedAgreementComponentInput
+  InsuredObject: InsuredObjectUpdateOneWithoutCoverageInput
+  InsuranceAgreement: InsuranceAgreementUpdateOneWithoutCoverage_ReferencedAgreementBaseInput
+}
+
+input CoverageUpdateWithoutInsuranceAgreementDataInput {
+  id: StringFieldUpdateOperationsInput
+  agreementBaseKey: NullableStringFieldUpdateOperationsInput
+  agreementBaseKind: NullableStringFieldUpdateOperationsInput
+  agreementComponentKind: NullableStringFieldUpdateOperationsInput
+  benefitKind: NullableStringFieldUpdateOperationsInput
+  coverageKind: NullableStringFieldUpdateOperationsInput
+  creationDateTime: NullableStringFieldUpdateOperationsInput
+  effectivePeriodStart: NullableStringFieldUpdateOperationsInput
+  effectivePeriodEnd: NullableStringFieldUpdateOperationsInput
+  identifier: NullableStringFieldUpdateOperationsInput
+  informationModelObjectKind: NullableStringFieldUpdateOperationsInput
+  name: NullableStringFieldUpdateOperationsInput
+  typeName: NullableStringFieldUpdateOperationsInput
+  version: NullableStringFieldUpdateOperationsInput
+  txGlobalTypeName: NullableStringFieldUpdateOperationsInput
+  txTypeCode: NullableStringFieldUpdateOperationsInput
+  txPrimaryKey: NullableStringFieldUpdateOperationsInput
+  txMetaSourceKey: NullableStringFieldUpdateOperationsInput
+  txMetaStartEventTime: NullableStringFieldUpdateOperationsInput
+  txMetaLoadTime: NullableStringFieldUpdateOperationsInput
+  txMetaSource: NullableStringFieldUpdateOperationsInput
+  txMetaCorrection: NullableStringFieldUpdateOperationsInput
+  txMetaChange: NullableStringFieldUpdateOperationsInput
+  txMetaAccessFilter: NullableIntFieldUpdateOperationsInput
+  InsuranceAgreement_IncludedAgreementComponent: InsuranceAgreementUpdateOneWithoutCoverage_IncludedAgreementComponentInput
+  InsuredObject: InsuredObjectUpdateOneWithoutCoverageInput
+  InsuranceAgreement_ReferencingAgreementBase: InsuranceAgreementUpdateOneWithoutCoverage_ReferencingAgreementBaseInput
+}
+
+input InsuranceAgreementUpdateWithoutInsuranceAgreement_UnderlyingAgreementDataInput {
+  id: StringFieldUpdateOperationsInput
+  agreementBaseKey: NullableStringFieldUpdateOperationsInput
+  agreementBaseKind: NullableStringFieldUpdateOperationsInput
+  agreementKind: NullableStringFieldUpdateOperationsInput
+  creationDateTime: NullableStringFieldUpdateOperationsInput
+  description: NullableStringFieldUpdateOperationsInput
+  effectivePeriodStart: NullableStringFieldUpdateOperationsInput
+  effectivePeriodEnd: NullableStringFieldUpdateOperationsInput
+  financialServicesAgreementKind: NullableStringFieldUpdateOperationsInput
+  identifier: NullableStringFieldUpdateOperationsInput
+  informationModelObjectKind: NullableStringFieldUpdateOperationsInput
+  insuranceAgreementKind: NullableStringFieldUpdateOperationsInput
+  issueDateTime: NullableStringFieldUpdateOperationsInput
+  name: NullableStringFieldUpdateOperationsInput
+  originalInceptionDateTime: NullableStringFieldUpdateOperationsInput
+  renewalIndicator: NullableBoolFieldUpdateOperationsInput
+  typeName: NullableStringFieldUpdateOperationsInput
+  version: NullableStringFieldUpdateOperationsInput
+  txGlobalTypeName: NullableStringFieldUpdateOperationsInput
+  txPrimaryKey: NullableStringFieldUpdateOperationsInput
+  txMetaSourceKey: NullableStringFieldUpdateOperationsInput
+  txMetaStartEventTime: NullableStringFieldUpdateOperationsInput
+  txMetaLoadTime: NullableStringFieldUpdateOperationsInput
+  txMetaSource: NullableStringFieldUpdateOperationsInput
+  txMetaCorrection: NullableStringFieldUpdateOperationsInput
+  txMetaChange: NullableStringFieldUpdateOperationsInput
+  txMetaAccessFilter: NullableIntFieldUpdateOperationsInput
+  InsuranceAgreement_ExcessAgreementId: NullableStringFieldUpdateOperationsInput
+  InsuranceAgreement_UnderlyingAgreementId: NullableStringFieldUpdateOperationsInput
+  Coverage_IncludedAgreementComponent: CoverageUpdateManyWithoutInsuranceAgreement_IncludedAgreementComponentInput
+  InsuredObject: InsuredObjectUpdateManyWithoutInsuranceAgreementInput
+  Coverage_ReferencingAgreementBase: CoverageUpdateManyWithoutInsuranceAgreement_ReferencingAgreementBaseInput
+  Coverage_ReferencedAgreementBase: CoverageUpdateManyWithoutInsuranceAgreementInput
+  InsuranceAgreement_ExcessAgreement: InsuranceAgreementUpdateManyWithoutInsuranceAgreement_UnderlyingAgreementInput
+  InsuranceAgreement_IncludedAgreement: InsuranceAgreementUpdateManyWithoutInsuranceAgreement_IncludedAgreement_backInput
+  InsuranceAgreement_IncludedAgreement_back: InsuranceAgreementUpdateOneWithoutInsuranceAgreement_IncludedAgreementInput
+}
+
+input InsuranceAgreementUpdateManyDataInput {
+  id: StringFieldUpdateOperationsInput
+  agreementBaseKey: NullableStringFieldUpdateOperationsInput
+  agreementBaseKind: NullableStringFieldUpdateOperationsInput
+  agreementKind: NullableStringFieldUpdateOperationsInput
+  creationDateTime: NullableStringFieldUpdateOperationsInput
+  description: NullableStringFieldUpdateOperationsInput
+  effectivePeriodStart: NullableStringFieldUpdateOperationsInput
+  effectivePeriodEnd: NullableStringFieldUpdateOperationsInput
+  financialServicesAgreementKind: NullableStringFieldUpdateOperationsInput
+  identifier: NullableStringFieldUpdateOperationsInput
+  informationModelObjectKind: NullableStringFieldUpdateOperationsInput
+  insuranceAgreementKind: NullableStringFieldUpdateOperationsInput
+  issueDateTime: NullableStringFieldUpdateOperationsInput
+  name: NullableStringFieldUpdateOperationsInput
+  originalInceptionDateTime: NullableStringFieldUpdateOperationsInput
+  renewalIndicator: NullableBoolFieldUpdateOperationsInput
+  typeName: NullableStringFieldUpdateOperationsInput
+  version: NullableStringFieldUpdateOperationsInput
+  txGlobalTypeName: NullableStringFieldUpdateOperationsInput
+  txPrimaryKey: NullableStringFieldUpdateOperationsInput
+  txMetaSourceKey: NullableStringFieldUpdateOperationsInput
+  txMetaStartEventTime: NullableStringFieldUpdateOperationsInput
+  txMetaLoadTime: NullableStringFieldUpdateOperationsInput
+  txMetaSource: NullableStringFieldUpdateOperationsInput
+  txMetaCorrection: NullableStringFieldUpdateOperationsInput
+  txMetaChange: NullableStringFieldUpdateOperationsInput
+  txMetaAccessFilter: NullableIntFieldUpdateOperationsInput
+  InsuranceAgreement_ExcessAgreementId: NullableStringFieldUpdateOperationsInput
+  InsuranceAgreement_UnderlyingAgreementId: NullableStringFieldUpdateOperationsInput
+}
+
+input InsuranceAgreementUpdateWithoutInsuranceAgreement_ExcessAgreementDataInput {
+  id: StringFieldUpdateOperationsInput
+  agreementBaseKey: NullableStringFieldUpdateOperationsInput
+  agreementBaseKind: NullableStringFieldUpdateOperationsInput
+  agreementKind: NullableStringFieldUpdateOperationsInput
+  creationDateTime: NullableStringFieldUpdateOperationsInput
+  description: NullableStringFieldUpdateOperationsInput
+  effectivePeriodStart: NullableStringFieldUpdateOperationsInput
+  effectivePeriodEnd: NullableStringFieldUpdateOperationsInput
+  financialServicesAgreementKind: NullableStringFieldUpdateOperationsInput
+  identifier: NullableStringFieldUpdateOperationsInput
+  informationModelObjectKind: NullableStringFieldUpdateOperationsInput
+  insuranceAgreementKind: NullableStringFieldUpdateOperationsInput
+  issueDateTime: NullableStringFieldUpdateOperationsInput
+  name: NullableStringFieldUpdateOperationsInput
+  originalInceptionDateTime: NullableStringFieldUpdateOperationsInput
+  renewalIndicator: NullableBoolFieldUpdateOperationsInput
+  typeName: NullableStringFieldUpdateOperationsInput
+  version: NullableStringFieldUpdateOperationsInput
+  txGlobalTypeName: NullableStringFieldUpdateOperationsInput
+  txPrimaryKey: NullableStringFieldUpdateOperationsInput
+  txMetaSourceKey: NullableStringFieldUpdateOperationsInput
+  txMetaStartEventTime: NullableStringFieldUpdateOperationsInput
+  txMetaLoadTime: NullableStringFieldUpdateOperationsInput
+  txMetaSource: NullableStringFieldUpdateOperationsInput
+  txMetaCorrection: NullableStringFieldUpdateOperationsInput
+  txMetaChange: NullableStringFieldUpdateOperationsInput
+  txMetaAccessFilter: NullableIntFieldUpdateOperationsInput
+  InsuranceAgreement_ExcessAgreementId: NullableStringFieldUpdateOperationsInput
+  InsuranceAgreement_UnderlyingAgreementId: NullableStringFieldUpdateOperationsInput
+  Coverage_IncludedAgreementComponent: CoverageUpdateManyWithoutInsuranceAgreement_IncludedAgreementComponentInput
+  InsuredObject: InsuredObjectUpdateManyWithoutInsuranceAgreementInput
+  Coverage_ReferencingAgreementBase: CoverageUpdateManyWithoutInsuranceAgreement_ReferencingAgreementBaseInput
+  Coverage_ReferencedAgreementBase: CoverageUpdateManyWithoutInsuranceAgreementInput
+  InsuranceAgreement_UnderlyingAgreement: InsuranceAgreementUpdateManyWithoutInsuranceAgreement_ExcessAgreementInput
+  InsuranceAgreement_IncludedAgreement: InsuranceAgreementUpdateManyWithoutInsuranceAgreement_IncludedAgreement_backInput
+  InsuranceAgreement_IncludedAgreement_back: InsuranceAgreementUpdateOneWithoutInsuranceAgreement_IncludedAgreementInput
+}
+
+input InsuranceAgreementUpdateWithoutInsuranceAgreement_IncludedAgreement_backDataInput {
+  id: StringFieldUpdateOperationsInput
+  agreementBaseKey: NullableStringFieldUpdateOperationsInput
+  agreementBaseKind: NullableStringFieldUpdateOperationsInput
+  agreementKind: NullableStringFieldUpdateOperationsInput
+  creationDateTime: NullableStringFieldUpdateOperationsInput
+  description: NullableStringFieldUpdateOperationsInput
+  effectivePeriodStart: NullableStringFieldUpdateOperationsInput
+  effectivePeriodEnd: NullableStringFieldUpdateOperationsInput
+  financialServicesAgreementKind: NullableStringFieldUpdateOperationsInput
+  identifier: NullableStringFieldUpdateOperationsInput
+  informationModelObjectKind: NullableStringFieldUpdateOperationsInput
+  insuranceAgreementKind: NullableStringFieldUpdateOperationsInput
+  issueDateTime: NullableStringFieldUpdateOperationsInput
+  name: NullableStringFieldUpdateOperationsInput
+  originalInceptionDateTime: NullableStringFieldUpdateOperationsInput
+  renewalIndicator: NullableBoolFieldUpdateOperationsInput
+  typeName: NullableStringFieldUpdateOperationsInput
+  version: NullableStringFieldUpdateOperationsInput
+  txGlobalTypeName: NullableStringFieldUpdateOperationsInput
+  txPrimaryKey: NullableStringFieldUpdateOperationsInput
+  txMetaSourceKey: NullableStringFieldUpdateOperationsInput
+  txMetaStartEventTime: NullableStringFieldUpdateOperationsInput
+  txMetaLoadTime: NullableStringFieldUpdateOperationsInput
+  txMetaSource: NullableStringFieldUpdateOperationsInput
+  txMetaCorrection: NullableStringFieldUpdateOperationsInput
+  txMetaChange: NullableStringFieldUpdateOperationsInput
+  txMetaAccessFilter: NullableIntFieldUpdateOperationsInput
+  InsuranceAgreement_ExcessAgreementId: NullableStringFieldUpdateOperationsInput
+  InsuranceAgreement_UnderlyingAgreementId: NullableStringFieldUpdateOperationsInput
+  Coverage_IncludedAgreementComponent: CoverageUpdateManyWithoutInsuranceAgreement_IncludedAgreementComponentInput
+  InsuredObject: InsuredObjectUpdateManyWithoutInsuranceAgreementInput
+  Coverage_ReferencingAgreementBase: CoverageUpdateManyWithoutInsuranceAgreement_ReferencingAgreementBaseInput
+  Coverage_ReferencedAgreementBase: CoverageUpdateManyWithoutInsuranceAgreementInput
+  InsuranceAgreement_ExcessAgreement: InsuranceAgreementUpdateManyWithoutInsuranceAgreement_UnderlyingAgreementInput
+  InsuranceAgreement_UnderlyingAgreement: InsuranceAgreementUpdateManyWithoutInsuranceAgreement_ExcessAgreementInput
+  InsuranceAgreement_IncludedAgreement: InsuranceAgreementUpdateManyWithoutInsuranceAgreement_IncludedAgreement_backInput
+}
+
+input CoverageUpdateWithoutInsuredObjectDataInput {
+  id: StringFieldUpdateOperationsInput
+  agreementBaseKey: NullableStringFieldUpdateOperationsInput
+  agreementBaseKind: NullableStringFieldUpdateOperationsInput
+  agreementComponentKind: NullableStringFieldUpdateOperationsInput
+  benefitKind: NullableStringFieldUpdateOperationsInput
+  coverageKind: NullableStringFieldUpdateOperationsInput
+  creationDateTime: NullableStringFieldUpdateOperationsInput
+  effectivePeriodStart: NullableStringFieldUpdateOperationsInput
+  effectivePeriodEnd: NullableStringFieldUpdateOperationsInput
+  identifier: NullableStringFieldUpdateOperationsInput
+  informationModelObjectKind: NullableStringFieldUpdateOperationsInput
+  name: NullableStringFieldUpdateOperationsInput
+  typeName: NullableStringFieldUpdateOperationsInput
+  version: NullableStringFieldUpdateOperationsInput
+  txGlobalTypeName: NullableStringFieldUpdateOperationsInput
+  txTypeCode: NullableStringFieldUpdateOperationsInput
+  txPrimaryKey: NullableStringFieldUpdateOperationsInput
+  txMetaSourceKey: NullableStringFieldUpdateOperationsInput
+  txMetaStartEventTime: NullableStringFieldUpdateOperationsInput
+  txMetaLoadTime: NullableStringFieldUpdateOperationsInput
+  txMetaSource: NullableStringFieldUpdateOperationsInput
+  txMetaCorrection: NullableStringFieldUpdateOperationsInput
+  txMetaChange: NullableStringFieldUpdateOperationsInput
+  txMetaAccessFilter: NullableIntFieldUpdateOperationsInput
+  InsuranceAgreement_IncludedAgreementComponent: InsuranceAgreementUpdateOneWithoutCoverage_IncludedAgreementComponentInput
+  InsuranceAgreement_ReferencingAgreementBase: InsuranceAgreementUpdateOneWithoutCoverage_ReferencingAgreementBaseInput
+  InsuranceAgreement: InsuranceAgreementUpdateOneWithoutCoverage_ReferencedAgreementBaseInput
+}
+
+type AggregateCoverage {
+  count: Int!
+  avg: CoverageAvgAggregateOutputType
+  sum: CoverageSumAggregateOutputType
+  min: CoverageMinAggregateOutputType
+  max: CoverageMaxAggregateOutputType
+}
+
+type AggregateInsuranceAgreement {
+  count: Int!
+  avg: InsuranceAgreementAvgAggregateOutputType
+  sum: InsuranceAgreementSumAggregateOutputType
+  min: InsuranceAgreementMinAggregateOutputType
+  max: InsuranceAgreementMaxAggregateOutputType
+}
+
+type AggregateInsuredObject {
+  count: Int!
+  avg: InsuredObjectAvgAggregateOutputType
+  sum: InsuredObjectSumAggregateOutputType
+  min: InsuredObjectMinAggregateOutputType
+  max: InsuredObjectMaxAggregateOutputType
+}
+
+type CoverageAvgAggregateOutputType {
+  txMetaAccessFilter: Float!
+}
+
+type CoverageSumAggregateOutputType {
+  txMetaAccessFilter: Int
+}
+
+type CoverageMinAggregateOutputType {
+  txMetaAccessFilter: Int
+}
+
+type CoverageMaxAggregateOutputType {
+  txMetaAccessFilter: Int
+}
+
+type InsuranceAgreementAvgAggregateOutputType {
+  txMetaAccessFilter: Float!
+}
+
+type InsuranceAgreementSumAggregateOutputType {
+  txMetaAccessFilter: Int
+}
+
+type InsuranceAgreementMinAggregateOutputType {
+  txMetaAccessFilter: Int
+}
+
+type InsuranceAgreementMaxAggregateOutputType {
+  txMetaAccessFilter: Int
+}
+
+type InsuredObjectAvgAggregateOutputType {
+  txMetaAccessFilter: Float!
+}
+
+type InsuredObjectSumAggregateOutputType {
+  txMetaAccessFilter: Int
+}
+
+type InsuredObjectMinAggregateOutputType {
+  txMetaAccessFilter: Int
+}
+
+type InsuredObjectMaxAggregateOutputType {
+  txMetaAccessFilter: Int
+}
+
+type Coverage {
+  id: String!
+  agreementBaseKey: String
+  agreementBaseKind: String
+  agreementComponentKind: String
+  benefitKind: String
+  coverageKind: String
+  creationDateTime: String
+  effectivePeriodStart: String
+  effectivePeriodEnd: String
+  identifier: String
+  informationModelObjectKind: String
+  name: String
+  typeName: String
+  version: String
+  txGlobalTypeName: String
+  txTypeCode: String
+  txPrimaryKey: String
+  txMetaSourceKey: String
+  txMetaStartEventTime: String
+  txMetaLoadTime: String
+  txMetaSource: String
+  txMetaCorrection: String
+  txMetaChange: String
+  txMetaAccessFilter: Int
+  #InsuranceAgreement_IncludedAgreementComponent: InsuranceAgreement
+  #InsuranceAgreement_IncludedAgreementComponentId: String
+  InsuredObject: InsuredObject
+  InsuredObjectId: String
+  #InsuranceAgreement_ReferencingAgreementBase: InsuranceAgreement
+  #InsuranceAgreement_ReferencingAgreementBaseId: String
+  #InsuranceAgreement: InsuranceAgreement
+  #insuranceAgreementId: String
+}
+
+type Query {
+
+  hello : String
+
+
+}
+
+type Mutation {
+  createOneCoverage(data: CoverageCreateInput!): Coverage!
+  createOneInsuranceAgreement(data: InsuranceAgreementCreateInput!): InsuranceAgreement!
+  createOneInsuredObject(data: InsuredObjectCreateInput!): InsuredObject!
+ # typeLoader(data: InsuranceAgreementCreateOneWithoutInsuranceAgreement_IncludedAgreementInput): InsuranceAgreement
+}
+
+type InsuranceAgreement {
+  id: String!
+  agreementBaseKey: String
+  agreementBaseKind: String
+  agreementKind: String
+  creationDateTime: String
+  description: String
+  effectivePeriodStart: String
+  effectivePeriodEnd: String
+  financialServicesAgreementKind: String
+  identifier: String
+  informationModelObjectKind: String
+  insuranceAgreementKind: String
+  issueDateTime: String
+  name: String
+  originalInceptionDateTime: String
+  renewalIndicator: Boolean
+  typeName: String
+  version: String
+  txGlobalTypeName: String
+  txPrimaryKey: String
+  txMetaSourceKey: String
+  txMetaStartEventTime: String
+  txMetaLoadTime: String
+  txMetaSource: String
+  txMetaCorrection: String
+  txMetaChange: String
+  txMetaAccessFilter: Int
+  #Coverage_IncludedAgreementComponent(where: CoverageWhereInput, orderBy: CoverageOrderByInput, cursor: CoverageWhereUniqueInput, take: Int, skip: Int, distinct: CoverageDistinctFieldEnum): [Coverage!]!
+ # InsuredObject(where: InsuredObjectWhereInput, orderBy: InsuredObjectOrderByInput, cursor: InsuredObjectWhereUniqueInput, take: Int, skip: Int, distinct: InsuredObjectDistinctFieldEnum): [InsuredObject!]!
+ # Coverage_ReferencingAgreementBase(where: CoverageWhereInput, orderBy: CoverageOrderByInput, cursor: CoverageWhereUniqueInput, take: Int, skip: Int, distinct: CoverageDistinctFieldEnum): [Coverage!]!
+ # Coverage_ReferencedAgreementBase(where: CoverageWhereInput, orderBy: CoverageOrderByInput, cursor: CoverageWhereUniqueInput, take: Int, skip: Int, distinct: CoverageDistinctFieldEnum): [Coverage!]!
+  #InsuranceAgreement_ExcessAgreement(where: InsuranceAgreementWhereInput, orderBy: InsuranceAgreementOrderByInput, cursor: InsuranceAgreementWhereUniqueInput, take: Int, skip: Int, distinct: InsuranceAgreementDistinctFieldEnum): [InsuranceAgreement!]!
+ # InsuranceAgreement_ExcessAgreementId: String
+ # InsuranceAgreement_UnderlyingAgreement(where: InsuranceAgreementWhereInput, orderBy: InsuranceAgreementOrderByInput, cursor: InsuranceAgreementWhereUniqueInput, take: Int, skip: Int, distinct: InsuranceAgreementDistinctFieldEnum): [InsuranceAgreement!]!
+ # InsuranceAgreement_UnderlyingAgreementId: String
+  #InsuranceAgreement_IncludedAgreement(where: InsuranceAgreementWhereInput, orderBy: InsuranceAgreementOrderByInput, cursor: InsuranceAgreementWhereUniqueInput, take: Int, skip: Int, distinct: InsuranceAgreementDistinctFieldEnum): [InsuranceAgreement!]!
+  #InsuranceAgreement_IncludedAgreement_back: InsuranceAgreement
+  #InsuranceAgreement_IncludedAgreementId: String
+}
+
+type InsuredObject {
+  id: String!
+  basingPhysicalObjectRoleInAgreementSpecificationSpecificat: String
+  creationDateTime: String
+  description: String
+  includingAgreementBaseAgreementBaseKey: String
+  informationModelObjectKind: String
+  physicalObjectRoleInAgreementKind: String
+  physicalObjectRoleKind: String
+  roleKey: String
+  roleKind: String
+  typeName: String
+  txGlobalTypeName: String
+  txPrimaryKey: String
+  txMetaSourceKey: String
+  txMetaStartEventTime: String
+  txMetaLoadTime: String
+  txMetaSource: String
+  txMetaCorrection: String
+  txMetaChange: String
+  txMetaAccessFilter: Int
+  #Coverage(where: CoverageWhereInput, orderBy: CoverageOrderByInput, cursor: CoverageWhereUniqueInput, take: Int, skip: Int, distinct: CoverageDistinctFieldEnum): [Coverage!]!
+  InsuranceAgreement: InsuranceAgreement
+  InsuranceAgreementId: String
+}

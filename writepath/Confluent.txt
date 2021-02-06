@@ -1,0 +1,5 @@
+export CONFLUENT_HOME=/home/statarm/Downloads/confluent-6.0.0
+export PATH=$PATH:$CONFLUENT_HOME/bin
+sudo kill -9 $(sudo lsof -t -i:8081)  or ./confluent local destroy
+
+./confluent local services start

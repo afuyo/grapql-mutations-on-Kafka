@@ -1,0 +1,321 @@
+{
+"type" : "record",
+"name" : "Coverage",
+"namespace" :"com.graphqlkafkaproducer.writepath.models2.agreement",
+"fields" : [ {
+"name" : "agreementBaseKey",
+"type" : [ "null", "string" ]
+}, {
+"name" : "agreementBaseKind",
+"type" : [ "null", "string" ]
+}, {
+"name" : "agreementComponentKind",
+"type" : [ "null", "string" ]
+}, {
+"name" : "benefitKind",
+"type" : [ "null", "string" ]
+}, {
+"name" : "coverageKind",
+"type" : [ "null", "string" ]
+}, {
+"name" : "creationDateTime",
+"type" : [ "null", "string" ]
+}, {
+"name" : "effectivePeriodEnd",
+"type" : [ "null", "string" ]
+}, {
+"name" : "effectivePeriodStart",
+"type" : [ "null", "string" ]
+}, {
+"name" : "id",
+"type" : [ "null", "string" ]
+}, {
+"name" : "identifier",
+"type" : [ "null", "string" ]
+}, {
+"name" : "informationModelObjectKind",
+"type" : [ "null", "string" ]
+}, {
+"name" : "insuranceAgreement_IncludedAgreementComponent",
+"type" : [ "null", {
+"type" : "record",
+"name" : "InsuranceAgreement",
+"fields" : [ {
+"name" : "agreementBaseKey",
+"type" : [ "null", "string" ]
+}, {
+"name" : "agreementBaseKind",
+"type" : [ "null", "string" ]
+}, {
+"name" : "agreementKind",
+"type" : [ "null", "string" ]
+}, {
+"name" : "coverage_IncludedAgreementComponent",
+"type" : [ "null", {
+"type" : "array",
+"items" : "Coverage"
+} ]
+}, {
+"name" : "coverage_ReferencedAgreementBase",
+"type" : [ "null", {
+"type" : "array",
+"items" : "Coverage"
+} ]
+}, {
+"name" : "coverage_ReferencingAgreementBase",
+"type" : [ "null", {
+"type" : "array",
+"items" : "Coverage"
+} ]
+}, {
+"name" : "creationDateTime",
+"type" : [ "null", "string" ]
+}, {
+"name" : "description",
+"type" : [ "null", "string" ]
+}, {
+"name" : "effectivePeriodEnd",
+"type" : [ "null", "string" ]
+}, {
+"name" : "effectivePeriodStart",
+"type" : [ "null", "string" ]
+}, {
+"name" : "financialServicesAgreementKind",
+"type" : [ "null", "string" ]
+}, {
+"name" : "id",
+"type" : [ "null", "string" ]
+}, {
+"name" : "identifier",
+"type" : [ "null", "string" ]
+}, {
+"name" : "informationModelObjectKind",
+"type" : [ "null", "string" ]
+}, {
+"name" : "insuranceAgreementKind",
+"type" : [ "null", "string" ]
+}, {
+"name" : "insuranceAgreement_ExcessAgreement",
+"type" : [ "null", {
+"type" : "array",
+"items" : "InsuranceAgreement"
+} ]
+}, {
+"name" : "insuranceAgreement_ExcessAgreementId",
+"type" : [ "null", "string" ]
+}, {
+"name" : "insuranceAgreement_IncludedAgreement",
+"type" : [ "null", {
+"type" : "array",
+"items" : "InsuranceAgreement"
+} ]
+}, {
+"name" : "insuranceAgreement_IncludedAgreementId",
+"type" : [ "null", "string" ]
+}, {
+"name" : "insuranceAgreement_IncludedAgreement_back",
+"type" : [ "null", "InsuranceAgreement" ]
+}, {
+"name" : "insuranceAgreement_UnderlyingAgreement",
+"type" : [ "null", {
+"type" : "array",
+"items" : "InsuranceAgreement"
+} ]
+}, {
+"name" : "insuranceAgreement_UnderlyingAgreementId",
+"type" : [ "null", "string" ]
+}, {
+"name" : "insuredObject",
+"type" : [ "null", {
+"type" : "array",
+"items" : {
+"type" : "record",
+"name" : "InsuredObject",
+"fields" : [ {
+"name" : "basingPhysicalObjectRoleInAgreementSpecificationSpecificat",
+"type" : [ "null", "string" ]
+}, {
+"name" : "coverage",
+"type" : [ "null", {
+"type" : "array",
+"items" : "Coverage"
+} ]
+}, {
+"name" : "creationDateTime",
+"type" : [ "null", "string" ]
+}, {
+"name" : "description",
+"type" : [ "null", "string" ]
+}, {
+"name" : "id",
+"type" : [ "null", "string" ]
+}, {
+"name" : "includingAgreementBaseAgreementBaseKey",
+"type" : [ "null", "string" ]
+}, {
+"name" : "informationModelObjectKind",
+"type" : [ "null", "string" ]
+}, {
+"name" : "insuranceAgreement",
+"type" : [ "null", "InsuranceAgreement" ]
+}, {
+"name" : "insuranceAgreementId",
+"type" : [ "null", "string" ]
+}, {
+"name" : "physicalObjectRoleInAgreementKind",
+"type" : [ "null", "string" ]
+}, {
+"name" : "physicalObjectRoleKind",
+"type" : [ "null", "string" ]
+}, {
+"name" : "roleKey",
+"type" : [ "null", "string" ]
+}, {
+"name" : "roleKind",
+"type" : [ "null", "string" ]
+}, {
+"name" : "txGlobalTypeName",
+"type" : [ "null", "string" ]
+}, {
+"name" : "txMetaAccessFilter",
+"type" : {
+"type" : "int",
+"java-class" : "java.lang.Integer"
+}
+}, {
+"name" : "txMetaChange",
+"type" : [ "null", "string" ]
+}, {
+"name" : "txMetaCorrection",
+"type" : [ "null", "string" ]
+}, {
+"name" : "txMetaLoadTime",
+"type" : [ "null", "string" ]
+}, {
+"name" : "txMetaSource",
+"type" : [ "null", "string" ]
+}, {
+"name" : "txMetaSourceKey",
+"type" : [ "null", "string" ]
+}, {
+"name" : "txMetaStartEventTime",
+"type" : [ "null", "string" ]
+}, {
+"name" : "txPrimaryKey",
+"type" : [ "null", "string" ]
+}, {
+"name" : "typeName",
+"type" : [ "null", "string" ]
+} ]
+}
+} ]
+}, {
+"name" : "issueDateTime",
+"type" : [ "null", "string" ]
+}, {
+"name" : "name",
+"type" : [ "null", "string" ]
+}, {
+"name" : "originalInceptionDateTime",
+"type" : [ "null", "string" ]
+}, {
+"name" : "renewalIndicator",
+"type" : [ "null", "boolean" ]
+}, {
+"name" : "txGlobalTypeName",
+"type" : [ "null", "string" ]
+}, {
+"name" : "txMetaAccessFilter",
+"type" : {
+"type" : "int",
+"java-class" : "java.lang.Integer"
+}
+}, {
+"name" : "txMetaChange",
+"type" : [ "null", "string" ]
+}, {
+"name" : "txMetaCorrection",
+"type" : [ "null", "string" ]
+}, {
+"name" : "txMetaLoadTime",
+"type" : [ "null", "string" ]
+}, {
+"name" : "txMetaSource",
+"type" : [ "null", "string" ]
+}, {
+"name" : "txMetaSourceKey",
+"type" : [ "null", "string" ]
+}, {
+"name" : "txMetaStartEventTime",
+"type" : [ "null", "string" ]
+}, {
+"name" : "txPrimaryKey",
+"type" : [ "null", "string" ]
+}, {
+"name" : "typeName",
+"type" : [ "null", "string" ]
+}, {
+"name" : "version",
+"type" : [ "null", "string" ]
+} ]
+} ]
+}, {
+"name" : "insuranceAgreement_IncludedAgreementComponentId",
+"type" : [ "null", "string" ]
+}, {
+"name" : "insuranceAgreement_ReferencingAgreementBase",
+"type" : [ "null", "InsuranceAgreement" ]
+}, {
+"name" : "insuranceAgreement_ReferencingAgreementBaseId",
+"type" : [ "null", "string" ]
+}, {
+"name" : "insuredObject",
+"type" : [ "null", "InsuredObject" ]
+}, {
+"name" : "insuredObjectId",
+"type" : [ "null", "string" ]
+}, {
+"name" : "name",
+"type" : [ "null", "string" ]
+}, {
+"name" : "txGlobalTypeName",
+"type" : [ "null", "string" ]
+}, {
+"name" : "txMetaAccessFilter",
+"type" : {
+"type" : "int",
+"java-class" : "java.lang.Integer"
+}
+}, {
+"name" : "txMetaChange",
+"type" : [ "null", "string" ]
+}, {
+"name" : "txMetaCorrection",
+"type" : [ "null", "string" ]
+}, {
+"name" : "txMetaLoadTime",
+"type" : [ "null", "string" ]
+}, {
+"name" : "txMetaSource",
+"type" : [ "null", "string" ]
+}, {
+"name" : "txMetaSourceKey",
+"type" : [ "null", "string" ]
+}, {
+"name" : "txMetaStartEventTime",
+"type" : [ "null", "string" ]
+}, {
+"name" : "txPrimaryKey",
+"type" : [ "null", "string" ]
+}, {
+"name" : "txTypeCode",
+"type" : [ "null", "string" ]
+}, {
+"name" : "typeName",
+"type" : [ "null", "string" ]
+}, {
+"name" : "version",
+"type" : [ "null", "string" ]
+} ]
+}
+

@@ -1,0 +1,2015 @@
+#scalar DateTime
+
+type BatchPayload {
+    count: Int!
+}
+
+enum ChildOrganizationDistinctFieldEnum {
+    id
+    basicDataCompleteCode
+    basingPartyRoleInRelationshipSpecificationSpecificationKey
+    creationDateTime
+    description
+    informationModelObjectKind
+    namePartyNameKey
+    partyRoleInRelationshipKind
+    partyRoleKind
+    playerRoleRoleKey
+    playingPartyPartyKey
+    roleKey
+    roleKind
+    rolePlayerPeriodStart
+    rolePlayerPeriodEnd
+    typeName
+    txGlobalTypeName
+    txTypeCode
+    txPrimaryKey
+    txMetaSourceKey
+    txMetaStartEventTime
+    txMetaLoadTime
+    txMetaSource
+    txMetaCorrection
+    txMetaChange
+    txMetaAccessFilter
+    PartyId
+    PartyNameId
+}
+
+enum PartyDistinctFieldEnum {
+    id
+    basicDataCompleteCode
+    creationDateTime
+    informationModelObjectKind
+    partyKey
+    partyKind
+    typeName
+    txGlobalTypeName
+    txTypeCode
+    txPrimaryKey
+    txMetaSourceKey
+    txMetaStartEventTime
+    txMetaLoadTime
+    txMetaSource
+    txMetaCorrection
+    txMetaChange
+    txMetaAccessFilter
+}
+
+enum PartyNameDistinctFieldEnum {
+    id
+    basicDataCompleteCode
+    creationDateTime
+    defaultIndicator
+    description
+    effectivePeriodStart
+    effectivePeriodEnd
+    fullName
+    givenName
+    informationModelObjectKind
+    middleName
+    ownerPartyKey
+    partyNameKey
+    partyNameKind
+    prefixTitleCode
+    suffix
+    surname
+    typeName
+    usageCode
+    utilizedLanguageLanguageKey
+    txGlobalTypeName
+    txTypeCode
+    txPrimaryKey
+    txMetaSourceKey
+    txMetaStartEventTime
+    txMetaLoadTime
+    txMetaSource
+    txMetaCorrection
+    txMetaChange
+    txMetaAccessFilter
+    PersonId
+    PartyId
+    CompanyId
+    OrganizationUnitId
+}
+
+enum PersonDistinctFieldEnum {
+    id
+    birthDateTime
+    bloodTypeCode
+    deathIndicator
+    ethnicityCode
+    genderCode
+    maritalStatusCode
+    missingDateTime
+    missingIndicator
+    partyKey
+    primaryLanguageLanguageKey
+    txGlobalGenderCode
+    txPrimaryKey
+    txMetaSourceKey
+    txMetaStartEventTime
+    txMetaLoadTime
+    txMetaSource
+    txMetaCorrection
+    txMetaChange
+    txMetaAccessFilter
+    PartyId
+}
+
+enum SortOrder {
+    asc
+    desc
+}
+
+input ChildOrganizationWhereInput {
+    AND: [ChildOrganizationWhereInput!]
+    OR: [ChildOrganizationWhereInput!]
+    NOT: [ChildOrganizationWhereInput!]
+    id: StringFilter
+    basicDataCompleteCode: StringNullableFilter
+    basingPartyRoleInRelationshipSpecificationSpecificationKey: StringNullableFilter
+    creationDateTime: StringNullableFilter
+    description: StringNullableFilter
+    informationModelObjectKind: StringNullableFilter
+    namePartyNameKey: StringNullableFilter
+    partyRoleInRelationshipKind: StringNullableFilter
+    partyRoleKind: StringNullableFilter
+    playerRoleRoleKey: StringNullableFilter
+    playingPartyPartyKey: StringNullableFilter
+    roleKey: StringNullableFilter
+    roleKind: StringNullableFilter
+    rolePlayerPeriodStart: StringNullableFilter
+    rolePlayerPeriodEnd: StringNullableFilter
+    typeName: StringNullableFilter
+    txGlobalTypeName: StringNullableFilter
+    txTypeCode: StringNullableFilter
+    txPrimaryKey: StringNullableFilter
+    txMetaSourceKey: StringNullableFilter
+    txMetaStartEventTime: StringNullableFilter
+    txMetaLoadTime: StringNullableFilter
+    txMetaSource: StringNullableFilter
+    txMetaCorrection: StringNullableFilter
+    txMetaChange: StringNullableFilter
+    txMetaAccessFilter: IntNullableFilter
+    Party: PartyWhereInput
+    PartyId: StringNullableFilter
+    PartyName: PartyNameWhereInput
+    PartyNameId: StringNullableFilter
+}
+
+input ChildOrganizationOrderByInput {
+    id: SortOrder
+    basicDataCompleteCode: SortOrder
+    basingPartyRoleInRelationshipSpecificationSpecificationKey: SortOrder
+    creationDateTime: SortOrder
+    description: SortOrder
+    informationModelObjectKind: SortOrder
+    namePartyNameKey: SortOrder
+    partyRoleInRelationshipKind: SortOrder
+    partyRoleKind: SortOrder
+    playerRoleRoleKey: SortOrder
+    playingPartyPartyKey: SortOrder
+    roleKey: SortOrder
+    roleKind: SortOrder
+    rolePlayerPeriodStart: SortOrder
+    rolePlayerPeriodEnd: SortOrder
+    typeName: SortOrder
+    txGlobalTypeName: SortOrder
+    txTypeCode: SortOrder
+    txPrimaryKey: SortOrder
+    txMetaSourceKey: SortOrder
+    txMetaStartEventTime: SortOrder
+    txMetaLoadTime: SortOrder
+    txMetaSource: SortOrder
+    txMetaCorrection: SortOrder
+    txMetaChange: SortOrder
+    txMetaAccessFilter: SortOrder
+    PartyId: SortOrder
+    PartyNameId: SortOrder
+}
+
+input ChildOrganizationWhereUniqueInput {
+    id: String
+    txPrimaryKey: String
+}
+
+input PartyWhereInput {
+    AND: [PartyWhereInput!]
+    OR: [PartyWhereInput!]
+    NOT: [PartyWhereInput!]
+    id: StringFilter
+    basicDataCompleteCode: StringNullableFilter
+    creationDateTime: StringNullableFilter
+    informationModelObjectKind: StringNullableFilter
+    partyKey: StringNullableFilter
+    partyKind: StringNullableFilter
+    typeName: StringNullableFilter
+    txGlobalTypeName: StringNullableFilter
+    txTypeCode: StringNullableFilter
+    txPrimaryKey: StringNullableFilter
+    txMetaSourceKey: StringNullableFilter
+    txMetaStartEventTime: StringNullableFilter
+    txMetaLoadTime: StringNullableFilter
+    txMetaSource: StringNullableFilter
+    txMetaCorrection: StringNullableFilter
+    txMetaChange: StringNullableFilter
+    txMetaAccessFilter: IntNullableFilter
+    Person: PersonListRelationFilter
+    PartyName: PartyNameListRelationFilter
+    ChildOrganization: ChildOrganizationListRelationFilter
+}
+
+input PartyOrderByInput {
+    id: SortOrder
+    basicDataCompleteCode: SortOrder
+    creationDateTime: SortOrder
+    informationModelObjectKind: SortOrder
+    partyKey: SortOrder
+    partyKind: SortOrder
+    typeName: SortOrder
+    txGlobalTypeName: SortOrder
+    txTypeCode: SortOrder
+    txPrimaryKey: SortOrder
+    txMetaSourceKey: SortOrder
+    txMetaStartEventTime: SortOrder
+    txMetaLoadTime: SortOrder
+    txMetaSource: SortOrder
+    txMetaCorrection: SortOrder
+    txMetaChange: SortOrder
+    txMetaAccessFilter: SortOrder
+}
+
+input PartyWhereUniqueInput {
+    id: String
+    txPrimaryKey: String
+}
+
+input PartyNameWhereInput {
+    AND: [PartyNameWhereInput!]
+    OR: [PartyNameWhereInput!]
+    NOT: [PartyNameWhereInput!]
+    id: StringFilter
+    basicDataCompleteCode: StringNullableFilter
+    creationDateTime: StringNullableFilter
+    defaultIndicator: BoolNullableFilter
+    description: StringNullableFilter
+    effectivePeriodStart: StringNullableFilter
+    effectivePeriodEnd: StringNullableFilter
+    fullName: StringNullableFilter
+    givenName: StringNullableFilter
+    informationModelObjectKind: StringNullableFilter
+    middleName: StringNullableFilter
+    ownerPartyKey: StringNullableFilter
+    partyNameKey: StringNullableFilter
+    partyNameKind: StringNullableFilter
+    prefixTitleCode: StringNullableFilter
+    suffix: StringNullableFilter
+    surname: StringNullableFilter
+    typeName: StringNullableFilter
+    usageCode: StringNullableFilter
+    utilizedLanguageLanguageKey: StringNullableFilter
+    txGlobalTypeName: StringNullableFilter
+    txTypeCode: StringNullableFilter
+    txPrimaryKey: StringNullableFilter
+    txMetaSourceKey: StringNullableFilter
+    txMetaStartEventTime: StringNullableFilter
+    txMetaLoadTime: StringNullableFilter
+    txMetaSource: StringNullableFilter
+    txMetaCorrection: StringNullableFilter
+    txMetaChange: StringNullableFilter
+    txMetaAccessFilter: IntNullableFilter
+    ChildOrganization: ChildOrganizationListRelationFilter
+    Person: PersonWhereInput
+    PersonId: StringNullableFilter
+    Party: PartyWhereInput
+    PartyId: StringNullableFilter
+    CompanyId: StringNullableFilter
+    OrganizationUnitId: StringNullableFilter
+}
+
+input PartyNameOrderByInput {
+    id: SortOrder
+    basicDataCompleteCode: SortOrder
+    creationDateTime: SortOrder
+    defaultIndicator: SortOrder
+    description: SortOrder
+    effectivePeriodStart: SortOrder
+    effectivePeriodEnd: SortOrder
+    fullName: SortOrder
+    givenName: SortOrder
+    informationModelObjectKind: SortOrder
+    middleName: SortOrder
+    ownerPartyKey: SortOrder
+    partyNameKey: SortOrder
+    partyNameKind: SortOrder
+    prefixTitleCode: SortOrder
+    suffix: SortOrder
+    surname: SortOrder
+    typeName: SortOrder
+    usageCode: SortOrder
+    utilizedLanguageLanguageKey: SortOrder
+    txGlobalTypeName: SortOrder
+    txTypeCode: SortOrder
+    txPrimaryKey: SortOrder
+    txMetaSourceKey: SortOrder
+    txMetaStartEventTime: SortOrder
+    txMetaLoadTime: SortOrder
+    txMetaSource: SortOrder
+    txMetaCorrection: SortOrder
+    txMetaChange: SortOrder
+    txMetaAccessFilter: SortOrder
+    PersonId: SortOrder
+    PartyId: SortOrder
+    CompanyId: SortOrder
+    OrganizationUnitId: SortOrder
+}
+
+input PartyNameWhereUniqueInput {
+    id: String
+    txPrimaryKey: String
+}
+
+input PersonWhereInput {
+    AND: [PersonWhereInput!]
+    OR: [PersonWhereInput!]
+    NOT: [PersonWhereInput!]
+    id: StringFilter
+    birthDateTime: StringNullableFilter
+    bloodTypeCode: StringNullableFilter
+    deathIndicator: BoolNullableFilter
+    ethnicityCode: StringNullableFilter
+    genderCode: StringNullableFilter
+    maritalStatusCode: StringNullableFilter
+    missingDateTime: StringNullableFilter
+    missingIndicator: BoolNullableFilter
+    partyKey: StringNullableFilter
+    primaryLanguageLanguageKey: StringNullableFilter
+    txGlobalGenderCode: StringNullableFilter
+    txPrimaryKey: StringNullableFilter
+    txMetaSourceKey: StringNullableFilter
+    txMetaStartEventTime: StringNullableFilter
+    txMetaLoadTime: StringNullableFilter
+    txMetaSource: StringNullableFilter
+    txMetaCorrection: StringNullableFilter
+    txMetaChange: StringNullableFilter
+    txMetaAccessFilter: IntNullableFilter
+    PartyName: PartyNameListRelationFilter
+    Party: PartyWhereInput
+    PartyId: StringNullableFilter
+}
+
+input PersonOrderByInput {
+    id: SortOrder
+    birthDateTime: SortOrder
+    bloodTypeCode: SortOrder
+    deathIndicator: SortOrder
+    ethnicityCode: SortOrder
+    genderCode: SortOrder
+    maritalStatusCode: SortOrder
+    missingDateTime: SortOrder
+    missingIndicator: SortOrder
+    partyKey: SortOrder
+    primaryLanguageLanguageKey: SortOrder
+    txGlobalGenderCode: SortOrder
+    txPrimaryKey: SortOrder
+    txMetaSourceKey: SortOrder
+    txMetaStartEventTime: SortOrder
+    txMetaLoadTime: SortOrder
+    txMetaSource: SortOrder
+    txMetaCorrection: SortOrder
+    txMetaChange: SortOrder
+    txMetaAccessFilter: SortOrder
+    PartyId: SortOrder
+}
+
+input PersonWhereUniqueInput {
+    id: String
+    txPrimaryKey: String
+}
+
+input ChildOrganizationCreateInput {
+    id: String
+    basicDataCompleteCode: String
+    basingPartyRoleInRelationshipSpecificationSpecificationKey: String
+    creationDateTime: String
+    description: String
+    informationModelObjectKind: String
+    namePartyNameKey: String
+    partyRoleInRelationshipKind: String
+    partyRoleKind: String
+    playerRoleRoleKey: String
+    playingPartyPartyKey: String
+    roleKey: String
+    roleKind: String
+    rolePlayerPeriodStart: String
+    rolePlayerPeriodEnd: String
+    typeName: String
+    txGlobalTypeName: String
+    txTypeCode: String
+    txPrimaryKey: String
+    txMetaSourceKey: String
+    txMetaStartEventTime: String
+    txMetaLoadTime: String
+    txMetaSource: String
+    txMetaCorrection: String
+    txMetaChange: String
+    txMetaAccessFilter: Int
+    Party: PartyCreateOneWithoutChildOrganizationInput
+    PartyName: PartyNameCreateOneWithoutChildOrganizationInput
+}
+
+input ChildOrganizationUpdateInput {
+    id: StringFieldUpdateOperationsInput
+    basicDataCompleteCode: NullableStringFieldUpdateOperationsInput
+    basingPartyRoleInRelationshipSpecificationSpecificationKey: NullableStringFieldUpdateOperationsInput
+    creationDateTime: NullableStringFieldUpdateOperationsInput
+    description: NullableStringFieldUpdateOperationsInput
+    informationModelObjectKind: NullableStringFieldUpdateOperationsInput
+    namePartyNameKey: NullableStringFieldUpdateOperationsInput
+    partyRoleInRelationshipKind: NullableStringFieldUpdateOperationsInput
+    partyRoleKind: NullableStringFieldUpdateOperationsInput
+    playerRoleRoleKey: NullableStringFieldUpdateOperationsInput
+    playingPartyPartyKey: NullableStringFieldUpdateOperationsInput
+    roleKey: NullableStringFieldUpdateOperationsInput
+    roleKind: NullableStringFieldUpdateOperationsInput
+    rolePlayerPeriodStart: NullableStringFieldUpdateOperationsInput
+    rolePlayerPeriodEnd: NullableStringFieldUpdateOperationsInput
+    typeName: NullableStringFieldUpdateOperationsInput
+    txGlobalTypeName: NullableStringFieldUpdateOperationsInput
+    txTypeCode: NullableStringFieldUpdateOperationsInput
+    txPrimaryKey: NullableStringFieldUpdateOperationsInput
+    txMetaSourceKey: NullableStringFieldUpdateOperationsInput
+    txMetaStartEventTime: NullableStringFieldUpdateOperationsInput
+    txMetaLoadTime: NullableStringFieldUpdateOperationsInput
+    txMetaSource: NullableStringFieldUpdateOperationsInput
+    txMetaCorrection: NullableStringFieldUpdateOperationsInput
+    txMetaChange: NullableStringFieldUpdateOperationsInput
+    txMetaAccessFilter: NullableIntFieldUpdateOperationsInput
+    Party: PartyUpdateOneWithoutChildOrganizationInput
+    PartyName: PartyNameUpdateOneWithoutChildOrganizationInput
+}
+
+input ChildOrganizationUpdateManyMutationInput {
+    id: StringFieldUpdateOperationsInput
+    basicDataCompleteCode: NullableStringFieldUpdateOperationsInput
+    basingPartyRoleInRelationshipSpecificationSpecificationKey: NullableStringFieldUpdateOperationsInput
+    creationDateTime: NullableStringFieldUpdateOperationsInput
+    description: NullableStringFieldUpdateOperationsInput
+    informationModelObjectKind: NullableStringFieldUpdateOperationsInput
+    namePartyNameKey: NullableStringFieldUpdateOperationsInput
+    partyRoleInRelationshipKind: NullableStringFieldUpdateOperationsInput
+    partyRoleKind: NullableStringFieldUpdateOperationsInput
+    playerRoleRoleKey: NullableStringFieldUpdateOperationsInput
+    playingPartyPartyKey: NullableStringFieldUpdateOperationsInput
+    roleKey: NullableStringFieldUpdateOperationsInput
+    roleKind: NullableStringFieldUpdateOperationsInput
+    rolePlayerPeriodStart: NullableStringFieldUpdateOperationsInput
+    rolePlayerPeriodEnd: NullableStringFieldUpdateOperationsInput
+    typeName: NullableStringFieldUpdateOperationsInput
+    txGlobalTypeName: NullableStringFieldUpdateOperationsInput
+    txTypeCode: NullableStringFieldUpdateOperationsInput
+    txPrimaryKey: NullableStringFieldUpdateOperationsInput
+    txMetaSourceKey: NullableStringFieldUpdateOperationsInput
+    txMetaStartEventTime: NullableStringFieldUpdateOperationsInput
+    txMetaLoadTime: NullableStringFieldUpdateOperationsInput
+    txMetaSource: NullableStringFieldUpdateOperationsInput
+    txMetaCorrection: NullableStringFieldUpdateOperationsInput
+    txMetaChange: NullableStringFieldUpdateOperationsInput
+    txMetaAccessFilter: NullableIntFieldUpdateOperationsInput
+}
+
+input PartyCreateInput {
+    id: String
+    basicDataCompleteCode: String
+    creationDateTime: String
+    informationModelObjectKind: String
+    partyKey: String
+    partyKind: String
+    typeName: String
+    txGlobalTypeName: String
+    txTypeCode: String
+    txPrimaryKey: String
+    txMetaSourceKey: String
+    txMetaStartEventTime: String
+    txMetaLoadTime: String
+    txMetaSource: String
+    txMetaCorrection: String
+    txMetaChange: String
+    txMetaAccessFilter: Int
+    Person: PersonCreateManyWithoutPartyInput
+    PartyName: PartyNameCreateManyWithoutPartyInput
+    ChildOrganization: ChildOrganizationCreateManyWithoutPartyInput
+}
+
+input PartyUpdateInput {
+    id: StringFieldUpdateOperationsInput
+    basicDataCompleteCode: NullableStringFieldUpdateOperationsInput
+    creationDateTime: NullableStringFieldUpdateOperationsInput
+    informationModelObjectKind: NullableStringFieldUpdateOperationsInput
+    partyKey: NullableStringFieldUpdateOperationsInput
+    partyKind: NullableStringFieldUpdateOperationsInput
+    typeName: NullableStringFieldUpdateOperationsInput
+    txGlobalTypeName: NullableStringFieldUpdateOperationsInput
+    txTypeCode: NullableStringFieldUpdateOperationsInput
+    txPrimaryKey: NullableStringFieldUpdateOperationsInput
+    txMetaSourceKey: NullableStringFieldUpdateOperationsInput
+    txMetaStartEventTime: NullableStringFieldUpdateOperationsInput
+    txMetaLoadTime: NullableStringFieldUpdateOperationsInput
+    txMetaSource: NullableStringFieldUpdateOperationsInput
+    txMetaCorrection: NullableStringFieldUpdateOperationsInput
+    txMetaChange: NullableStringFieldUpdateOperationsInput
+    txMetaAccessFilter: NullableIntFieldUpdateOperationsInput
+    Person: PersonUpdateManyWithoutPartyInput
+    PartyName: PartyNameUpdateManyWithoutPartyInput
+    ChildOrganization: ChildOrganizationUpdateManyWithoutPartyInput
+}
+
+input PartyUpdateManyMutationInput {
+    id: StringFieldUpdateOperationsInput
+    basicDataCompleteCode: NullableStringFieldUpdateOperationsInput
+    creationDateTime: NullableStringFieldUpdateOperationsInput
+    informationModelObjectKind: NullableStringFieldUpdateOperationsInput
+    partyKey: NullableStringFieldUpdateOperationsInput
+    partyKind: NullableStringFieldUpdateOperationsInput
+    typeName: NullableStringFieldUpdateOperationsInput
+    txGlobalTypeName: NullableStringFieldUpdateOperationsInput
+    txTypeCode: NullableStringFieldUpdateOperationsInput
+    txPrimaryKey: NullableStringFieldUpdateOperationsInput
+    txMetaSourceKey: NullableStringFieldUpdateOperationsInput
+    txMetaStartEventTime: NullableStringFieldUpdateOperationsInput
+    txMetaLoadTime: NullableStringFieldUpdateOperationsInput
+    txMetaSource: NullableStringFieldUpdateOperationsInput
+    txMetaCorrection: NullableStringFieldUpdateOperationsInput
+    txMetaChange: NullableStringFieldUpdateOperationsInput
+    txMetaAccessFilter: NullableIntFieldUpdateOperationsInput
+}
+
+input PartyNameCreateInput {
+    id: String
+    basicDataCompleteCode: String
+    creationDateTime: String
+    defaultIndicator: Boolean
+    description: String
+    effectivePeriodStart: String
+    effectivePeriodEnd: String
+    fullName: String
+    givenName: String
+    informationModelObjectKind: String
+    middleName: String
+    ownerPartyKey: String
+    partyNameKey: String
+    partyNameKind: String
+    prefixTitleCode: String
+    suffix: String
+    surname: String
+    typeName: String
+    usageCode: String
+    utilizedLanguageLanguageKey: String
+    txGlobalTypeName: String
+    txTypeCode: String
+    txPrimaryKey: String
+    txMetaSourceKey: String
+    txMetaStartEventTime: String
+    txMetaLoadTime: String
+    txMetaSource: String
+    txMetaCorrection: String
+    txMetaChange: String
+    txMetaAccessFilter: Int
+    CompanyId: String
+    OrganizationUnitId: String
+    ChildOrganization: ChildOrganizationCreateManyWithoutPartyNameInput
+    Person: PersonCreateOneWithoutPartyNameInput
+    Party: PartyCreateOneWithoutPartyNameInput
+}
+
+input PartyNameUpdateInput {
+    id: StringFieldUpdateOperationsInput
+    basicDataCompleteCode: NullableStringFieldUpdateOperationsInput
+    creationDateTime: NullableStringFieldUpdateOperationsInput
+    defaultIndicator: NullableBoolFieldUpdateOperationsInput
+    description: NullableStringFieldUpdateOperationsInput
+    effectivePeriodStart: NullableStringFieldUpdateOperationsInput
+    effectivePeriodEnd: NullableStringFieldUpdateOperationsInput
+    fullName: NullableStringFieldUpdateOperationsInput
+    givenName: NullableStringFieldUpdateOperationsInput
+    informationModelObjectKind: NullableStringFieldUpdateOperationsInput
+    middleName: NullableStringFieldUpdateOperationsInput
+    ownerPartyKey: NullableStringFieldUpdateOperationsInput
+    partyNameKey: NullableStringFieldUpdateOperationsInput
+    partyNameKind: NullableStringFieldUpdateOperationsInput
+    prefixTitleCode: NullableStringFieldUpdateOperationsInput
+    suffix: NullableStringFieldUpdateOperationsInput
+    surname: NullableStringFieldUpdateOperationsInput
+    typeName: NullableStringFieldUpdateOperationsInput
+    usageCode: NullableStringFieldUpdateOperationsInput
+    utilizedLanguageLanguageKey: NullableStringFieldUpdateOperationsInput
+    txGlobalTypeName: NullableStringFieldUpdateOperationsInput
+    txTypeCode: NullableStringFieldUpdateOperationsInput
+    txPrimaryKey: NullableStringFieldUpdateOperationsInput
+    txMetaSourceKey: NullableStringFieldUpdateOperationsInput
+    txMetaStartEventTime: NullableStringFieldUpdateOperationsInput
+    txMetaLoadTime: NullableStringFieldUpdateOperationsInput
+    txMetaSource: NullableStringFieldUpdateOperationsInput
+    txMetaCorrection: NullableStringFieldUpdateOperationsInput
+    txMetaChange: NullableStringFieldUpdateOperationsInput
+    txMetaAccessFilter: NullableIntFieldUpdateOperationsInput
+    CompanyId: NullableStringFieldUpdateOperationsInput
+    OrganizationUnitId: NullableStringFieldUpdateOperationsInput
+    ChildOrganization: ChildOrganizationUpdateManyWithoutPartyNameInput
+    Person: PersonUpdateOneWithoutPartyNameInput
+    Party: PartyUpdateOneWithoutPartyNameInput
+}
+
+input PartyNameUpdateManyMutationInput {
+    id: StringFieldUpdateOperationsInput
+    basicDataCompleteCode: NullableStringFieldUpdateOperationsInput
+    creationDateTime: NullableStringFieldUpdateOperationsInput
+    defaultIndicator: NullableBoolFieldUpdateOperationsInput
+    description: NullableStringFieldUpdateOperationsInput
+    effectivePeriodStart: NullableStringFieldUpdateOperationsInput
+    effectivePeriodEnd: NullableStringFieldUpdateOperationsInput
+    fullName: NullableStringFieldUpdateOperationsInput
+    givenName: NullableStringFieldUpdateOperationsInput
+    informationModelObjectKind: NullableStringFieldUpdateOperationsInput
+    middleName: NullableStringFieldUpdateOperationsInput
+    ownerPartyKey: NullableStringFieldUpdateOperationsInput
+    partyNameKey: NullableStringFieldUpdateOperationsInput
+    partyNameKind: NullableStringFieldUpdateOperationsInput
+    prefixTitleCode: NullableStringFieldUpdateOperationsInput
+    suffix: NullableStringFieldUpdateOperationsInput
+    surname: NullableStringFieldUpdateOperationsInput
+    typeName: NullableStringFieldUpdateOperationsInput
+    usageCode: NullableStringFieldUpdateOperationsInput
+    utilizedLanguageLanguageKey: NullableStringFieldUpdateOperationsInput
+    txGlobalTypeName: NullableStringFieldUpdateOperationsInput
+    txTypeCode: NullableStringFieldUpdateOperationsInput
+    txPrimaryKey: NullableStringFieldUpdateOperationsInput
+    txMetaSourceKey: NullableStringFieldUpdateOperationsInput
+    txMetaStartEventTime: NullableStringFieldUpdateOperationsInput
+    txMetaLoadTime: NullableStringFieldUpdateOperationsInput
+    txMetaSource: NullableStringFieldUpdateOperationsInput
+    txMetaCorrection: NullableStringFieldUpdateOperationsInput
+    txMetaChange: NullableStringFieldUpdateOperationsInput
+    txMetaAccessFilter: NullableIntFieldUpdateOperationsInput
+    CompanyId: NullableStringFieldUpdateOperationsInput
+    OrganizationUnitId: NullableStringFieldUpdateOperationsInput
+}
+
+input PersonCreateInput {
+    id: String
+    birthDateTime: String
+    bloodTypeCode: String
+    deathIndicator: Boolean
+    ethnicityCode: String
+    genderCode: String
+    maritalStatusCode: String
+    missingDateTime: String
+    missingIndicator: Boolean
+    partyKey: String
+    primaryLanguageLanguageKey: String
+    txGlobalGenderCode: String
+    txPrimaryKey: String
+    txMetaSourceKey: String
+    txMetaStartEventTime: String
+    txMetaLoadTime: String
+    txMetaSource: String
+    txMetaCorrection: String
+    txMetaChange: String
+    txMetaAccessFilter: Int
+    PartyName: PartyNameCreateManyWithoutPersonInput
+    Party: PartyCreateOneWithoutPersonInput
+}
+
+input PersonUpdateInput {
+    id: StringFieldUpdateOperationsInput
+    birthDateTime: NullableStringFieldUpdateOperationsInput
+    bloodTypeCode: NullableStringFieldUpdateOperationsInput
+    deathIndicator: NullableBoolFieldUpdateOperationsInput
+    ethnicityCode: NullableStringFieldUpdateOperationsInput
+    genderCode: NullableStringFieldUpdateOperationsInput
+    maritalStatusCode: NullableStringFieldUpdateOperationsInput
+    missingDateTime: NullableStringFieldUpdateOperationsInput
+    missingIndicator: NullableBoolFieldUpdateOperationsInput
+    partyKey: NullableStringFieldUpdateOperationsInput
+    primaryLanguageLanguageKey: NullableStringFieldUpdateOperationsInput
+    txGlobalGenderCode: NullableStringFieldUpdateOperationsInput
+    txPrimaryKey: NullableStringFieldUpdateOperationsInput
+    txMetaSourceKey: NullableStringFieldUpdateOperationsInput
+    txMetaStartEventTime: NullableStringFieldUpdateOperationsInput
+    txMetaLoadTime: NullableStringFieldUpdateOperationsInput
+    txMetaSource: NullableStringFieldUpdateOperationsInput
+    txMetaCorrection: NullableStringFieldUpdateOperationsInput
+    txMetaChange: NullableStringFieldUpdateOperationsInput
+    txMetaAccessFilter: NullableIntFieldUpdateOperationsInput
+    PartyName: PartyNameUpdateManyWithoutPersonInput
+    Party: PartyUpdateOneWithoutPersonInput
+}
+
+input PersonUpdateManyMutationInput {
+    id: StringFieldUpdateOperationsInput
+    birthDateTime: NullableStringFieldUpdateOperationsInput
+    bloodTypeCode: NullableStringFieldUpdateOperationsInput
+    deathIndicator: NullableBoolFieldUpdateOperationsInput
+    ethnicityCode: NullableStringFieldUpdateOperationsInput
+    genderCode: NullableStringFieldUpdateOperationsInput
+    maritalStatusCode: NullableStringFieldUpdateOperationsInput
+    missingDateTime: NullableStringFieldUpdateOperationsInput
+    missingIndicator: NullableBoolFieldUpdateOperationsInput
+    partyKey: NullableStringFieldUpdateOperationsInput
+    primaryLanguageLanguageKey: NullableStringFieldUpdateOperationsInput
+    txGlobalGenderCode: NullableStringFieldUpdateOperationsInput
+    txPrimaryKey: NullableStringFieldUpdateOperationsInput
+    txMetaSourceKey: NullableStringFieldUpdateOperationsInput
+    txMetaStartEventTime: NullableStringFieldUpdateOperationsInput
+    txMetaLoadTime: NullableStringFieldUpdateOperationsInput
+    txMetaSource: NullableStringFieldUpdateOperationsInput
+    txMetaCorrection: NullableStringFieldUpdateOperationsInput
+    txMetaChange: NullableStringFieldUpdateOperationsInput
+    txMetaAccessFilter: NullableIntFieldUpdateOperationsInput
+}
+
+input StringFilter {
+    equals: String
+    in: [String!]
+    notIn: [String!]
+    lt: String
+    lte: String
+    gt: String
+    gte: String
+    contains: String
+    startsWith: String
+    endsWith: String
+    not: String
+}
+
+input StringNullableFilter {
+    equals: String
+    in: [String!]
+    notIn: [String!]
+    lt: String
+    lte: String
+    gt: String
+    gte: String
+    contains: String
+    startsWith: String
+    endsWith: String
+    not: String
+}
+
+input IntNullableFilter {
+    equals: Int
+    in: [Int!]
+    notIn: [Int!]
+    lt: Int
+    lte: Int
+    gt: Int
+    gte: Int
+    not: Int
+}
+
+input PartyRelationFilter {
+    is: PartyWhereInput
+    isNot: PartyWhereInput
+}
+
+input PartyNameRelationFilter {
+    is: PartyNameWhereInput
+    isNot: PartyNameWhereInput
+}
+
+input PersonListRelationFilter {
+    every: PersonWhereInput
+    some: PersonWhereInput
+    none: PersonWhereInput
+}
+
+input PartyNameListRelationFilter {
+    every: PartyNameWhereInput
+    some: PartyNameWhereInput
+    none: PartyNameWhereInput
+}
+
+input ChildOrganizationListRelationFilter {
+    every: ChildOrganizationWhereInput
+    some: ChildOrganizationWhereInput
+    none: ChildOrganizationWhereInput
+}
+
+input BoolNullableFilter {
+    equals: Boolean
+    not: Boolean
+}
+
+input PersonRelationFilter {
+    is: PersonWhereInput
+    isNot: PersonWhereInput
+}
+
+input PartyCreateOneWithoutChildOrganizationInput {
+    create: PartyCreateWithoutChildOrganizationInput
+    connect: PartyWhereUniqueInput
+}
+
+input PartyNameCreateOneWithoutChildOrganizationInput {
+    create: PartyNameCreateWithoutChildOrganizationInput
+    connect: PartyNameWhereUniqueInput
+}
+
+input StringFieldUpdateOperationsInput {
+    set: String
+}
+
+input NullableStringFieldUpdateOperationsInput {
+    set: String
+}
+
+input NullableIntFieldUpdateOperationsInput {
+    set: Int
+}
+
+input PartyUpdateOneWithoutChildOrganizationInput {
+    create: PartyCreateWithoutChildOrganizationInput
+    connect: PartyWhereUniqueInput
+    disconnect: Boolean
+    delete: Boolean
+    update: PartyUpdateWithoutChildOrganizationDataInput
+    upsert: PartyUpsertWithoutChildOrganizationInput
+}
+
+input PartyNameUpdateOneWithoutChildOrganizationInput {
+    create: PartyNameCreateWithoutChildOrganizationInput
+    connect: PartyNameWhereUniqueInput
+    disconnect: Boolean
+    delete: Boolean
+    update: PartyNameUpdateWithoutChildOrganizationDataInput
+    upsert: PartyNameUpsertWithoutChildOrganizationInput
+}
+
+input PersonCreateManyWithoutPartyInput {
+    create: [PersonCreateWithoutPartyInput!]
+    connect: [PersonWhereUniqueInput!]
+}
+
+input PartyNameCreateManyWithoutPartyInput {
+    create: [PartyNameCreateWithoutPartyInput!]
+    connect: [PartyNameWhereUniqueInput!]
+}
+
+input ChildOrganizationCreateManyWithoutPartyInput {
+    create: [ChildOrganizationCreateWithoutPartyInput!]
+    connect: [ChildOrganizationWhereUniqueInput!]
+}
+
+input PersonUpdateManyWithoutPartyInput {
+    create: [PersonCreateWithoutPartyInput!]
+    connect: [PersonWhereUniqueInput!]
+    set: [PersonWhereUniqueInput!]
+    disconnect: [PersonWhereUniqueInput!]
+    delete: [PersonWhereUniqueInput!]
+    update: [PersonUpdateWithWhereUniqueWithoutPartyInput!]
+    updateMany: [PersonUpdateManyWithWhereNestedInput!]
+    deleteMany: [PersonScalarWhereInput!]
+    upsert: [PersonUpsertWithWhereUniqueWithoutPartyInput!]
+}
+
+input PartyNameUpdateManyWithoutPartyInput {
+    create: [PartyNameCreateWithoutPartyInput!]
+    connect: [PartyNameWhereUniqueInput!]
+    set: [PartyNameWhereUniqueInput!]
+    disconnect: [PartyNameWhereUniqueInput!]
+    delete: [PartyNameWhereUniqueInput!]
+    update: [PartyNameUpdateWithWhereUniqueWithoutPartyInput!]
+    updateMany: [PartyNameUpdateManyWithWhereNestedInput!]
+    deleteMany: [PartyNameScalarWhereInput!]
+    upsert: [PartyNameUpsertWithWhereUniqueWithoutPartyInput!]
+}
+
+input ChildOrganizationUpdateManyWithoutPartyInput {
+    create: [ChildOrganizationCreateWithoutPartyInput!]
+    connect: [ChildOrganizationWhereUniqueInput!]
+    set: [ChildOrganizationWhereUniqueInput!]
+    disconnect: [ChildOrganizationWhereUniqueInput!]
+    delete: [ChildOrganizationWhereUniqueInput!]
+    update: [ChildOrganizationUpdateWithWhereUniqueWithoutPartyInput!]
+    updateMany: [ChildOrganizationUpdateManyWithWhereNestedInput!]
+    deleteMany: [ChildOrganizationScalarWhereInput!]
+    upsert: [ChildOrganizationUpsertWithWhereUniqueWithoutPartyInput!]
+}
+
+input ChildOrganizationCreateManyWithoutPartyNameInput {
+    create: [ChildOrganizationCreateWithoutPartyNameInput!]
+    connect: [ChildOrganizationWhereUniqueInput!]
+}
+
+input PersonCreateOneWithoutPartyNameInput {
+    create: PersonCreateWithoutPartyNameInput
+    connect: PersonWhereUniqueInput
+}
+
+input PartyCreateOneWithoutPartyNameInput {
+    create: PartyCreateWithoutPartyNameInput
+    connect: PartyWhereUniqueInput
+}
+
+input NullableBoolFieldUpdateOperationsInput {
+    set: Boolean
+}
+
+input ChildOrganizationUpdateManyWithoutPartyNameInput {
+    create: [ChildOrganizationCreateWithoutPartyNameInput!]
+    connect: [ChildOrganizationWhereUniqueInput!]
+    set: [ChildOrganizationWhereUniqueInput!]
+    disconnect: [ChildOrganizationWhereUniqueInput!]
+    delete: [ChildOrganizationWhereUniqueInput!]
+    update: [ChildOrganizationUpdateWithWhereUniqueWithoutPartyNameInput!]
+    updateMany: [ChildOrganizationUpdateManyWithWhereNestedInput!]
+    deleteMany: [ChildOrganizationScalarWhereInput!]
+    upsert: [ChildOrganizationUpsertWithWhereUniqueWithoutPartyNameInput!]
+}
+
+input PersonUpdateOneWithoutPartyNameInput {
+    create: PersonCreateWithoutPartyNameInput
+    connect: PersonWhereUniqueInput
+    disconnect: Boolean
+    delete: Boolean
+    update: PersonUpdateWithoutPartyNameDataInput
+    upsert: PersonUpsertWithoutPartyNameInput
+}
+
+input PartyUpdateOneWithoutPartyNameInput {
+    create: PartyCreateWithoutPartyNameInput
+    connect: PartyWhereUniqueInput
+    disconnect: Boolean
+    delete: Boolean
+    update: PartyUpdateWithoutPartyNameDataInput
+    upsert: PartyUpsertWithoutPartyNameInput
+}
+
+input PartyNameCreateManyWithoutPersonInput {
+    create: [PartyNameCreateWithoutPersonInput!]
+    connect: [PartyNameWhereUniqueInput!]
+}
+
+input PartyCreateOneWithoutPersonInput {
+    create: PartyCreateWithoutPersonInput
+    connect: PartyWhereUniqueInput
+}
+
+input PartyNameUpdateManyWithoutPersonInput {
+    create: [PartyNameCreateWithoutPersonInput!]
+    connect: [PartyNameWhereUniqueInput!]
+    set: [PartyNameWhereUniqueInput!]
+    disconnect: [PartyNameWhereUniqueInput!]
+    delete: [PartyNameWhereUniqueInput!]
+    update: [PartyNameUpdateWithWhereUniqueWithoutPersonInput!]
+    updateMany: [PartyNameUpdateManyWithWhereNestedInput!]
+    deleteMany: [PartyNameScalarWhereInput!]
+    upsert: [PartyNameUpsertWithWhereUniqueWithoutPersonInput!]
+}
+
+input PartyUpdateOneWithoutPersonInput {
+    create: PartyCreateWithoutPersonInput
+    connect: PartyWhereUniqueInput
+    disconnect: Boolean
+    delete: Boolean
+    update: PartyUpdateWithoutPersonDataInput
+    upsert: PartyUpsertWithoutPersonInput
+}
+
+input NestedStringFilter {
+    equals: String
+    in: [String!]
+    notIn: [String!]
+    lt: String
+    lte: String
+    gt: String
+    gte: String
+    contains: String
+    startsWith: String
+    endsWith: String
+    not: NestedStringFilter
+}
+
+input NestedStringNullableFilter {
+    equals: String
+    in: [String!]
+    notIn: [String!]
+    lt: String
+    lte: String
+    gt: String
+    gte: String
+    contains: String
+    startsWith: String
+    endsWith: String
+    not: NestedStringNullableFilter
+}
+
+input NestedIntNullableFilter {
+    equals: Int
+    in: [Int!]
+    notIn: [Int!]
+    lt: Int
+    lte: Int
+    gt: Int
+    gte: Int
+    not: NestedIntNullableFilter
+}
+
+input NestedBoolNullableFilter {
+    equals: Boolean
+    not: NestedBoolNullableFilter
+}
+
+input PartyCreateWithoutChildOrganizationInput {
+    id: String
+    basicDataCompleteCode: String
+    creationDateTime: String
+    informationModelObjectKind: String
+    partyKey: String
+    partyKind: String
+    typeName: String
+    txGlobalTypeName: String
+    txTypeCode: String
+    txPrimaryKey: String
+    txMetaSourceKey: String
+    txMetaStartEventTime: String
+    txMetaLoadTime: String
+    txMetaSource: String
+    txMetaCorrection: String
+    txMetaChange: String
+    txMetaAccessFilter: Int
+    Person: PersonCreateManyWithoutPartyInput
+    PartyName: PartyNameCreateManyWithoutPartyInput
+}
+
+input PartyNameCreateWithoutChildOrganizationInput {
+    id: String
+    basicDataCompleteCode: String
+    creationDateTime: String
+    defaultIndicator: Boolean
+    description: String
+    effectivePeriodStart: String
+    effectivePeriodEnd: String
+    fullName: String
+    givenName: String
+    informationModelObjectKind: String
+    middleName: String
+    ownerPartyKey: String
+    partyNameKey: String
+    partyNameKind: String
+    prefixTitleCode: String
+    suffix: String
+    surname: String
+    typeName: String
+    usageCode: String
+    utilizedLanguageLanguageKey: String
+    txGlobalTypeName: String
+    txTypeCode: String
+    txPrimaryKey: String
+    txMetaSourceKey: String
+    txMetaStartEventTime: String
+    txMetaLoadTime: String
+    txMetaSource: String
+    txMetaCorrection: String
+    txMetaChange: String
+    txMetaAccessFilter: Int
+    CompanyId: String
+    OrganizationUnitId: String
+    Person: PersonCreateOneWithoutPartyNameInput
+    Party: PartyCreateOneWithoutPartyNameInput
+}
+
+input PartyUpdateWithoutChildOrganizationDataInput {
+    id: StringFieldUpdateOperationsInput
+    basicDataCompleteCode: NullableStringFieldUpdateOperationsInput
+    creationDateTime: NullableStringFieldUpdateOperationsInput
+    informationModelObjectKind: NullableStringFieldUpdateOperationsInput
+    partyKey: NullableStringFieldUpdateOperationsInput
+    partyKind: NullableStringFieldUpdateOperationsInput
+    typeName: NullableStringFieldUpdateOperationsInput
+    txGlobalTypeName: NullableStringFieldUpdateOperationsInput
+    txTypeCode: NullableStringFieldUpdateOperationsInput
+    txPrimaryKey: NullableStringFieldUpdateOperationsInput
+    txMetaSourceKey: NullableStringFieldUpdateOperationsInput
+    txMetaStartEventTime: NullableStringFieldUpdateOperationsInput
+    txMetaLoadTime: NullableStringFieldUpdateOperationsInput
+    txMetaSource: NullableStringFieldUpdateOperationsInput
+    txMetaCorrection: NullableStringFieldUpdateOperationsInput
+    txMetaChange: NullableStringFieldUpdateOperationsInput
+    txMetaAccessFilter: NullableIntFieldUpdateOperationsInput
+    Person: PersonUpdateManyWithoutPartyInput
+    PartyName: PartyNameUpdateManyWithoutPartyInput
+}
+
+input PartyUpsertWithoutChildOrganizationInput {
+    update: PartyUpdateWithoutChildOrganizationDataInput!
+    create: PartyCreateWithoutChildOrganizationInput!
+}
+
+input PartyNameUpdateWithoutChildOrganizationDataInput {
+    id: StringFieldUpdateOperationsInput
+    basicDataCompleteCode: NullableStringFieldUpdateOperationsInput
+    creationDateTime: NullableStringFieldUpdateOperationsInput
+    defaultIndicator: NullableBoolFieldUpdateOperationsInput
+    description: NullableStringFieldUpdateOperationsInput
+    effectivePeriodStart: NullableStringFieldUpdateOperationsInput
+    effectivePeriodEnd: NullableStringFieldUpdateOperationsInput
+    fullName: NullableStringFieldUpdateOperationsInput
+    givenName: NullableStringFieldUpdateOperationsInput
+    informationModelObjectKind: NullableStringFieldUpdateOperationsInput
+    middleName: NullableStringFieldUpdateOperationsInput
+    ownerPartyKey: NullableStringFieldUpdateOperationsInput
+    partyNameKey: NullableStringFieldUpdateOperationsInput
+    partyNameKind: NullableStringFieldUpdateOperationsInput
+    prefixTitleCode: NullableStringFieldUpdateOperationsInput
+    suffix: NullableStringFieldUpdateOperationsInput
+    surname: NullableStringFieldUpdateOperationsInput
+    typeName: NullableStringFieldUpdateOperationsInput
+    usageCode: NullableStringFieldUpdateOperationsInput
+    utilizedLanguageLanguageKey: NullableStringFieldUpdateOperationsInput
+    txGlobalTypeName: NullableStringFieldUpdateOperationsInput
+    txTypeCode: NullableStringFieldUpdateOperationsInput
+    txPrimaryKey: NullableStringFieldUpdateOperationsInput
+    txMetaSourceKey: NullableStringFieldUpdateOperationsInput
+    txMetaStartEventTime: NullableStringFieldUpdateOperationsInput
+    txMetaLoadTime: NullableStringFieldUpdateOperationsInput
+    txMetaSource: NullableStringFieldUpdateOperationsInput
+    txMetaCorrection: NullableStringFieldUpdateOperationsInput
+    txMetaChange: NullableStringFieldUpdateOperationsInput
+    txMetaAccessFilter: NullableIntFieldUpdateOperationsInput
+    CompanyId: NullableStringFieldUpdateOperationsInput
+    OrganizationUnitId: NullableStringFieldUpdateOperationsInput
+    Person: PersonUpdateOneWithoutPartyNameInput
+    Party: PartyUpdateOneWithoutPartyNameInput
+}
+
+input PartyNameUpsertWithoutChildOrganizationInput {
+    update: PartyNameUpdateWithoutChildOrganizationDataInput!
+    create: PartyNameCreateWithoutChildOrganizationInput!
+}
+
+input PersonCreateWithoutPartyInput {
+    id: String
+    birthDateTime: String
+    bloodTypeCode: String
+    deathIndicator: Boolean
+    ethnicityCode: String
+    genderCode: String
+    maritalStatusCode: String
+    missingDateTime: String
+    missingIndicator: Boolean
+    partyKey: String
+    primaryLanguageLanguageKey: String
+    txGlobalGenderCode: String
+    txPrimaryKey: String
+    txMetaSourceKey: String
+    txMetaStartEventTime: String
+    txMetaLoadTime: String
+    txMetaSource: String
+    txMetaCorrection: String
+    txMetaChange: String
+    txMetaAccessFilter: Int
+    PartyName: PartyNameCreateManyWithoutPersonInput
+}
+
+input PartyNameCreateWithoutPartyInput {
+    id: String
+    basicDataCompleteCode: String
+    creationDateTime: String
+    defaultIndicator: Boolean
+    description: String
+    effectivePeriodStart: String
+    effectivePeriodEnd: String
+    fullName: String
+    givenName: String
+    informationModelObjectKind: String
+    middleName: String
+    ownerPartyKey: String
+    partyNameKey: String
+    partyNameKind: String
+    prefixTitleCode: String
+    suffix: String
+    surname: String
+    typeName: String
+    usageCode: String
+    utilizedLanguageLanguageKey: String
+    txGlobalTypeName: String
+    txTypeCode: String
+    txPrimaryKey: String
+    txMetaSourceKey: String
+    txMetaStartEventTime: String
+    txMetaLoadTime: String
+    txMetaSource: String
+    txMetaCorrection: String
+    txMetaChange: String
+    txMetaAccessFilter: Int
+    CompanyId: String
+    OrganizationUnitId: String
+    ChildOrganization: ChildOrganizationCreateManyWithoutPartyNameInput
+    Person: PersonCreateOneWithoutPartyNameInput
+}
+
+input ChildOrganizationCreateWithoutPartyInput {
+    id: String
+    basicDataCompleteCode: String
+    basingPartyRoleInRelationshipSpecificationSpecificationKey: String
+    creationDateTime: String
+    description: String
+    informationModelObjectKind: String
+    namePartyNameKey: String
+    partyRoleInRelationshipKind: String
+    partyRoleKind: String
+    playerRoleRoleKey: String
+    playingPartyPartyKey: String
+    roleKey: String
+    roleKind: String
+    rolePlayerPeriodStart: String
+    rolePlayerPeriodEnd: String
+    typeName: String
+    txGlobalTypeName: String
+    txTypeCode: String
+    txPrimaryKey: String
+    txMetaSourceKey: String
+    txMetaStartEventTime: String
+    txMetaLoadTime: String
+    txMetaSource: String
+    txMetaCorrection: String
+    txMetaChange: String
+    txMetaAccessFilter: Int
+    PartyName: PartyNameCreateOneWithoutChildOrganizationInput
+}
+
+input PersonUpdateWithWhereUniqueWithoutPartyInput {
+    where: PersonWhereUniqueInput!
+    data: PersonUpdateWithoutPartyDataInput!
+}
+
+input PersonUpdateManyWithWhereNestedInput {
+    where: PersonScalarWhereInput!
+    data: PersonUpdateManyDataInput!
+}
+
+input PersonScalarWhereInput {
+    AND: [PersonScalarWhereInput!]
+    OR: [PersonScalarWhereInput!]
+    NOT: [PersonScalarWhereInput!]
+    id: StringFilter
+    birthDateTime: StringNullableFilter
+    bloodTypeCode: StringNullableFilter
+    deathIndicator: BoolNullableFilter
+    ethnicityCode: StringNullableFilter
+    genderCode: StringNullableFilter
+    maritalStatusCode: StringNullableFilter
+    missingDateTime: StringNullableFilter
+    missingIndicator: BoolNullableFilter
+    partyKey: StringNullableFilter
+    primaryLanguageLanguageKey: StringNullableFilter
+    txGlobalGenderCode: StringNullableFilter
+    txPrimaryKey: StringNullableFilter
+    txMetaSourceKey: StringNullableFilter
+    txMetaStartEventTime: StringNullableFilter
+    txMetaLoadTime: StringNullableFilter
+    txMetaSource: StringNullableFilter
+    txMetaCorrection: StringNullableFilter
+    txMetaChange: StringNullableFilter
+    txMetaAccessFilter: IntNullableFilter
+    PartyId: StringNullableFilter
+}
+
+input PersonUpsertWithWhereUniqueWithoutPartyInput {
+    where: PersonWhereUniqueInput!
+    update: PersonUpdateWithoutPartyDataInput!
+    create: PersonCreateWithoutPartyInput!
+}
+
+input PartyNameUpdateWithWhereUniqueWithoutPartyInput {
+    where: PartyNameWhereUniqueInput!
+    data: PartyNameUpdateWithoutPartyDataInput!
+}
+
+input PartyNameUpdateManyWithWhereNestedInput {
+    where: PartyNameScalarWhereInput!
+    data: PartyNameUpdateManyDataInput!
+}
+
+input PartyNameScalarWhereInput {
+    AND: [PartyNameScalarWhereInput!]
+    OR: [PartyNameScalarWhereInput!]
+    NOT: [PartyNameScalarWhereInput!]
+    id: StringFilter
+    basicDataCompleteCode: StringNullableFilter
+    creationDateTime: StringNullableFilter
+    defaultIndicator: BoolNullableFilter
+    description: StringNullableFilter
+    effectivePeriodStart: StringNullableFilter
+    effectivePeriodEnd: StringNullableFilter
+    fullName: StringNullableFilter
+    givenName: StringNullableFilter
+    informationModelObjectKind: StringNullableFilter
+    middleName: StringNullableFilter
+    ownerPartyKey: StringNullableFilter
+    partyNameKey: StringNullableFilter
+    partyNameKind: StringNullableFilter
+    prefixTitleCode: StringNullableFilter
+    suffix: StringNullableFilter
+    surname: StringNullableFilter
+    typeName: StringNullableFilter
+    usageCode: StringNullableFilter
+    utilizedLanguageLanguageKey: StringNullableFilter
+    txGlobalTypeName: StringNullableFilter
+    txTypeCode: StringNullableFilter
+    txPrimaryKey: StringNullableFilter
+    txMetaSourceKey: StringNullableFilter
+    txMetaStartEventTime: StringNullableFilter
+    txMetaLoadTime: StringNullableFilter
+    txMetaSource: StringNullableFilter
+    txMetaCorrection: StringNullableFilter
+    txMetaChange: StringNullableFilter
+    txMetaAccessFilter: IntNullableFilter
+    PersonId: StringNullableFilter
+    PartyId: StringNullableFilter
+    CompanyId: StringNullableFilter
+    OrganizationUnitId: StringNullableFilter
+}
+
+input PartyNameUpsertWithWhereUniqueWithoutPartyInput {
+    where: PartyNameWhereUniqueInput!
+    update: PartyNameUpdateWithoutPartyDataInput!
+    create: PartyNameCreateWithoutPartyInput!
+}
+
+input ChildOrganizationUpdateWithWhereUniqueWithoutPartyInput {
+    where: ChildOrganizationWhereUniqueInput!
+    data: ChildOrganizationUpdateWithoutPartyDataInput!
+}
+
+input ChildOrganizationUpdateManyWithWhereNestedInput {
+    where: ChildOrganizationScalarWhereInput!
+    data: ChildOrganizationUpdateManyDataInput!
+}
+
+input ChildOrganizationScalarWhereInput {
+    AND: [ChildOrganizationScalarWhereInput!]
+    OR: [ChildOrganizationScalarWhereInput!]
+    NOT: [ChildOrganizationScalarWhereInput!]
+    id: StringFilter
+    basicDataCompleteCode: StringNullableFilter
+    basingPartyRoleInRelationshipSpecificationSpecificationKey: StringNullableFilter
+    creationDateTime: StringNullableFilter
+    description: StringNullableFilter
+    informationModelObjectKind: StringNullableFilter
+    namePartyNameKey: StringNullableFilter
+    partyRoleInRelationshipKind: StringNullableFilter
+    partyRoleKind: StringNullableFilter
+    playerRoleRoleKey: StringNullableFilter
+    playingPartyPartyKey: StringNullableFilter
+    roleKey: StringNullableFilter
+    roleKind: StringNullableFilter
+    rolePlayerPeriodStart: StringNullableFilter
+    rolePlayerPeriodEnd: StringNullableFilter
+    typeName: StringNullableFilter
+    txGlobalTypeName: StringNullableFilter
+    txTypeCode: StringNullableFilter
+    txPrimaryKey: StringNullableFilter
+    txMetaSourceKey: StringNullableFilter
+    txMetaStartEventTime: StringNullableFilter
+    txMetaLoadTime: StringNullableFilter
+    txMetaSource: StringNullableFilter
+    txMetaCorrection: StringNullableFilter
+    txMetaChange: StringNullableFilter
+    txMetaAccessFilter: IntNullableFilter
+    PartyId: StringNullableFilter
+    PartyNameId: StringNullableFilter
+}
+
+input ChildOrganizationUpsertWithWhereUniqueWithoutPartyInput {
+    where: ChildOrganizationWhereUniqueInput!
+    update: ChildOrganizationUpdateWithoutPartyDataInput!
+    create: ChildOrganizationCreateWithoutPartyInput!
+}
+
+input ChildOrganizationCreateWithoutPartyNameInput {
+    id: String
+    basicDataCompleteCode: String
+    basingPartyRoleInRelationshipSpecificationSpecificationKey: String
+    creationDateTime: String
+    description: String
+    informationModelObjectKind: String
+    namePartyNameKey: String
+    partyRoleInRelationshipKind: String
+    partyRoleKind: String
+    playerRoleRoleKey: String
+    playingPartyPartyKey: String
+    roleKey: String
+    roleKind: String
+    rolePlayerPeriodStart: String
+    rolePlayerPeriodEnd: String
+    typeName: String
+    txGlobalTypeName: String
+    txTypeCode: String
+    txPrimaryKey: String
+    txMetaSourceKey: String
+    txMetaStartEventTime: String
+    txMetaLoadTime: String
+    txMetaSource: String
+    txMetaCorrection: String
+    txMetaChange: String
+    txMetaAccessFilter: Int
+    Party: PartyCreateOneWithoutChildOrganizationInput
+}
+
+input PersonCreateWithoutPartyNameInput {
+    id: String
+    birthDateTime: String
+    bloodTypeCode: String
+    deathIndicator: Boolean
+    ethnicityCode: String
+    genderCode: String
+    maritalStatusCode: String
+    missingDateTime: String
+    missingIndicator: Boolean
+    partyKey: String
+    primaryLanguageLanguageKey: String
+    txGlobalGenderCode: String
+    txPrimaryKey: String
+    txMetaSourceKey: String
+    txMetaStartEventTime: String
+    txMetaLoadTime: String
+    txMetaSource: String
+    txMetaCorrection: String
+    txMetaChange: String
+    txMetaAccessFilter: Int
+    Party: PartyCreateOneWithoutPersonInput
+}
+
+input PartyCreateWithoutPartyNameInput {
+    id: String
+    basicDataCompleteCode: String
+    creationDateTime: String
+    informationModelObjectKind: String
+    partyKey: String
+    partyKind: String
+    typeName: String
+    txGlobalTypeName: String
+    txTypeCode: String
+    txPrimaryKey: String
+    txMetaSourceKey: String
+    txMetaStartEventTime: String
+    txMetaLoadTime: String
+    txMetaSource: String
+    txMetaCorrection: String
+    txMetaChange: String
+    txMetaAccessFilter: Int
+    Person: PersonCreateManyWithoutPartyInput
+    ChildOrganization: ChildOrganizationCreateManyWithoutPartyInput
+}
+
+input ChildOrganizationUpdateWithWhereUniqueWithoutPartyNameInput {
+    where: ChildOrganizationWhereUniqueInput!
+    data: ChildOrganizationUpdateWithoutPartyNameDataInput!
+}
+
+input ChildOrganizationUpsertWithWhereUniqueWithoutPartyNameInput {
+    where: ChildOrganizationWhereUniqueInput!
+    update: ChildOrganizationUpdateWithoutPartyNameDataInput!
+    create: ChildOrganizationCreateWithoutPartyNameInput!
+}
+
+input PersonUpdateWithoutPartyNameDataInput {
+    id: StringFieldUpdateOperationsInput
+    birthDateTime: NullableStringFieldUpdateOperationsInput
+    bloodTypeCode: NullableStringFieldUpdateOperationsInput
+    deathIndicator: NullableBoolFieldUpdateOperationsInput
+    ethnicityCode: NullableStringFieldUpdateOperationsInput
+    genderCode: NullableStringFieldUpdateOperationsInput
+    maritalStatusCode: NullableStringFieldUpdateOperationsInput
+    missingDateTime: NullableStringFieldUpdateOperationsInput
+    missingIndicator: NullableBoolFieldUpdateOperationsInput
+    partyKey: NullableStringFieldUpdateOperationsInput
+    primaryLanguageLanguageKey: NullableStringFieldUpdateOperationsInput
+    txGlobalGenderCode: NullableStringFieldUpdateOperationsInput
+    txPrimaryKey: NullableStringFieldUpdateOperationsInput
+    txMetaSourceKey: NullableStringFieldUpdateOperationsInput
+    txMetaStartEventTime: NullableStringFieldUpdateOperationsInput
+    txMetaLoadTime: NullableStringFieldUpdateOperationsInput
+    txMetaSource: NullableStringFieldUpdateOperationsInput
+    txMetaCorrection: NullableStringFieldUpdateOperationsInput
+    txMetaChange: NullableStringFieldUpdateOperationsInput
+    txMetaAccessFilter: NullableIntFieldUpdateOperationsInput
+    Party: PartyUpdateOneWithoutPersonInput
+}
+
+input PersonUpsertWithoutPartyNameInput {
+    update: PersonUpdateWithoutPartyNameDataInput!
+    create: PersonCreateWithoutPartyNameInput!
+}
+
+input PartyUpdateWithoutPartyNameDataInput {
+    id: StringFieldUpdateOperationsInput
+    basicDataCompleteCode: NullableStringFieldUpdateOperationsInput
+    creationDateTime: NullableStringFieldUpdateOperationsInput
+    informationModelObjectKind: NullableStringFieldUpdateOperationsInput
+    partyKey: NullableStringFieldUpdateOperationsInput
+    partyKind: NullableStringFieldUpdateOperationsInput
+    typeName: NullableStringFieldUpdateOperationsInput
+    txGlobalTypeName: NullableStringFieldUpdateOperationsInput
+    txTypeCode: NullableStringFieldUpdateOperationsInput
+    txPrimaryKey: NullableStringFieldUpdateOperationsInput
+    txMetaSourceKey: NullableStringFieldUpdateOperationsInput
+    txMetaStartEventTime: NullableStringFieldUpdateOperationsInput
+    txMetaLoadTime: NullableStringFieldUpdateOperationsInput
+    txMetaSource: NullableStringFieldUpdateOperationsInput
+    txMetaCorrection: NullableStringFieldUpdateOperationsInput
+    txMetaChange: NullableStringFieldUpdateOperationsInput
+    txMetaAccessFilter: NullableIntFieldUpdateOperationsInput
+    Person: PersonUpdateManyWithoutPartyInput
+    ChildOrganization: ChildOrganizationUpdateManyWithoutPartyInput
+}
+
+input PartyUpsertWithoutPartyNameInput {
+    update: PartyUpdateWithoutPartyNameDataInput!
+    create: PartyCreateWithoutPartyNameInput!
+}
+
+input PartyNameCreateWithoutPersonInput {
+    id: String
+    basicDataCompleteCode: String
+    creationDateTime: String
+    defaultIndicator: Boolean
+    description: String
+    effectivePeriodStart: String
+    effectivePeriodEnd: String
+    fullName: String
+    givenName: String
+    informationModelObjectKind: String
+    middleName: String
+    ownerPartyKey: String
+    partyNameKey: String
+    partyNameKind: String
+    prefixTitleCode: String
+    suffix: String
+    surname: String
+    typeName: String
+    usageCode: String
+    utilizedLanguageLanguageKey: String
+    txGlobalTypeName: String
+    txTypeCode: String
+    txPrimaryKey: String
+    txMetaSourceKey: String
+    txMetaStartEventTime: String
+    txMetaLoadTime: String
+    txMetaSource: String
+    txMetaCorrection: String
+    txMetaChange: String
+    txMetaAccessFilter: Int
+    CompanyId: String
+    OrganizationUnitId: String
+    ChildOrganization: ChildOrganizationCreateManyWithoutPartyNameInput
+    Party: PartyCreateOneWithoutPartyNameInput
+}
+
+input PartyCreateWithoutPersonInput {
+    id: String
+    basicDataCompleteCode: String
+    creationDateTime: String
+    informationModelObjectKind: String
+    partyKey: String
+    partyKind: String
+    typeName: String
+    txGlobalTypeName: String
+    txTypeCode: String
+    txPrimaryKey: String
+    txMetaSourceKey: String
+    txMetaStartEventTime: String
+    txMetaLoadTime: String
+    txMetaSource: String
+    txMetaCorrection: String
+    txMetaChange: String
+    txMetaAccessFilter: Int
+    PartyName: PartyNameCreateManyWithoutPartyInput
+    ChildOrganization: ChildOrganizationCreateManyWithoutPartyInput
+}
+
+input PartyNameUpdateWithWhereUniqueWithoutPersonInput {
+    where: PartyNameWhereUniqueInput!
+    data: PartyNameUpdateWithoutPersonDataInput!
+}
+
+input PartyNameUpsertWithWhereUniqueWithoutPersonInput {
+    where: PartyNameWhereUniqueInput!
+    update: PartyNameUpdateWithoutPersonDataInput!
+    create: PartyNameCreateWithoutPersonInput!
+}
+
+input PartyUpdateWithoutPersonDataInput {
+    id: StringFieldUpdateOperationsInput
+    basicDataCompleteCode: NullableStringFieldUpdateOperationsInput
+    creationDateTime: NullableStringFieldUpdateOperationsInput
+    informationModelObjectKind: NullableStringFieldUpdateOperationsInput
+    partyKey: NullableStringFieldUpdateOperationsInput
+    partyKind: NullableStringFieldUpdateOperationsInput
+    typeName: NullableStringFieldUpdateOperationsInput
+    txGlobalTypeName: NullableStringFieldUpdateOperationsInput
+    txTypeCode: NullableStringFieldUpdateOperationsInput
+    txPrimaryKey: NullableStringFieldUpdateOperationsInput
+    txMetaSourceKey: NullableStringFieldUpdateOperationsInput
+    txMetaStartEventTime: NullableStringFieldUpdateOperationsInput
+    txMetaLoadTime: NullableStringFieldUpdateOperationsInput
+    txMetaSource: NullableStringFieldUpdateOperationsInput
+    txMetaCorrection: NullableStringFieldUpdateOperationsInput
+    txMetaChange: NullableStringFieldUpdateOperationsInput
+    txMetaAccessFilter: NullableIntFieldUpdateOperationsInput
+    PartyName: PartyNameUpdateManyWithoutPartyInput
+    ChildOrganization: ChildOrganizationUpdateManyWithoutPartyInput
+}
+
+input PartyUpsertWithoutPersonInput {
+    update: PartyUpdateWithoutPersonDataInput!
+    create: PartyCreateWithoutPersonInput!
+}
+
+input PersonUpdateWithoutPartyDataInput {
+    id: StringFieldUpdateOperationsInput
+    birthDateTime: NullableStringFieldUpdateOperationsInput
+    bloodTypeCode: NullableStringFieldUpdateOperationsInput
+    deathIndicator: NullableBoolFieldUpdateOperationsInput
+    ethnicityCode: NullableStringFieldUpdateOperationsInput
+    genderCode: NullableStringFieldUpdateOperationsInput
+    maritalStatusCode: NullableStringFieldUpdateOperationsInput
+    missingDateTime: NullableStringFieldUpdateOperationsInput
+    missingIndicator: NullableBoolFieldUpdateOperationsInput
+    partyKey: NullableStringFieldUpdateOperationsInput
+    primaryLanguageLanguageKey: NullableStringFieldUpdateOperationsInput
+    txGlobalGenderCode: NullableStringFieldUpdateOperationsInput
+    txPrimaryKey: NullableStringFieldUpdateOperationsInput
+    txMetaSourceKey: NullableStringFieldUpdateOperationsInput
+    txMetaStartEventTime: NullableStringFieldUpdateOperationsInput
+    txMetaLoadTime: NullableStringFieldUpdateOperationsInput
+    txMetaSource: NullableStringFieldUpdateOperationsInput
+    txMetaCorrection: NullableStringFieldUpdateOperationsInput
+    txMetaChange: NullableStringFieldUpdateOperationsInput
+    txMetaAccessFilter: NullableIntFieldUpdateOperationsInput
+    PartyName: PartyNameUpdateManyWithoutPersonInput
+}
+
+input PersonUpdateManyDataInput {
+    id: StringFieldUpdateOperationsInput
+    birthDateTime: NullableStringFieldUpdateOperationsInput
+    bloodTypeCode: NullableStringFieldUpdateOperationsInput
+    deathIndicator: NullableBoolFieldUpdateOperationsInput
+    ethnicityCode: NullableStringFieldUpdateOperationsInput
+    genderCode: NullableStringFieldUpdateOperationsInput
+    maritalStatusCode: NullableStringFieldUpdateOperationsInput
+    missingDateTime: NullableStringFieldUpdateOperationsInput
+    missingIndicator: NullableBoolFieldUpdateOperationsInput
+    partyKey: NullableStringFieldUpdateOperationsInput
+    primaryLanguageLanguageKey: NullableStringFieldUpdateOperationsInput
+    txGlobalGenderCode: NullableStringFieldUpdateOperationsInput
+    txPrimaryKey: NullableStringFieldUpdateOperationsInput
+    txMetaSourceKey: NullableStringFieldUpdateOperationsInput
+    txMetaStartEventTime: NullableStringFieldUpdateOperationsInput
+    txMetaLoadTime: NullableStringFieldUpdateOperationsInput
+    txMetaSource: NullableStringFieldUpdateOperationsInput
+    txMetaCorrection: NullableStringFieldUpdateOperationsInput
+    txMetaChange: NullableStringFieldUpdateOperationsInput
+    txMetaAccessFilter: NullableIntFieldUpdateOperationsInput
+}
+
+input PartyNameUpdateWithoutPartyDataInput {
+    id: StringFieldUpdateOperationsInput
+    basicDataCompleteCode: NullableStringFieldUpdateOperationsInput
+    creationDateTime: NullableStringFieldUpdateOperationsInput
+    defaultIndicator: NullableBoolFieldUpdateOperationsInput
+    description: NullableStringFieldUpdateOperationsInput
+    effectivePeriodStart: NullableStringFieldUpdateOperationsInput
+    effectivePeriodEnd: NullableStringFieldUpdateOperationsInput
+    fullName: NullableStringFieldUpdateOperationsInput
+    givenName: NullableStringFieldUpdateOperationsInput
+    informationModelObjectKind: NullableStringFieldUpdateOperationsInput
+    middleName: NullableStringFieldUpdateOperationsInput
+    ownerPartyKey: NullableStringFieldUpdateOperationsInput
+    partyNameKey: NullableStringFieldUpdateOperationsInput
+    partyNameKind: NullableStringFieldUpdateOperationsInput
+    prefixTitleCode: NullableStringFieldUpdateOperationsInput
+    suffix: NullableStringFieldUpdateOperationsInput
+    surname: NullableStringFieldUpdateOperationsInput
+    typeName: NullableStringFieldUpdateOperationsInput
+    usageCode: NullableStringFieldUpdateOperationsInput
+    utilizedLanguageLanguageKey: NullableStringFieldUpdateOperationsInput
+    txGlobalTypeName: NullableStringFieldUpdateOperationsInput
+    txTypeCode: NullableStringFieldUpdateOperationsInput
+    txPrimaryKey: NullableStringFieldUpdateOperationsInput
+    txMetaSourceKey: NullableStringFieldUpdateOperationsInput
+    txMetaStartEventTime: NullableStringFieldUpdateOperationsInput
+    txMetaLoadTime: NullableStringFieldUpdateOperationsInput
+    txMetaSource: NullableStringFieldUpdateOperationsInput
+    txMetaCorrection: NullableStringFieldUpdateOperationsInput
+    txMetaChange: NullableStringFieldUpdateOperationsInput
+    txMetaAccessFilter: NullableIntFieldUpdateOperationsInput
+    CompanyId: NullableStringFieldUpdateOperationsInput
+    OrganizationUnitId: NullableStringFieldUpdateOperationsInput
+    ChildOrganization: ChildOrganizationUpdateManyWithoutPartyNameInput
+    Person: PersonUpdateOneWithoutPartyNameInput
+}
+
+input PartyNameUpdateManyDataInput {
+    id: StringFieldUpdateOperationsInput
+    basicDataCompleteCode: NullableStringFieldUpdateOperationsInput
+    creationDateTime: NullableStringFieldUpdateOperationsInput
+    defaultIndicator: NullableBoolFieldUpdateOperationsInput
+    description: NullableStringFieldUpdateOperationsInput
+    effectivePeriodStart: NullableStringFieldUpdateOperationsInput
+    effectivePeriodEnd: NullableStringFieldUpdateOperationsInput
+    fullName: NullableStringFieldUpdateOperationsInput
+    givenName: NullableStringFieldUpdateOperationsInput
+    informationModelObjectKind: NullableStringFieldUpdateOperationsInput
+    middleName: NullableStringFieldUpdateOperationsInput
+    ownerPartyKey: NullableStringFieldUpdateOperationsInput
+    partyNameKey: NullableStringFieldUpdateOperationsInput
+    partyNameKind: NullableStringFieldUpdateOperationsInput
+    prefixTitleCode: NullableStringFieldUpdateOperationsInput
+    suffix: NullableStringFieldUpdateOperationsInput
+    surname: NullableStringFieldUpdateOperationsInput
+    typeName: NullableStringFieldUpdateOperationsInput
+    usageCode: NullableStringFieldUpdateOperationsInput
+    utilizedLanguageLanguageKey: NullableStringFieldUpdateOperationsInput
+    txGlobalTypeName: NullableStringFieldUpdateOperationsInput
+    txTypeCode: NullableStringFieldUpdateOperationsInput
+    txPrimaryKey: NullableStringFieldUpdateOperationsInput
+    txMetaSourceKey: NullableStringFieldUpdateOperationsInput
+    txMetaStartEventTime: NullableStringFieldUpdateOperationsInput
+    txMetaLoadTime: NullableStringFieldUpdateOperationsInput
+    txMetaSource: NullableStringFieldUpdateOperationsInput
+    txMetaCorrection: NullableStringFieldUpdateOperationsInput
+    txMetaChange: NullableStringFieldUpdateOperationsInput
+    txMetaAccessFilter: NullableIntFieldUpdateOperationsInput
+    CompanyId: NullableStringFieldUpdateOperationsInput
+    OrganizationUnitId: NullableStringFieldUpdateOperationsInput
+}
+
+input ChildOrganizationUpdateWithoutPartyDataInput {
+    id: StringFieldUpdateOperationsInput
+    basicDataCompleteCode: NullableStringFieldUpdateOperationsInput
+    basingPartyRoleInRelationshipSpecificationSpecificationKey: NullableStringFieldUpdateOperationsInput
+    creationDateTime: NullableStringFieldUpdateOperationsInput
+    description: NullableStringFieldUpdateOperationsInput
+    informationModelObjectKind: NullableStringFieldUpdateOperationsInput
+    namePartyNameKey: NullableStringFieldUpdateOperationsInput
+    partyRoleInRelationshipKind: NullableStringFieldUpdateOperationsInput
+    partyRoleKind: NullableStringFieldUpdateOperationsInput
+    playerRoleRoleKey: NullableStringFieldUpdateOperationsInput
+    playingPartyPartyKey: NullableStringFieldUpdateOperationsInput
+    roleKey: NullableStringFieldUpdateOperationsInput
+    roleKind: NullableStringFieldUpdateOperationsInput
+    rolePlayerPeriodStart: NullableStringFieldUpdateOperationsInput
+    rolePlayerPeriodEnd: NullableStringFieldUpdateOperationsInput
+    typeName: NullableStringFieldUpdateOperationsInput
+    txGlobalTypeName: NullableStringFieldUpdateOperationsInput
+    txTypeCode: NullableStringFieldUpdateOperationsInput
+    txPrimaryKey: NullableStringFieldUpdateOperationsInput
+    txMetaSourceKey: NullableStringFieldUpdateOperationsInput
+    txMetaStartEventTime: NullableStringFieldUpdateOperationsInput
+    txMetaLoadTime: NullableStringFieldUpdateOperationsInput
+    txMetaSource: NullableStringFieldUpdateOperationsInput
+    txMetaCorrection: NullableStringFieldUpdateOperationsInput
+    txMetaChange: NullableStringFieldUpdateOperationsInput
+    txMetaAccessFilter: NullableIntFieldUpdateOperationsInput
+    PartyName: PartyNameUpdateOneWithoutChildOrganizationInput
+}
+
+input ChildOrganizationUpdateManyDataInput {
+    id: StringFieldUpdateOperationsInput
+    basicDataCompleteCode: NullableStringFieldUpdateOperationsInput
+    basingPartyRoleInRelationshipSpecificationSpecificationKey: NullableStringFieldUpdateOperationsInput
+    creationDateTime: NullableStringFieldUpdateOperationsInput
+    description: NullableStringFieldUpdateOperationsInput
+    informationModelObjectKind: NullableStringFieldUpdateOperationsInput
+    namePartyNameKey: NullableStringFieldUpdateOperationsInput
+    partyRoleInRelationshipKind: NullableStringFieldUpdateOperationsInput
+    partyRoleKind: NullableStringFieldUpdateOperationsInput
+    playerRoleRoleKey: NullableStringFieldUpdateOperationsInput
+    playingPartyPartyKey: NullableStringFieldUpdateOperationsInput
+    roleKey: NullableStringFieldUpdateOperationsInput
+    roleKind: NullableStringFieldUpdateOperationsInput
+    rolePlayerPeriodStart: NullableStringFieldUpdateOperationsInput
+    rolePlayerPeriodEnd: NullableStringFieldUpdateOperationsInput
+    typeName: NullableStringFieldUpdateOperationsInput
+    txGlobalTypeName: NullableStringFieldUpdateOperationsInput
+    txTypeCode: NullableStringFieldUpdateOperationsInput
+    txPrimaryKey: NullableStringFieldUpdateOperationsInput
+    txMetaSourceKey: NullableStringFieldUpdateOperationsInput
+    txMetaStartEventTime: NullableStringFieldUpdateOperationsInput
+    txMetaLoadTime: NullableStringFieldUpdateOperationsInput
+    txMetaSource: NullableStringFieldUpdateOperationsInput
+    txMetaCorrection: NullableStringFieldUpdateOperationsInput
+    txMetaChange: NullableStringFieldUpdateOperationsInput
+    txMetaAccessFilter: NullableIntFieldUpdateOperationsInput
+}
+
+input ChildOrganizationUpdateWithoutPartyNameDataInput {
+    id: StringFieldUpdateOperationsInput
+    basicDataCompleteCode: NullableStringFieldUpdateOperationsInput
+    basingPartyRoleInRelationshipSpecificationSpecificationKey: NullableStringFieldUpdateOperationsInput
+    creationDateTime: NullableStringFieldUpdateOperationsInput
+    description: NullableStringFieldUpdateOperationsInput
+    informationModelObjectKind: NullableStringFieldUpdateOperationsInput
+    namePartyNameKey: NullableStringFieldUpdateOperationsInput
+    partyRoleInRelationshipKind: NullableStringFieldUpdateOperationsInput
+    partyRoleKind: NullableStringFieldUpdateOperationsInput
+    playerRoleRoleKey: NullableStringFieldUpdateOperationsInput
+    playingPartyPartyKey: NullableStringFieldUpdateOperationsInput
+    roleKey: NullableStringFieldUpdateOperationsInput
+    roleKind: NullableStringFieldUpdateOperationsInput
+    rolePlayerPeriodStart: NullableStringFieldUpdateOperationsInput
+    rolePlayerPeriodEnd: NullableStringFieldUpdateOperationsInput
+    typeName: NullableStringFieldUpdateOperationsInput
+    txGlobalTypeName: NullableStringFieldUpdateOperationsInput
+    txTypeCode: NullableStringFieldUpdateOperationsInput
+    txPrimaryKey: NullableStringFieldUpdateOperationsInput
+    txMetaSourceKey: NullableStringFieldUpdateOperationsInput
+    txMetaStartEventTime: NullableStringFieldUpdateOperationsInput
+    txMetaLoadTime: NullableStringFieldUpdateOperationsInput
+    txMetaSource: NullableStringFieldUpdateOperationsInput
+    txMetaCorrection: NullableStringFieldUpdateOperationsInput
+    txMetaChange: NullableStringFieldUpdateOperationsInput
+    txMetaAccessFilter: NullableIntFieldUpdateOperationsInput
+    Party: PartyUpdateOneWithoutChildOrganizationInput
+}
+
+input PartyNameUpdateWithoutPersonDataInput {
+    id: StringFieldUpdateOperationsInput
+    basicDataCompleteCode: NullableStringFieldUpdateOperationsInput
+    creationDateTime: NullableStringFieldUpdateOperationsInput
+    defaultIndicator: NullableBoolFieldUpdateOperationsInput
+    description: NullableStringFieldUpdateOperationsInput
+    effectivePeriodStart: NullableStringFieldUpdateOperationsInput
+    effectivePeriodEnd: NullableStringFieldUpdateOperationsInput
+    fullName: NullableStringFieldUpdateOperationsInput
+    givenName: NullableStringFieldUpdateOperationsInput
+    informationModelObjectKind: NullableStringFieldUpdateOperationsInput
+    middleName: NullableStringFieldUpdateOperationsInput
+    ownerPartyKey: NullableStringFieldUpdateOperationsInput
+    partyNameKey: NullableStringFieldUpdateOperationsInput
+    partyNameKind: NullableStringFieldUpdateOperationsInput
+    prefixTitleCode: NullableStringFieldUpdateOperationsInput
+    suffix: NullableStringFieldUpdateOperationsInput
+    surname: NullableStringFieldUpdateOperationsInput
+    typeName: NullableStringFieldUpdateOperationsInput
+    usageCode: NullableStringFieldUpdateOperationsInput
+    utilizedLanguageLanguageKey: NullableStringFieldUpdateOperationsInput
+    txGlobalTypeName: NullableStringFieldUpdateOperationsInput
+    txTypeCode: NullableStringFieldUpdateOperationsInput
+    txPrimaryKey: NullableStringFieldUpdateOperationsInput
+    txMetaSourceKey: NullableStringFieldUpdateOperationsInput
+    txMetaStartEventTime: NullableStringFieldUpdateOperationsInput
+    txMetaLoadTime: NullableStringFieldUpdateOperationsInput
+    txMetaSource: NullableStringFieldUpdateOperationsInput
+    txMetaCorrection: NullableStringFieldUpdateOperationsInput
+    txMetaChange: NullableStringFieldUpdateOperationsInput
+    txMetaAccessFilter: NullableIntFieldUpdateOperationsInput
+    CompanyId: NullableStringFieldUpdateOperationsInput
+    OrganizationUnitId: NullableStringFieldUpdateOperationsInput
+    ChildOrganization: ChildOrganizationUpdateManyWithoutPartyNameInput
+    Party: PartyUpdateOneWithoutPartyNameInput
+}
+
+type Person {
+    id: String!
+    birthDateTime: String
+    bloodTypeCode: String
+    deathIndicator: Boolean
+    ethnicityCode: String
+    genderCode: String
+    maritalStatusCode: String
+    missingDateTime: String
+    missingIndicator: Boolean
+    partyKey: String
+    primaryLanguageLanguageKey: String
+    txGlobalGenderCode: String
+    txPrimaryKey: String
+    txMetaSourceKey: String
+    txMetaStartEventTime: String
+    txMetaLoadTime: String
+    txMetaSource: String
+    txMetaCorrection: String
+    txMetaChange: String
+    txMetaAccessFilter: Int
+    PartyName: [PartyName!]!
+    Party: Party
+    PartyId: String
+}
+
+type Query {
+    hello : String
+   # findOnePerson(where: PersonWhereUniqueInput!): Person
+    #findManyPerson(where: PersonWhereInput, orderBy: [PersonOrderByInput!], cursor: PersonWhereUniqueInput, distinct: PersonDistinctFieldEnum, skip: Int, take: Int): [Person!]
+    #findOneChildOrganization(where: ChildOrganizationWhereUniqueInput!): ChildOrganization
+   # findManyChildOrganization(where: ChildOrganizationWhereInput, orderBy: [ChildOrganizationOrderByInput!], cursor: ChildOrganizationWhereUniqueInput, distinct: ChildOrganizationDistinctFieldEnum, skip: Int, take: Int): [ChildOrganization!]
+   # findOneParty(where: PartyWhereUniqueInput!): Party
+   # findManyParty(where: PartyWhereInput, orderBy: [PartyOrderByInput!], cursor: PartyWhereUniqueInput, distinct: PartyDistinctFieldEnum, skip: Int, take: Int): [Party!]
+    #findOnePartyName(where: PartyNameWhereUniqueInput!): PartyName
+   # findManyPartyName(where: PartyNameWhereInput, orderBy: [PartyNameOrderByInput!], cursor: PartyNameWhereUniqueInput, distinct: PartyNameDistinctFieldEnum, skip: Int, take: Int): [PartyName!]
+}
+
+type Mutation {
+    createOnePerson(data: PersonCreateInput!): Person!
+    createOneChildOrganization(data: ChildOrganizationCreateInput!): ChildOrganization!
+    createOneParty(data: PartyCreateInput!): Party!
+    createOnePartyName(data: PartyNameCreateInput!): PartyName!
+}
+
+type ChildOrganization {
+    id: String!
+    basicDataCompleteCode: String
+    basingPartyRoleInRelationshipSpecificationSpecificationKey: String
+    creationDateTime: String
+    description: String
+    informationModelObjectKind: String
+    namePartyNameKey: String
+    partyRoleInRelationshipKind: String
+    partyRoleKind: String
+    playerRoleRoleKey: String
+    playingPartyPartyKey: String
+    roleKey: String
+    roleKind: String
+    rolePlayerPeriodStart: String
+    rolePlayerPeriodEnd: String
+    typeName: String
+    txGlobalTypeName: String
+    txTypeCode: String
+    txPrimaryKey: String
+    txMetaSourceKey: String
+    txMetaStartEventTime: String
+    txMetaLoadTime: String
+    txMetaSource: String
+    txMetaCorrection: String
+    txMetaChange: String
+    txMetaAccessFilter: Int
+    Party: Party
+    PartyId: String
+    PartyName: PartyName
+    PartyNameId: String
+}
+
+type Party {
+    id: String!
+    basicDataCompleteCode: String
+    creationDateTime: String
+    informationModelObjectKind: String
+    partyKey: String
+    partyKind: String
+    typeName: String
+    txGlobalTypeName: String
+    txTypeCode: String
+    txPrimaryKey: String
+    txMetaSourceKey: String
+    txMetaStartEventTime: String
+    txMetaLoadTime: String
+    txMetaSource: String
+    txMetaCorrection: String
+    txMetaChange: String
+    txMetaAccessFilter: Int
+    Person:[Person!]!
+    PartyName: [PartyName!]!
+    ChildOrganization: [ChildOrganization!]!
+}
+
+type PartyName {
+    id: String!
+    basicDataCompleteCode: String
+    creationDateTime: String
+    defaultIndicator: Boolean
+    description: String
+    effectivePeriodStart: String
+    effectivePeriodEnd: String
+    fullName: String
+    givenName: String
+    informationModelObjectKind: String
+    middleName: String
+    ownerPartyKey: String
+    partyNameKey: String
+    partyNameKind: String
+    prefixTitleCode: String
+    suffix: String
+    surname: String
+    typeName: String
+    usageCode: String
+    utilizedLanguageLanguageKey: String
+    txGlobalTypeName: String
+    txTypeCode: String
+    txPrimaryKey: String
+    txMetaSourceKey: String
+    txMetaStartEventTime: String
+    txMetaLoadTime: String
+    txMetaSource: String
+    txMetaCorrection: String
+    txMetaChange: String
+    txMetaAccessFilter: Int
+    ChildOrganization: [ChildOrganization!]!
+    Person: Person
+    PersonId: String
+    Party: Party
+    PartyId: String
+    CompanyId: String
+    OrganizationUnitId: String
+}
